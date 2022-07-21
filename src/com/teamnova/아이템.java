@@ -8,7 +8,8 @@ public class 아이템 {
     int 체력회복;
     int 마나회복;
     int 아이템번호;
-    public String 낡은검(){
+    캐릭터 캐릭터 = new 캐릭터();
+    public String 낡은검(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "낡은검";
         타입 = "무기";
@@ -17,7 +18,7 @@ public class 아이템 {
         return 이름;
 
     }
-    public String 철검(){
+    public String 철검(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "철검";
         타입 = "무기";
@@ -25,7 +26,7 @@ public class 아이템 {
         아이템번호 = 1;
         return 이름;
     }
-    public String 가죽갑옷(){
+    public String 가죽갑옷(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "가죽갑옷";
         타입 = "갑옷";
@@ -33,7 +34,11 @@ public class 아이템 {
         아이템번호 = 2;
         return 이름;
     }
-    public String 철갑옷(){
+    public int 가죽갑옷적용(int _방어도){
+        _방어도 = 캐릭터.방어력 + 2;
+        return _방어도;
+    }
+    public String 철갑옷(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "철갑옷";
         타입 = "갑옷";
@@ -41,7 +46,7 @@ public class 아이템 {
         아이템번호 = 3;
         return 이름;
     }
-    public String 체력포션(){
+    public String 체력포션(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "체력포션";
         타입 = "포션";
@@ -50,7 +55,7 @@ public class 아이템 {
         return 이름;
 
     }
-    public String 마나포션(){
+    public String 마나포션(){ //이름 리턴시켜주는 메소드,정보
 
         이름 = "마나포션";
         타입 = "포션";
@@ -59,4 +64,5 @@ public class 아이템 {
         return 이름;
 
     }
+
 }
