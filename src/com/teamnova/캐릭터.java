@@ -37,6 +37,7 @@ public class 캐릭터 { //구조체
 
     //종족 구조체 만들고 메인에서 이프문으로 메소드로 연결?
     public void 스테이터스() {
+        스킬 스킬 = new 스킬();
         System.out.println("이름 = " + 이름);
         System.out.println("레벨 = " + 레벨); //최대레벨 표시
         System.out.println("공격력 = " + 공격력); //크리티컬 시스템 추가?
@@ -47,6 +48,7 @@ public class 캐릭터 { //구조체
         System.out.println("마나 = " + 마나); //최대마나 표시
         System.out.println("최대마나 = " + 최대마나);
         System.out.println("경험치 = " + 경험치 + "/" + 레벨업경험치); //최대경험치 표시
+        System.out.println("보유스킬 = ");
     }
 
     public int 공격() { //평타 메소드
@@ -56,13 +58,13 @@ public class 캐릭터 { //구조체
 
     }
 
-    public int 공격받음(int _체력, 몬스터 _이름) {
-        몬스터 몬스터 = new 몬스터();
+    public int 공격받음(int _체력, int _적공격력) {
+//        몬스터 몬스터 = new 몬스터();
 
-        if (방어력 >= 몬스터.공격력) {
-            _체력 = 체력 - 0; //방어력이 적 공격력보다 높으면 데미지0
+        if (this.방어력 >= _적공격력) {
+            _체력 = this.체력 - 0; //방어력이 적 공격력보다 높으면 데미지0
         } else {
-            _체력 = 체력 + 방어력 - 몬스터.공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
+            _체력 = this.체력 + this.방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
         }
         return _체력;
     }

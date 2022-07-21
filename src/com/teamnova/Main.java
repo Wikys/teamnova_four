@@ -14,8 +14,10 @@ public class Main {
         캐릭터 유저명 = new 캐릭터(null,1,5,0,5,10,10,10,10,10,0,10);
         몬스터 몬스터정보 = new 몬스터();
         몬스터 생성된몬스터 = new 몬스터();
+        스킬 스킬사용 =new 스킬(); // 스킬사용 호출
         String 내캐릭터;
-        전투 전투 = new 전투();
+        boolean 스킬사용횟수 = true;
+//        전투 전투 = new 전투();
         Random 랜덤 = new Random(); // 몬스터 생성자?
 
         System.out.println("YGGDRASIL RPG"); //타이틀
@@ -25,13 +27,15 @@ public class Main {
             System.out.println("\"캐릭터 작성을 시작합니다\n" +
                     "이름을 입력 해주세요\""); // "(인풋값으로 이름받음")
             유저명.이름=in.next();
-
+            String 기본스킬 = 스킬사용.용기이름();
+            스킬사용._스킬목록().add(기본스킬);
             System.out.println(유저명.이름 + " 캐릭터가 작성되었습니다"); //클래스로 연결?
         } else {
             return;
         }
 
         System.out.println("당신은 모험을 시작합니다");
+        행동문 :
         while (true) {
             System.out.println("행동을 선택해주세요");
             System.out.println("1.탐색");
@@ -40,6 +44,7 @@ public class Main {
             System.out.println("4.소지품");
             System.out.println("5.스테이터스");
             System.out.println("6.장비");
+            System.out.println("7.스킬");
             System.out.println("0.끝내기");
             선택 = in.nextInt();
 
@@ -84,14 +89,28 @@ public class Main {
 
                         if (선택 == 1) {
                             System.out.println(생성.이름+"을(를) 공격하였습니다 데미지를 "+(유저명.공격력-생성.방어력)+" 주었습니다"); //연산후 저장해서 루프처음으로
-                            System.out.println(생성.이름+"이(가) 반격합니다 데미지를 "+유저명.공격받음(유저명,생성)+ "받았습니다");
+                            System.out.println(생성.이름+"이(가) 반격합니다 데미지를 "+(생성.공격력-유저명.방어력)+ "받았습니다");
 
-                            생성.체력 = 생성.체력 + 생성.방어력 - 유저명.공격력;
-                            유저명.체력 = 유저명.공격받음(유저명,생성);
+                            생성.체력 = 생성.몹공격받음(생성.체력,유저명.공격력);
+                            유저명.체력 = 유저명.공격받음(유저명.체력,생성.공격력);
+
+                            if (유저명.체력 <= 0){
+                                System.out.println("사망하셨습니다");
+                                return; // 사망했으니 종료
+                            }
+                            else if (생성.체력 <= 0){
+                                System.out.println("몬스터를 처치하였습니다");
+
+                                continue 행동문; // 초기반복문으로 되돌아가기
+                                //재화획득 추가하기
+                            }
 
 
                         } else if (선택 == 2) {
-                            System.out.println("스킬을 사용해서 피해를 # 주었습니다"); //종족스킬별로 다르게설정..?
+                            System.out.println("어떤 스킬을 사용하시겠습니까");
+                            // 스킬어레이 호출?
+
+
                         }
                     } else if (선택 == 2) {
                         System.out.println("아이템 사용");
@@ -139,7 +158,7 @@ public class Main {
                 System.out.println("4.마나 포션 5 Gold");
                 선택 = in.nextInt();
             } else if (선택 == 4) {
-                소지품 소지품 = new 소지품(0, null, null);
+//                소지품 소지품 = new 소지품(0, null, null);
 //                System.out.println(소지품.소지품); // 인벤토리 2차원배열? // 버리기 장착등 구현
                 System.out.println("1.아이템장착"); //배열 삭제하면서 플레이어에게 효과적용
                 System.out.println("2.아이템버리기"); //배열삭제로 구현?
@@ -164,6 +183,13 @@ public class Main {
                 선택 = in.nextInt();
             } else if (선택 == 6) {
                 System.out.println("장비중인거 보여주기");
+            } else if (선택 == 7) {
+                System.out.println("보유스킬");
+                System.out.println(스킬사용._스킬목록());
+
+                System.out.println("돌아가시려면 아무키나 입력하세요");
+                선택 = in.nextInt();
+
             } else if (선택 == 0) {
                 return;
             }
