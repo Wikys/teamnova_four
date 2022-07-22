@@ -64,7 +64,7 @@ public class 몬스터 {
 
         if (인카운터 == 0) {
             this.이름 = "고블린";
-            this.골드 = random.nextInt(5);
+
 
         } else if (인카운터 == 1) {
             this.이름 = "오크";

@@ -15,8 +15,8 @@ public class Main {
         몬스터 몬스터정보 = new 몬스터();
         몬스터 생성된몬스터 = new 몬스터();
         스킬 스킬사용 =new 스킬(); // 스킬사용 호출
-        소지품 소지품 = new 소지품();// 인벤토리 호출
-        아이템 아이템 = new 아이템(); // 아이템호출
+
+
 
         String 내캐릭터;
 
@@ -32,10 +32,12 @@ public class Main {
             System.out.println("\"캐릭터 작성을 시작합니다\n" +
                     "이름을 입력 해주세요\""); // "(인풋값으로 이름받음")
             유저명.이름=in.next();
-//            String 기본스킬 = 스킬사용.용기이름();
+
+            아이템 섹스 = new 아이템(900);
+
 
              스킬사용._스킬목록.add(스킬사용.용기이름());
-             소지품.인벤토리.add(아이템.가죽갑옷());
+
             System.out.println(유저명.이름 + " 캐릭터가 작성되었습니다"); //클래스로 연결?
             System.out.println("기본스킬이 지급되었습니다");
             System.out.println("기본아이템이 지급되었습니다");
@@ -199,11 +201,11 @@ public class Main {
                 System.out.println("구매할 물건을 선택 해주세요");
                 System.out.println("1.낡은 철검 10 Gold");
                 System.out.println("2.낡은 가죽갑옷 15 Gold");
-                System.out.println("3.체력 포션 5 Gold");
-                System.out.println("4.마나 포션 5 Gold");
+                System.out.println("3.체력 com.teamnova.포션 5 Gold");
+                System.out.println("4.마나 com.teamnova.포션 5 Gold");
                 선택 = in.nextInt();
             } else if (선택 == 4) {
-                System.out.println(소지품.인벤토리);
+         //       System.out.println(아이템.인벤토리());
 
 //                System.out.println(소지품.소지품); // 인벤토리 2차원배열? // 버리기 장착등 구현
                 System.out.println("1.아이템장착"); //배열 삭제하면서 플레이어에게 효과적용
@@ -213,23 +215,26 @@ public class Main {
                 선택 = in.nextInt();
 
                 if(선택 ==1){
-                    System.out.println(소지품.인벤토리);
+      //              System.out.println(아이템.인벤토리());
                     System.out.println("장착하실 아이템 이름을 입력해주세요");
                     사용 = in.next();
 
-                    if(사용.equals("가죽갑옷") && 소지품.인벤토리.contains("가죽갑옷")){ //계속 장착되는거 막아야함
-                        System.out.println("방어력이 2 증가했습니다");
-                        유저명.방어력 = 아이템.가죽갑옷적용(유저명.방어력);
-                        소지품.인벤토리.remove("가죽갑옷");
-                        System.out.println("돌아가시려면 아무숫자나 입력하세요");
-                        선택 = in.nextInt();
-                        continue 행동문;
-                    }else {
-                        System.out.println("아이템이 없습니다!");
-                        System.out.println("돌아가시려면 아무글자나 입력하세요");
-
-
-                    }
+//                    if(사용.equals("가죽갑옷") && 소지품.인벤토리.contains("가죽갑옷")){ //계속 장착되는거 막아야함
+//                        System.out.println("방어력이 2 증가했습니다");
+//                        유저명.방어력 = 아이템.가죽갑옷적용(유저명.방어력);
+//                        소지품.인벤토리.remove("가죽갑옷");
+//                        System.out.println("돌아가시려면 아무숫자나 입력하세요");
+//                        선택 = in.nextInt();
+//
+//                        continue 행동문;
+//
+//                    }
+//                    else {
+//                        System.out.println("아이템이 없습니다!");
+//                        System.out.println("돌아가시려면 아무글자나 입력하세요");
+//
+//
+//                    }
                 }
 //                if (선택 == 1){
 //                    System.out.println("장착할 아이템 이름을 입력해주세요");
