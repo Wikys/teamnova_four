@@ -90,8 +90,8 @@ public class 샘플코드 {
 //
 //        ArrayList<gameItem> Inventory = new ArrayList<gameItem>();
 //
-//        Inventory.add(hpPotion);
-//        Inventory.add(hpPotion);
+//        Inventory.add(hpPotion.아이템이름);
+//        Inventory.add("회복량 : " + hpPotion.회복략);
 //        Inventory.add(mpPotion);
 //        Inventory.add(mpPotion);
 //
@@ -99,3 +99,39 @@ public class 샘플코드 {
 //            System.out.println(Inventory.get(i).Name); }
 //    }
 //}
+
+//      StringBuilder 섹스 = new StringBuilder();
+//      섹스.append("섹").append("스").append("다이스키")
+//      sout(섹스)
+// 출력값: 섹스다이스키
+//      섹스.append("전우애다이스키")
+//      sout(섹스)
+//출력값 : 섹스다이스키전우애다이스키
+//
+//sout(인벤.get(1))
+//sout(인벤.getz  (2))
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
