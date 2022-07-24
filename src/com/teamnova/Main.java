@@ -212,6 +212,11 @@ public class Main {
                 // 구매완료되면 인벤토리와 전투인벤토리에 생성
                 선택 = in.nextInt();
                 유저명.돈 = 상점.구매(선택);
+                아이템.인벤토리.addAll(상점.아이템반환(선택));
+                System.out.println("0.나가기");
+                if (선택 == 0){
+                    continue ;
+                }
             } else if (선택 == 4) {
                 while (true){
 
@@ -233,8 +238,8 @@ public class Main {
 
                     System.out.println("장착하실 아이템 이름을 입력해주세요");
                     사용 = in.next();
-
-                    if (사용.contains("낡은검") && 아이템.인벤토리.contains(낡은검)) { //계속 장착되는거 막아야함
+                    System.out.println(사용.equals("철검") +"|" + 아이템.인벤토리.equals(철검));
+                    if (사용.equals("낡은검") && 아이템.인벤토리.contains(낡은검)) { //계속 장착되는거 막아야함
                         System.out.println("공격력이 " + 낡은검.공격력 + " 증가했습니다");
 
                         유저명.공격력 = 유저명.공격력 + 낡은검.공격력;
@@ -242,7 +247,7 @@ public class Main {
                         아이템.장비창.add(낡은검);
                         continue;
 
-                    } else if (사용.contains("철검") && 아이템.인벤토리.contains(철검)) { //계속 장착되는거 막아야함
+                    } else if (사용.equals("철검") && 아이템.인벤토리.contains(철검)) { //계속 장착되는거 막아야함
                         System.out.println("공격력이 " + 철검.공격력 + " 증가했습니다");
 
                         유저명.공격력 = 유저명.공격력 + 철검.공격력;
@@ -250,7 +255,7 @@ public class Main {
                         아이템.장비창.add(철검);
 
                         continue;
-                    } else if (사용.contains("가죽갑옷") && 아이템.인벤토리.contains(가죽갑옷)) { //계속 장착되는거 막아야함
+                    } else if (사용.equals("가죽갑옷") && 아이템.인벤토리.contains(가죽갑옷)) { //계속 장착되는거 막아야함
                         System.out.println("방어력이 " + 가죽갑옷.방어력 + " 증가했습니다");
 
                         유저명.방어력 = 유저명.방어력 + 가죽갑옷.방어력;
@@ -258,7 +263,7 @@ public class Main {
                         아이템.장비창.add(가죽갑옷);
 
                         continue;
-                    } else if (사용.contains("철갑옷") && 아이템.인벤토리.contains(철갑옷)) { //계속 장착되는거 막아야함
+                    } else if (사용.equals("철갑옷") && 아이템.인벤토리.contains(철갑옷)) { //계속 장착되는거 막아야함
                         System.out.println("방어력이 " + 철갑옷.방어력 + " 증가했습니다");
 
                         유저명.방어력 = 유저명.방어력 + 철갑옷.방어력;

@@ -10,6 +10,7 @@ public class 아이템 {
     int 체력회복;
     int 마나회복;
     int 아이템번호; //1 부터
+    int 상점번호;
     int 가격;
     ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
     ArrayList<아이템> 장비창 = new ArrayList<아이템>();
