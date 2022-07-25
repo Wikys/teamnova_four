@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/상점.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/상점.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" afterDir="false" />
     </list>
@@ -26,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>

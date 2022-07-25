@@ -1,5 +1,6 @@
 package com.teamnova;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class 캐릭터 { //구조체
     String 이름;
@@ -26,6 +27,7 @@ public class 캐릭터 { //구조체
     아이템 철갑옷 = new 아이템("철갑옷", 2, 101, 5);
     아이템 체력포션 = new 아이템("체력포션",3,900,5);
     아이템 마나포션 = new 아이템("마나포션",4,901,5);
+    Random random = new Random();
 
     public 캐릭터(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치) {
         this.이름 = _이름;
@@ -63,23 +65,32 @@ public class 캐릭터 { //구조체
 
     }
 
-    public int 공격() { //평타 메소드
+//    public int 공격(int _내공격력,int _적방어력) { //평타 메소드
+//
+//
+//
+//        return 전투중공격력; // 스킬공격 추가?
+//
+//    }
 
-
-        return 전투중공격력; // 스킬공격 추가?
-
-    }
-
-    public int 공격받음(int _체력, int _적공격력) {
+    public int 공격받음(int _방어력, int _적공격력, int _회피율) {
 //        몬스터 몬스터 = new 몬스터();
+        int 회피 = random.nextInt(100)+1;
 
         if (this.전투중방어력 >= _적공격력) {
-            _체력 = this.전투중체력 - 0; //방어력이 적 공격력보다 높으면 데미지0
-        } else {
-            _체력 = this.전투중체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
+            _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
         }
-        return _체력;
+        else if(회피 <= _회피율){
+            _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
+            System.out.println("완벽하게 회피하였습니다");
+        }
+        else {
+//            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
+            _적공격력 = _방어력 - _적공격력;
+        }
+        return _적공격력;
     }
+
 
     int 체력회복() { // 휴식
         return 최대체력;
@@ -102,6 +113,31 @@ public class 캐릭터 { //구조체
 
 
         return _회복량;
+    }
+
+    public 아이템 랜덤드랍(){
+        int 아이템드랍 = random.nextInt(5)+1;
+        아이템 드랍템 = null;
+
+        if(아이템드랍 == 0){
+            드랍템 = this.낡은검;
+        }
+        else if(아이템드랍 ==1){
+            드랍템 = this.철검;
+        }
+        else if(아이템드랍 ==2){
+            드랍템 = this.가죽갑옷;
+        }
+        else if(아이템드랍 ==3){
+            드랍템 = this.철갑옷;
+        }
+        else if(아이템드랍 ==4){
+            드랍템 = this.체력포션;
+        }
+        else if(아이템드랍 ==5){
+            드랍템 = this.마나포션;
+        }
+        return 드랍템;
     }
 
 

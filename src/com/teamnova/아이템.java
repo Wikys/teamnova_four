@@ -15,6 +15,7 @@ public class 아이템 {
     ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
     ArrayList<아이템> 장비창 = new ArrayList<아이템>();
     ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
+ //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
 
 
     아이템(){
@@ -45,7 +46,7 @@ public class 아이템 {
                  this.방어력 = 수치;
              }
          }
-         else if(타입 == 3){
+         else if(타입 == 3){ //포션류
              if(아이템번호 == 900){
                  this.체력회복 = 수치;
              }
