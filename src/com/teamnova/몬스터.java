@@ -11,6 +11,8 @@ public class 몬스터 {
     int 경험치;
     int 골드;
     int 아이템;
+    int 몬스터번호;
+    아이템 아이템드랍 = new 아이템();
     Random random = new Random();
 
 //    public 몬스터 (String _이름, int _공격력, int _방어력, int _체력, int _경험치, int _골드, int _아이템){ //스테이터스
@@ -21,7 +23,7 @@ public class 몬스터 {
     public 몬스터(){}
 
 
-    public 몬스터(String 이름, int 공격력, int 방어력, int 체력, int 경험치, int 골드, int 아이템) {
+    public 몬스터(String 이름, int 체력, int 공격력, int 방어력, int 경험치, int 골드, int 아이템, int 몬스터번호) {
         this.이름 = 이름;
         this.공격력 = 공격력;
         this.방어력 = 방어력;
@@ -29,6 +31,7 @@ public class 몬스터 {
         this.경험치 = 경험치;
         this.골드 = 골드;
         this.아이템 = 아이템;
+        this.몬스터번호 = 몬스터번호;
     }
 
     public void 고블린() {
@@ -84,6 +87,8 @@ public class 몬스터 {
         }
         return _체력;
     }
+ //   public int 전투완료 ();
+
 }
 
 

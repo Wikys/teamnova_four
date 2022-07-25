@@ -16,6 +16,7 @@ public class 아이템 {
     ArrayList<아이템> 장비창 = new ArrayList<아이템>();
     ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
 
+
     아이템(){
 
     }
@@ -31,9 +32,9 @@ public class 아이템 {
                  this.공격력 = 수치;
              }
              else if (아이템번호 == 1){
-                 if(아이템번호 == 0){
+
                      this.공격력 = 수치;
-                 }
+
              }
          }
          else if(타입 == 2){ //방어구
@@ -48,7 +49,10 @@ public class 아이템 {
              if(아이템번호 == 900){
                  this.체력회복 = 수치;
              }
-             else if(아이템번호 == 901){
+
+         }
+         else if(타입 == 4){
+             if(아이템번호 == 901){
                  this.마나회복 = 수치;
              }
          }
@@ -128,6 +132,7 @@ public class 아이템 {
         this.가격 = 5;
 
     }
+
     public String 이름_마나포션(){ //이름 리턴시켜주는 메소드,정보
 
         this.이름 = "마나포션";
@@ -141,6 +146,7 @@ public class 아이템 {
         this.아이템번호 = 901;
         this.가격 = 5;
     }
+
 
 
 
