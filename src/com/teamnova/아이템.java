@@ -12,6 +12,7 @@ public class 아이템 {
     int 아이템번호; //1 부터
     int 상점번호;
     int 가격;
+    boolean 중복장착 = false;
     ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
     ArrayList<아이템> 장비창 = new ArrayList<아이템>();
     ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
@@ -22,7 +23,7 @@ public class 아이템 {
 
     }
 
-     아이템(String 이름, int 타입, int 아이템번호, int 수치 ){
+     아이템(String 이름, int 타입, int 아이템번호, int 수치, boolean 중복장착){
          this.이름 = 이름;
          this.타입 = 타입;
          this.아이템번호 = 아이템번호;
@@ -74,6 +75,7 @@ public class 아이템 {
         this.공격력 = 1;
         this.아이템번호 = 0;
         this.가격 = 0;
+        this.중복장착 = false;
 
     }
     public String 이름_철검(){ //이름 리턴시켜주는 메소드,정보
@@ -87,6 +89,7 @@ public class 아이템 {
         this.공격력 = 3;
         this.아이템번호 = 1;
         this.가격 = 10;
+        this.중복장착 = false;
 
     }
     public String 이름_가죽갑옷(){ //이름 리턴시켜주는 메소드,정보
@@ -100,6 +103,7 @@ public class 아이템 {
         this.방어력 = 2;
         this.아이템번호 = 100;
         this.가격 = 15;
+        this.중복장착 = false;
     }
 //    public int 가죽갑옷적용(int _방어도){ //아이템의 실제효과
 //        캐릭터 캐릭터 = new 캐릭터();
@@ -118,6 +122,7 @@ public class 아이템 {
         this.방어력 = 5;
         this.아이템번호 = 101;
         this.가격 = 30;
+        this.중복장착 = false;
 
     }
     public String 이름_체력포션(){ //이름 리턴시켜주는 메소드,정보
@@ -147,16 +152,11 @@ public class 아이템 {
         this.아이템번호 = 901;
         this.가격 = 5;
     }
-
-
-
-
-
-
-
-
-
-
-
-
+//    public boolean 무기장착(int _아이템타입){ // 메인에 구현하니 정보가 저장되서 구현이안되서 메소드로함 // 해제도 만들어야함
+//        boolean 무기중복 = false;
+//        if (this.타입 == 1){
+//            무기중복 = true;
+//        }
+//        return 무기중복;
+//    }
 }

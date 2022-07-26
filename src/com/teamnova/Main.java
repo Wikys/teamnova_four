@@ -16,8 +16,8 @@ public class Main {
         몬스터 몬스터정보 = new 몬스터();
         몬스터 생성된몬스터 = new 몬스터();
         스킬 스킬사용 = new 스킬(); // 스킬사용 호출
-        boolean 무기 = false; //중복착용 막기
-        boolean 방어구 = false; //중복착용 막기
+//        boolean 무기 = false; //중복착용 막기
+//        boolean 방어구 = false; //중복착용 막기
 //        아이템 낡은검 = new 아이템("낡은검", 1, 0, 1); // 아이템호출
 //        아이템 철검 = new 아이템("철검", 1, 1, 3);
 //        아이템 가죽갑옷 = new 아이템("가죽갑옷", 2, 100, 2);
@@ -76,7 +76,7 @@ public class Main {
         행동문:
         while (true) {
 
-            
+
             유저명.전투중체력 = 유저명.체력;
             유저명.전투중마나 = 유저명.마나;
             유저명.전투중공격력 = 유저명.공격력;
@@ -150,27 +150,25 @@ public class Main {
                             유저명.전투중체력 = 내남은체력;
 
 
-
-
                             if (유저명.전투중체력 <= 0) {
                                 System.out.println("사망하셨습니다");
                                 return; // 사망했으니 종료
                             } else if (생성.체력 <= 0) {
                                 아이템 랜덤드랍 = 유저명.랜덤드랍();
-                                System.out.println(생성.이름+"을(를) 처치하였습니다");
-                                System.out.println("획득 경험치 "+ 생성.경험치);
-                                System.out.println("획득 골드 "+생성.골드);
-                                System.out.println("획득 아이템 "+ 랜덤드랍.이름);
+                                System.out.println(생성.이름 + "을(를) 처치하였습니다");
+                                System.out.println("획득 경험치 " + 생성.경험치);
+                                System.out.println("획득 골드 " + 생성.골드);
+                                System.out.println("획득 아이템 " + 랜덤드랍.이름);
                                 System.out.println("계속하려면 아무숫자나 입력하세요");
                                 선택 = in.nextInt();
                                 유저명.경험치 = 유저명.경험치 + 생성.경험치;
                                 유저명.돈 = 유저명.돈 + 생성.골드;
                                 아이템.인벤토리.add(랜덤드랍);
 
-                                if (유저명.경험치 >= 유저명.레벨업경험치){
+                                if (유저명.경험치 >= 유저명.레벨업경험치) {
                                     유저명.경험치 = 0;
-                                    유저명.레벨 = 유저명.레벨+1;
-                                    유저명.레벨업경험치 = 유저명.레벨업경험치*5;
+                                    유저명.레벨 = 유저명.레벨 + 1;
+                                    유저명.레벨업경험치 = 유저명.레벨업경험치 * 5;
                                     유저명.공격력 = 유저명.공격력 + 1;
                                     유저명.방어력 = 유저명.방어력 + 1;
                                     유저명.최대체력 = 유저명.최대체력 + 1;
@@ -193,8 +191,6 @@ public class Main {
                                     유저명.마나 = 유저명.전투중마나;
                                 }
                                 유저명.전투중방어력 = 유저명.방어력; // 전투중방어력 초기화
-
-
 
 
                                 continue 행동문; // 초기반복문으로 되돌아가기
@@ -230,24 +226,22 @@ public class Main {
                         System.out.println("사용할 아이템 이름을 입력해주세요");
                         사용 = in.next();
                         for (int i = 0; i < 아이템.전투인벤토리.size(); i++) {
-                            if(사용.equals(아이템.전투인벤토리.get(i).이름)){
+                            if (사용.equals(아이템.전투인벤토리.get(i).이름)) {
 
-                                if (아이템.전투인벤토리.get(i).타입 == 3){ //체력포션 사용
-                                   유저명.전투중체력 =   유저명.포션꿀꺽(아이템.전투인벤토리.get(i).체력회복,유저명.최대체력,유저명.전투중체력);
-                                    System.out.println(아이템.전투인벤토리.get(i).이름+"을 사용하였습니다");
+                                if (아이템.전투인벤토리.get(i).타입 == 3) { //체력포션 사용
+                                    유저명.전투중체력 = 유저명.포션꿀꺽(아이템.전투인벤토리.get(i).체력회복, 유저명.최대체력, 유저명.전투중체력);
+                                    System.out.println(아이템.전투인벤토리.get(i).이름 + "을 사용하였습니다");
                                     아이템.전투인벤토리.remove(아이템.전투인벤토리.get(i));
-                                    break ;
+                                    break;
 
 
-                                }
-                                else if (아이템.전투인벤토리.get(i).타입 == 4){ //마나포션 사용
-                                    유저명.전투중마나 =   유저명.포션꿀꺽(아이템.전투인벤토리.get(i).마나회복,유저명.최대마나,유저명.전투중마나);
-                                    System.out.println(아이템.전투인벤토리.get(i).이름+"을 사용하였습니다");
+                                } else if (아이템.전투인벤토리.get(i).타입 == 4) { //마나포션 사용
+                                    유저명.전투중마나 = 유저명.포션꿀꺽(아이템.전투인벤토리.get(i).마나회복, 유저명.최대마나, 유저명.전투중마나);
+                                    System.out.println(아이템.전투인벤토리.get(i).이름 + "을 사용하였습니다");
                                     아이템.전투인벤토리.remove(아이템.전투인벤토리.get(i)); //3개씩 사용되는버그
-                                    break ;
+                                    break;
 
                                 }
-
 
 
                             }
@@ -318,8 +312,6 @@ public class Main {
                 선택 = in.nextInt();
                 if (선택 == 1) { // 지금 이상태로 상점에서 아이템을 생성해주면 전투쪽에서 아이템생성할때 문제생김 싹다갈아엎고 아이템 클래스에 넣기..
 //                    System.out.println(소지품.인벤토리);
-                    
-                    
 
 
                     System.out.println("장착하실 아이템 이름을 입력해주세요");
@@ -327,42 +319,43 @@ public class Main {
 
                     for (int i = 0; i < 아이템.인벤토리.size(); i++) {
 
-                        if (아이템.인벤토리.get(i).이름.equals("낡은검") && 아이템.인벤토리.get(i).이름.equals(사용) && 무기 == false) {
+                        if (아이템.인벤토리.get(i).이름.equals("낡은검") && 아이템.인벤토리.get(i).이름.equals(사용) && 아이템.인벤토리.get(i).중복장착 == false) {
                             System.out.println("공격력이 " + 유저명.낡은검.공격력 + " 증가했습니다");
 
                             유저명.공격력 = 유저명.공격력 + 유저명.낡은검.공격력;
                             아이템.장비창.add(아이템.인벤토리.get(i));
                             아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                            무기 = true;
+                            아이템.인벤토리.get(i).중복장착 = true;
+
 
                             continue;
 
 
-                        } else if (아이템.인벤토리.get(i).이름.equals("철검") && 아이템.인벤토리.get(i).이름.equals(사용)&& 무기 == false) { //계속 장착되는거 막아야함
+                        } else if (아이템.인벤토리.get(i).이름.equals("철검") && 아이템.인벤토리.get(i).이름.equals(사용) && 아이템.인벤토리.get(i).중복장착 == false) { //계속 장착되는거 막아야함
                             System.out.println("공격력이 " + 유저명.철검.공격력 + " 증가했습니다");
 
                             유저명.공격력 = 유저명.공격력 + 유저명.철검.공격력;
                             아이템.장비창.add(아이템.인벤토리.get(i));
                             아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                            무기 = true;
+                            아이템.인벤토리.get(i).중복장착 = true;
 
                             continue;
-                        } else if (아이템.인벤토리.get(i).이름.equals("가죽갑옷") && 아이템.인벤토리.get(i).이름.equals(사용)&& 방어구 == false) { //계속 장착되는거 막아야함
+                        } else if (아이템.인벤토리.get(i).이름.equals("가죽갑옷") && 아이템.인벤토리.get(i).이름.equals(사용) && 아이템.인벤토리.get(i).중복장착 == false) { //계속 장착되는거 막아야함
                             System.out.println("방어력이 " + 유저명.가죽갑옷.방어력 + " 증가했습니다");
 
                             유저명.방어력 = 유저명.방어력 + 유저명.가죽갑옷.방어력;
                             아이템.장비창.add(아이템.인벤토리.get(i));
                             아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                            방어구 = true;
+                            아이템.인벤토리.get(i).중복장착 = true;
 
                             continue;
-                        } else if (아이템.인벤토리.get(i).이름.equals("철갑옷") && 아이템.인벤토리.get(i).이름.equals(사용) && 방어구 == false) { //계속 장착는거 막아야함
+                        } else if (아이템.인벤토리.get(i).이름.equals("철갑옷") && 아이템.인벤토리.get(i).이름.equals(사용) && 아이템.인벤토리.get(i).중복장착 == false) { //계속 장착는거 막아야함
                             System.out.println("방어력이 " + 유저명.철갑옷.방어력 + " 증가했습니다");
 
                             유저명.방어력 = 유저명.방어력 + 유저명.철갑옷.방어력;
                             아이템.장비창.add(아이템.인벤토리.get(i));
                             아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                            방어구 = true;
+                            아이템.인벤토리.get(i).중복장착 = true;
 
                             continue;
                         } else {
@@ -397,25 +390,24 @@ public class Main {
                         if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 == 3) { // 체력포션
                             if (아이템.인벤토리.get(i).체력회복 == 5) { // 나중에 상위포션 추가?
 
-                                System.out.println(아이템.인벤토리.get(i).이름+"을 퀵슬롯에 옮겼습니다");
+                                System.out.println(아이템.인벤토리.get(i).이름 + "을 퀵슬롯에 옮겼습니다");
                                 아이템.전투인벤토리.add(아이템.인벤토리.get(i));
                                 아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                                break ;
+                                break;
 
                             }
 
-                        }else if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 == 4) {//마나포션
+                        } else if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 == 4) {//마나포션
 
                             if (아이템.인벤토리.get(i).마나회복 == 5) {
 
-                                System.out.println(아이템.인벤토리.get(i).이름+"을 퀵슬롯에 옮겼습니다");
+                                System.out.println(아이템.인벤토리.get(i).이름 + "을 퀵슬롯에 옮겼습니다");
                                 아이템.전투인벤토리.add(아이템.인벤토리.get(i));
                                 아이템.인벤토리.remove(아이템.인벤토리.get(i));
-                                break ;
+                                break;
 
                             }
-                        }
-                        else if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 != 3
+                        } else if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 != 3
                                 && 아이템.인벤토리.get(i).타입 != 4) {
                             System.out.println("아이템이 없거나 포션이 아닙니다");
 
@@ -447,7 +439,8 @@ public class Main {
                     if (선택 == 1) {
                         System.out.println("벗고싶은 아이템 이름을 입력하세요");
                         사용 = in.next();
-                        if (사용.contains("낡은검") && 아이템.장비창.contains(유저명.낡은검)&& 무기 == true) {
+//                        if (사용.contains("낡은검") && 아이템.장비창.contains(유저명.낡은검)&&) {
+                        if (아이템.인벤토리.get(i).이름.equals("낡은검") && 아이템.인벤토리.get(i).이름.equals(사용) && 아이템.인벤토리.get(i).중복장착 == false) {
                             System.out.println("공격력이 " + 유저명.낡은검.공격력 + " 감소했습니다");
 
                             유저명.공격력 = 유저명.공격력 - 유저명.낡은검.공격력;
@@ -457,7 +450,7 @@ public class Main {
                             System.out.println("돌아가시려면 아무숫자나 입력하세요");
 
                             continue;
-                        } else if (사용.contains("철검") && 아이템.장비창.contains(유저명.철검)&& 무기 == true) {
+                        } else if (사용.contains("철검") && 아이템.장비창.contains(유저명.철검) && 무기 == true) {
                             System.out.println("공격력이 " + 유저명.철검.공격력 + " 감소했습니다");
 
                             유저명.공격력 = 유저명.공격력 - 유저명.철검.공격력;
@@ -467,7 +460,7 @@ public class Main {
                             System.out.println("돌아가시려면 아무숫자나 입력하세요");
 
                             continue;
-                        } else if (사용.contains("가죽갑옷") && 아이템.장비창.contains(유저명.가죽갑옷)&& 방어구 == true) {
+                        } else if (사용.contains("가죽갑옷") && 아이템.장비창.contains(유저명.가죽갑옷) && 방어구 == true) {
                             System.out.println("방어력이 " + 유저명.가죽갑옷.방어력 + " 감소했습니다");
 
                             유저명.방어력 = 유저명.방어력 - 유저명.가죽갑옷.방어력;
@@ -477,7 +470,7 @@ public class Main {
                             System.out.println("돌아가시려면 아무숫자나 입력하세요");
 
                             continue;
-                        } else if (사용.contains("철갑옷") && 아이템.장비창.contains(유저명.철갑옷)&& 방어구 == true) {
+                        } else if (사용.contains("철갑옷") && 아이템.장비창.contains(유저명.철갑옷) && 방어구 == true) {
                             System.out.println("방어력이 " + 유저명.철갑옷.방어력 + " 감소했습니다");
 
                             유저명.방어력 = 유저명.방어력 - 유저명.철갑옷.방어력;
