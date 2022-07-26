@@ -7,9 +7,6 @@
     <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="0724 집">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
