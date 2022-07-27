@@ -116,7 +116,7 @@ public class 캐릭터 { //구조체
 
     public 아이템 랜덤드랍(){
         int 아이템드랍 = random.nextInt(5)+1;
-        아이템 드랍템 = null;
+        아이템 드랍템 = null; //초기화
 
         if(아이템드랍 == 0){
             드랍템 = this.낡은검;

@@ -10,8 +10,8 @@ public class 몬스터 {
     int 체력;
     int 경험치;
     int 골드;
-    int 아이템;
-    int 몬스터번호;
+//    int 아이템;
+//    int 몬스터번호;
     아이템 아이템드랍 = new 아이템();
     Random random = new Random();
 
@@ -30,8 +30,8 @@ public class 몬스터 {
         this.체력 = 체력;
         this.경험치 = 경험치;
         this.골드 = 골드;
-        this.아이템 = 아이템;
-        this.몬스터번호 = 몬스터번호;
+//        this.아이템 = 아이템;
+//        this.몬스터번호 = 몬스터번호;
     }
 
     public void 고블린() {
@@ -63,7 +63,8 @@ public class 몬스터 {
 
 
     public String 몬스터() { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
-        int 인카운터 = random.nextInt(2)+1;
+        int 인카운터 = random.nextInt(2);
+
 
         if (인카운터 == 0) {
             this.이름 = "고블린";
