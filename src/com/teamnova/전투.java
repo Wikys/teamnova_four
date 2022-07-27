@@ -17,5 +17,8 @@ public class 전투 {
         System.out.println("획득 아이템 n");
         System.out.println("계속하려면 아무숫자나 입력하세요");
         선택 = in.nextInt();
+
+
+        
     }
 }

@@ -58,10 +58,8 @@ public class 캐릭터 { //구조체
         System.out.println("공격력 = " + this.공격력); //크리티컬 시스템 추가?
         System.out.println("방어력 = " + this.방어력);
         System.out.println("회피율 = " + this.회피율);
-        System.out.println("체력 = " + this.체력); //최대체력 표시
-        System.out.println("최대체력 = " + this.최대체력);
-        System.out.println("마나 = " + this.마나); //최대마나 표시
-        System.out.println("최대마나 = " + this.최대마나);
+        System.out.println("체력 = " + this.체력+"/"+this.최대체력); //최대체력 표시
+        System.out.println("마나 = " + this.마나+"/"+this.최대마나); //최대마나 표시
         System.out.println("경험치 = " + this.경험치 + "/" + this.레벨업경험치); //최대경험치 표시
 
     }
