@@ -1,25 +1,12 @@
-//package com.teamnova;
-//
-//import java.util.ArrayList;
-//
-//public class 실험용 {
-//    public static void main(String[] args) {
-//        ArrayList<String> arr = new ArrayList<String>();
-//        ArrayList<String> arr1 = new ArrayList<String>();
-//
-//        arr.add("찐빵");
-//        arr.add("슨상");
-//        arr1.add("현수");
-//        arr1.add("재영");
-//        System.out.println(arr);
-//        System.out.println(arr1);
-//
-//        arr.addAll(arr1);
-//        System.out.println(arr);
-//
-//        System.out.println(arr.equals("현수"));
-//
-//
-//    }
-//}
-
+// 공격스킬 사용시 적이 반격? // 해결
+//데미지 받는부분 어색함 -말고 +로 표기 // 해결
+//소지품에서 포션장착 어색함 //멘토생각?
+//최대스탯,현재스탯 작대기로 표시 //해결
+//발표준비 시나리오 작성 어떻게 시연을 할것인지
+//아이템 장착해제안됨 // 해결
+//보유스킬 리스트에 설명달아주기 // 해결
+//프로그램 목적만들기 (엔딩)
+//구조도 다시만들기
+// 몹 뒤지면서 때리는문제 해결 이프문으로 몹피0이면 뒤지고 아니면 반격식? //메서드에 추가하면 좋을거같음
+//https://velog.io/@max9106/Java-%ED%81%B4%EB%9E%98%EC%8A%A4Class          // 클래스 설명
+// 고블린킹 보스몹 만들기? 레벨5때 메인메뉴에 생기게끔

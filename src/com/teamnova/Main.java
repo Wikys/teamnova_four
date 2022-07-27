@@ -94,6 +94,7 @@ public class Main {
                 String 몬스터생성 = 생성.몬스터();
                 System.out.println("탐색중 " + 몬스터생성 + "을(를) 마주쳤습니다!");
                 System.out.println("전투를 시작합니다");
+                boolean 도주카운터 = true;
 
                 boolean 용기사용횟수 = true; // 용기스킬사용횟수
 
@@ -117,7 +118,8 @@ public class Main {
 
                     System.out.println("전투행동을 선택해주세요");
                     System.out.println("1.공격");
-                    System.out.println("2.아이템사용"); //미구현
+                    System.out.println("2.아이템사용");
+                    System.out.println("3.도주하기");
                     선택 = in.nextInt();
 
 
@@ -221,6 +223,7 @@ public class Main {
 
 
                         }
+
                     } else if (선택 == 2) { //퀵슬롯
                         for (int i = 0; i < 아이템.전투인벤토리.size(); i++) {
                             System.out.println(아이템.전투인벤토리.get(i).이름);
@@ -242,21 +245,29 @@ public class Main {
                                     System.out.println(아이템.전투인벤토리.get(i).이름 + "을 사용하였습니다");
                                     아이템.전투인벤토리.remove(아이템.전투인벤토리.get(i)); //3개씩 사용되는버그
                                     break;
-
                                 }
-
-
                             }
+                        }
+                    }
+                    else if (선택 == 3 ){
+                        System.out.println("도주를 시도합니다");
+                        int 도주확률 = random.nextInt(100);
+
+                        if (도주확률 <= 50 && 도주카운터 == true){ // 도주확률이 50안쪽이면 도망성공
+                            System.out.println("도주에 성공하셨습니다");
+                            continue 행동문;
+                        }
+                        else if (도주확률 > 50 && 도주카운터 == true){ // 도주카운터가 51~100이뜨면 도주실패
+                            System.out.println("상남자특) 도망안침");
+                            도주카운터 = false;
+                        }
+                        else if (도주카운터 == false){ // 도주시도는 단 한번만 가능
+                            System.out.println("이미 적에게 발각당하셨습니다");
+                            System.out.println("도망칠수 없습니다");
 
                         }
-
-
                     }
-                    // 몹체력 0이면 브레이크
-
                 }
-
-
 //                if (선택 == 2) {
 //                    System.out.println("도주를 시도합니다"); //도주카운터 불러오기
 //                    int 도주 = random.nextInt(5);
