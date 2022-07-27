@@ -100,16 +100,7 @@ public class 샘플코드 {
 //    }
 //}
 
-//      StringBuilder 섹스 = new StringBuilder();
-//      섹스.append("섹").append("스").append("다이스키")
-//      sout(섹스)
-// 출력값: 섹스다이스키
-//      섹스.append("전우애다이스키")
-//      sout(섹스)
-//출력값 : 섹스다이스키전우애다이스키
-//
-//sout(인벤.get(1))
-//sout(인벤.getz  (2))
+
 //
 //
 //
