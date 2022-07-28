@@ -283,7 +283,7 @@ public class Main {
                 선택 = in.nextInt();
                 아이템.인벤토리.addAll(상점.아이템반환(선택, 유저명));
                 유저명.돈 = 유저명.돈 - 상점.구매(선택, 유저명);
-                //
+
 
                 if (선택 == 0) {
                     continue;
@@ -413,15 +413,9 @@ public class Main {
                         } else if (사용.equals(아이템.인벤토리.get(i).이름) && 아이템.인벤토리.get(i).타입 != 3
                                 && 아이템.인벤토리.get(i).타입 != 4) {
                             System.out.println("아이템이 없거나 포션이 아닙니다");
-
                         }
-
-
                     }
-
                 }
-
-
                 //       사용 = in.next();
 
             } else if (선택 == 5) {
@@ -500,6 +494,8 @@ public class Main {
                     } else if (선택 == 0) {
                         continue 행동문;
 
+                    }else{
+                        System.out.println("아이템이 없거나 중복장착 시도입니다!");
                     }
                 }
 
