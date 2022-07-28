@@ -138,6 +138,17 @@ public class 캐릭터 { //구조체
         }
         return 드랍템;
     }
+    public boolean 보스_컨텐츠해금(int _캐릭터레벨, boolean _해금){ //캐릭터레벨이 5일때 고블린킹 컨텐츠해금
+
+
+        if (_캐릭터레벨 ==5){
+            System.out.println("5레벨이 되어 고블린킹 보스가 해금되었습니다");
+            System.out.println("앞으로 탐색에서 일정확률로 해당보스가 등장합니다");
+            _해금 = false;
+
+        }
+        return _해금;
+    }
 
 
 

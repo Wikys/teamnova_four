@@ -10,8 +10,11 @@ public class 몬스터 {
     int 체력;
     int 경험치;
     int 골드;
+
+
+    int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터
 //    int 아이템;
-//    int 몬스터번호;
+    int 몬스터번호;
     아이템 아이템드랍 = new 아이템();
     Random random = new Random();
 
@@ -30,8 +33,21 @@ public class 몬스터 {
         this.체력 = 체력;
         this.경험치 = 경험치;
         this.골드 = 골드;
+        this.몬스터타입 = 0;
 //        this.아이템 = 아이템;
-//        this.몬스터번호 = 몬스터번호;
+        this.몬스터번호 = 몬스터번호;
+    }
+
+    public void 보물() {
+        this.이름 = "보물";
+        this.체력 = 1;
+        this.공격력 = 0;
+        this.방어력 = 0;
+        this.경험치 = 0;
+        this.골드 = random.nextInt(1000);
+        this.몬스터타입 = 1;
+        this.몬스터번호 = 999;
+
     }
 
     public void 고블린() {
@@ -41,6 +57,8 @@ public class 몬스터 {
         this.방어력 = 0;
         this.경험치 = 5;
         this.골드 = random.nextInt(5);
+        this.몬스터타입 = 0;
+        this.몬스터번호 = 0;
     }
 
     public void 오크() {
@@ -50,6 +68,8 @@ public class 몬스터 {
         this.방어력 = 1;
         this.경험치 = 8;
         this.골드 = random.nextInt(10);
+        this.몬스터타입 = 0;
+        this.몬스터번호 = 1;
     }
 
     public void 오우거() {
@@ -59,25 +79,45 @@ public class 몬스터 {
         this.방어력 = 2;
         this.경험치 = 10;
         this.골드 = random.nextInt(15);
+        this.몬스터타입 = 0;
+        this.몬스터번호 = 2;
+
     }
 
+    public void 고블린킹() {
+        this.이름 = "고블린킹";
+        this.체력 = 50;
+        this.공격력 = 7;
+        this.방어력 = 3;
+        this.경험치 = 30;
+        this.골드 = random.nextInt(100);
+        this.몬스터타입 = 1;
+        this.몬스터번호 = 3;
 
-    public String 몬스터() { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
-        int 인카운터 = random.nextInt(2);
+    } //특수아이템 떨어뜨리게하기
 
 
-        if (인카운터 == 0) {
+    public String 몬스터(int _인카운터, int _레벨) { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
+
+        if (_인카운터 == 0){
+            this.이름 = "보물";
+        }
+        if (_인카운터 == 1) {
             this.이름 = "고블린";
 
-
-        } else if (인카운터 == 1) {
+        } else if (_인카운터 == 2) {
             this.이름 = "오크";
 
-        } else if (인카운터 == 2) {
+        } else if (_인카운터 == 3) {
             this.이름 = "오우거";
+        }
+
+        else if (_인카운터 == 4 && _레벨 >=5){
+            this.이름 = "고블린킹";
         }
         return this.이름;
     }
+
 //    public int 몹공격받음(int _체력, int _적공격력) {
 ////        몬스터 몬스터 = new 몬스터();
 //
