@@ -43,7 +43,7 @@ public class 몬스터 {
         this.체력 = 1;
         this.공격력 = 0;
         this.방어력 = 0;
-        this.경험치 = 0;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(1000);
         this.몬스터타입 = 1;
         this.몬스터번호 = 999;
@@ -86,8 +86,8 @@ public class 몬스터 {
 
     public void 고블린킹() {
         this.이름 = "고블린킹";
-        this.체력 = 50;
-        this.공격력 = 7;
+        this.체력 = 200;
+        this.공격력 = 10;
         this.방어력 = 3;
         this.경험치 = 30;
         this.골드 = random.nextInt(100);
@@ -99,7 +99,7 @@ public class 몬스터 {
 
     public String 몬스터(int _인카운터, int _레벨) { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
 
-        if (_인카운터 == 0){
+        if (_인카운터 == 0){ //더미? 치트몬스터
             this.이름 = "보물";
         }
         if (_인카운터 == 1) {
@@ -112,7 +112,7 @@ public class 몬스터 {
             this.이름 = "오우거";
         }
 
-        else if (_인카운터 == 4 && _레벨 >=5){
+        else if (_인카운터 == 4){ //5레벨 이하면 못만남
             this.이름 = "고블린킹";
         }
         return this.이름;
