@@ -8,6 +8,9 @@ public class 몬스터 {
     int 공격력;
     int 방어력;
     int 체력;
+    int 마나;
+    int 회피율;
+
     int 경험치;
     int 골드;
 
@@ -26,11 +29,13 @@ public class 몬스터 {
     public 몬스터(){}
 
 
-    public 몬스터(String 이름, int 체력, int 공격력, int 방어력, int 경험치, int 골드, int 아이템, int 몬스터번호) {
+    public 몬스터(String 이름, int 체력,int 마나, int 공격력, int 방어력,int 회피율, int 경험치, int 골드, int 아이템, int 몬스터번호) {
         this.이름 = 이름;
         this.공격력 = 공격력;
         this.방어력 = 방어력;
         this.체력 = 체력;
+        this.마나 = 마나;
+        this.회피율 = 회피율;
         this.경험치 = 경험치;
         this.골드 = 골드;
         this.몬스터타입 = 0;
@@ -41,8 +46,10 @@ public class 몬스터 {
     public void 보물() {
         this.이름 = "보물";
         this.체력 = 1;
+        this.마나 = 0;
         this.공격력 = 0;
         this.방어력 = 0;
+        this.회피율 = 0;
         this.경험치 = 1000;
         this.골드 = random.nextInt(1000);
         this.몬스터타입 = 1;
@@ -53,8 +60,10 @@ public class 몬스터 {
     public void 고블린() {
         this.이름 = "고블린";
         this.체력 = 10;
+        this.마나 = 0;
         this.공격력 = 1;
         this.방어력 = 0;
+        this.회피율 = 2;
         this.경험치 = 5;
         this.골드 = random.nextInt(5);
         this.몬스터타입 = 0;
@@ -64,8 +73,10 @@ public class 몬스터 {
     public void 오크() {
         this.이름 = "오크";
         this.체력 = 15;
+        this.마나 = 0;
         this.공격력 = 3;
         this.방어력 = 1;
+        this.회피율 = 3;
         this.경험치 = 8;
         this.골드 = random.nextInt(10);
         this.몬스터타입 = 0;
@@ -74,8 +85,9 @@ public class 몬스터 {
 
     public void 오우거() {
         this.이름 = "오우거";
-        this.체력 = 20;
-        this.공격력 = 4;
+        this.체력 = 30;
+        this.마나 = 0;
+        this.공격력 = 5;
         this.방어력 = 2;
         this.경험치 = 10;
         this.골드 = random.nextInt(15);
@@ -87,8 +99,10 @@ public class 몬스터 {
     public void 고블린킹() {
         this.이름 = "고블린킹";
         this.체력 = 200;
+        this.마나 = 0;
         this.공격력 = 10;
         this.방어력 = 3;
+        this.회피율 = 5;
         this.경험치 = 30;
         this.골드 = random.nextInt(100);
         this.몬스터타입 = 1;

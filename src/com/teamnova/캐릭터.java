@@ -1,4 +1,5 @@
 package com.teamnova;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -30,6 +31,10 @@ public class 캐릭터 { //구조체
     아이템 마나포션 = new 아이템("마나포션",4,901,5);
     Random random = new Random();
     스킬 용기 = new 스킬("용기", 5, 1 , 3, false, "방어력+");
+//    ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
+//    ArrayList<아이템> 장비창 = new ArrayList<아이템>();
+//    ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
+//    //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
 
     public 캐릭터(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치) {
         this.이름 = _이름;
@@ -48,6 +53,22 @@ public class 캐릭터 { //구조체
 
     public 캐릭터() {
 
+    }
+    public String 캐릭터이름(String _입력값 ) { //캐릭터의 이름을 기입해주는 메소드
+        System.out.println(_입력값+" 캐릭터가 생성되었습니다");
+        this.이름 = _입력값;
+        return _입력값;
+    }
+    public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리){
+        _인벤토리.add(낡은검);
+        _인벤토리.add(가죽갑옷);
+        System.out.println("기본아이템이 지급되었습니다");
+        return _인벤토리;
+    }
+    public ArrayList<스킬> 기본스킬(ArrayList<스킬> _스킬인벤){
+        _스킬인벤.add(용기);
+        System.out.println("기본스킬이 지급되었습니다");
+        return _스킬인벤;
     }
 
 
@@ -160,7 +181,10 @@ public class 캐릭터 { //구조체
 
 
 
+
+
     }
+
 
 
 
