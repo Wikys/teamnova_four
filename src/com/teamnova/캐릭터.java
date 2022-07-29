@@ -28,9 +28,9 @@ public class 캐릭터 { //구조체
     아이템 가죽갑옷 = new 아이템("가죽갑옷", 2, 100, 2);
     아이템 철갑옷 = new 아이템("철갑옷", 2, 101, 5);
     아이템 체력포션 = new 아이템("체력포션",3,900,5);
-    아이템 마나포션 = new 아이템("마나포션",4,901,5);
+    아이템 마나포션 = new 아이템("마나포션",4,901,5); //나중에 지우자
     Random random = new Random();
-    스킬 용기 = new 스킬("용기", 5, 1 , 3, false, "방어력+");
+    스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1);
 //    ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
 //    ArrayList<아이템> 장비창 = new ArrayList<아이템>();
 //    ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
