@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="0728 집 (검사전)">
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 메서드정리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메인메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  }
+}</component>
   <component name="RunManager" selected="애플리케이션.com.teamnova.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -96,14 +100,7 @@
       <option name="project" value="LOCAL" />
       <updated>1658907957043</updated>
     </task>
-    <task id="LOCAL-00002" summary="0728 집 (검사전)">
-      <created>1659005582376</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1659005582376</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,12 +113,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />
-    <MESSAGE value="0728 집 (검사전)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0728 집 (검사전)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 회사" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
