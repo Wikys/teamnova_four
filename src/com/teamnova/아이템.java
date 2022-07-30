@@ -27,10 +27,11 @@ public class 아이템 {
 
     }
 
-    아이템(String 이름, int 타입, int 아이템번호, int 수치) {
+    아이템(String 이름, int 타입, int 아이템번호, int 수치, String 설명) {
         this.이름 = 이름;
         this.타입 = 타입;
         this.아이템번호 = 아이템번호;
+        this.설명 = 설명;
 
         if (타입 == 1) { //무기
             if (아이템번호 == 0) {
