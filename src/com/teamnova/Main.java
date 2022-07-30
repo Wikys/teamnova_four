@@ -418,41 +418,7 @@ public class Main {
             } else if (선택 == 0) {
                 return;
             }
-
         }
-//        System.out.println("전투를 시작합니다");
-//        while (true) {
-//            System.out.println("플레이어, 몬스터 스테이터스 출력"); // 클래스
-//            System.out.println("전투행동을 선택해주세요");
-//            System.out.println("1.공격");
-//            System.out.println("2.방어");
-//            선택 = in.nextInt();
-//
-//            if (선택 == 1) {
-//                System.out.println("어떻게 공격하시겠습니까");
-//                System.out.println("1.공격");
-//                System.out.println("2.스킬사용");
-//                선택 = in.nextInt();
-//
-//                if (선택 == 1) {
-//                    System.out.println("+몬스터이름+을(를) 공격하였습니다 데미지를 +공격력+ 주었습니다"); //연산후 저장해서 루프처음으로
-//                } else if (선택 == 2) {
-//                    System.out.println("스킬을 사용해서 피해를 # 주었습니다"); //종족스킬별로 다르게설정..?
-//                }
-//            } else if (선택 == 2) {
-//                System.out.println("적의 공격을 방어하였습니다.");
-//                System.out.println("데미지를 +상대방공격력+ - +방어력+ 받았습니다"); ////연산후 저장해서 루프처음으로
-//
-//            }break; // 몹체력 0이면 브레이크
-//
-//        }
-//        System.out.println("+몬스터이름+을(를) 처치하였습니다"); // 이부분은 고려를 해야될거같음 반복이안됨
-//        System.out.println("획득 경험치 n");
-//        System.out.println("획득 골드 n");
-//        System.out.println("획득 아이템 n");
-//        System.out.println("계속하려면 아무숫자나 입력하세요");
-//        선택 = in.nextInt();
-
     }
 }
 
