@@ -18,7 +18,7 @@ public class 상점 {
 
     int 판매가격;
 
-    public void 판매목록(){
+    public void 판매목록(캐릭터 _캐릭터){
 
 
         System.out.println("구매할 물건 번호를 입력 해주세요");
@@ -28,11 +28,11 @@ public class 상점 {
         System.out.println("4.체력포션 "+체력포션가격.가격+" Gold");
         System.out.println("5.마나포션 "+마나포션가격.가격+" Gold");
         System.out.println();
-
-
-        // 내 소지금 추가및 돈부족시에 경고띄우기
+        System.out.println("소지금 " + _캐릭터.돈 + " Gold");
+        System.out.println();
+        System.out.println("0.나가기");
+        // 돈부족시에 경고띄우기
         // 구매완료되면 인벤토리와 전투인벤토리에 생성
-
     }
     public int 구매(int _구매번호, 캐릭터 소지금){ // 구매번호를 인자로 받아와서 아이템에 대입후 함수실행
         int 지불 = 0;
