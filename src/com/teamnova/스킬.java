@@ -2,8 +2,11 @@ package com.teamnova;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Scanner;
 
 public class 스킬 {
+    Scanner in = new Scanner(System.in);
+    int 입력;
 
     String 스킬이름;
     int 스킬공격력;
@@ -12,6 +15,7 @@ public class 스킬 {
     boolean 스킬제한 = true;
     int 수치;
     int 효과; // 0공격관련버프 1방어관련버프
+    String 설명;
 
 
     ArrayList<스킬> _스킬목록 = new ArrayList<>();
@@ -20,13 +24,14 @@ public class 스킬 {
 
     }
 
-    스킬(String 스킬이름, int 마나소모, int 수치, int 계열, boolean 스킬제한, int 효과) { // 회복스킬
+    스킬(String 스킬이름, int 마나소모, int 수치, int 계열, boolean 스킬제한, int 효과, String 설명) { // 회복스킬
         this.스킬이름 = 스킬이름;
         this.마나소모 = 마나소모;
         this.수치 = 수치;
         this.계열 = 계열;
         this.스킬제한 = 스킬제한;
         this.효과 = 효과;
+        this.설명 = 설명;
 
     }
 
@@ -50,6 +55,29 @@ public class 스킬 {
         int _패널티 = _현재마나 - _마나소모;
         return _패널티;
     }
-
+    public void 스킬인벤(캐릭터 _캐릭터){
+        System.out.println("보유스킬");
+        System.out.println("====================");
+        for (int i = 0; i < this._스킬목록.size(); i++) {
+            System.out.println("스킬 이름: " + i + ". " + _스킬목록.get(i).스킬이름);
+        }
+        System.out.println("====================");
+        System.out.println("1.스킬정보");
+        System.out.println("0.나가기");
+        입력 = in.nextInt();
+        if(입력 == 1) {
+            System.out.println("설명을 보고싶은 스킬의 번호를 입력하세요");
+            입력 = in.nextInt();
+            스킬 선택스킬 = _스킬목록.get(입력);
+            System.out.println(선택스킬.설명);
+            System.out.println("마나소모량: "+선택스킬.마나소모);
+            System.out.println();
+            System.out.println("00.돌아가기");
+            입력 = in.nextInt();
+            if(입력 == 00){
+                this.스킬인벤(_캐릭터);
+            }
+        }
+    }// 나가는건 밖에다..
 }
 

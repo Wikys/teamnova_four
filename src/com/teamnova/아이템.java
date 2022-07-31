@@ -27,11 +27,12 @@ public class 아이템 {
 
     }
 
-    아이템(String 이름, int 타입, int 아이템번호, int 수치, String 설명) {
+    아이템(String 이름, int 타입, int 아이템번호, int 수치, String 설명, int 가격) { //아이템타입,번호,수치 갈라서 어떤종류의 아이템인지 갈라주는 생성자
         this.이름 = 이름;
         this.타입 = 타입;
         this.아이템번호 = 아이템번호;
         this.설명 = 설명;
+        this.가격 = 가격;
 
         if (타입 == 1) { //무기
             if (아이템번호 == 0) {
@@ -65,7 +66,7 @@ public class 아이템 {
         this.가격 = 가격;
     }
 
-    public void 낡은검() {
+    public void 낡은검() { //아이템 정보들 (기능x)
         this.이름 = "낡은검";
         this.타입 = 1;
         this.공격력 = 1;

@@ -36,7 +36,6 @@ public class 몬스터 {
         this.경험치 = 경험치;
         this.골드 = 골드;
         this.몬스터타입 = 0;
-//        this.아이템 = 아이템;
         this.몬스터번호 = 몬스터번호;
     }
 
