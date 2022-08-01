@@ -18,15 +18,11 @@ public class 몬스터 {
     아이템 아이템드랍 = new 아이템();
     Random random = new Random();
 
-//    public 몬스터 (String _이름, int _공격력, int _방어력, int _체력, int _경험치, int _골드, int _아이템){ //스테이터스
-//
-//
-//    }
-    //디폴트 생성자
+
     public 몬스터(){}
 
 
-    public 몬스터(String 이름, int 체력,int 마나, int 공격력, int 방어력,int 회피율, int 경험치, int 골드, int 아이템, int 몬스터번호) {
+    public 몬스터(String 이름, int 체력,int 마나, int 공격력, int 방어력,int 회피율, int 경험치, int 골드, int 몬스터번호, int 몬스터타입) {
         this.이름 = 이름;
         this.공격력 = 공격력;
         this.방어력 = 방어력;
@@ -35,9 +31,9 @@ public class 몬스터 {
         this.회피율 = 회피율;
         this.경험치 = 경험치;
         this.골드 = 골드;
-        this.몬스터타입 = 0;
         this.몬스터번호 = 몬스터번호;
-    }
+        this.몬스터타입 = 몬스터타입;
+    } //아직쓸곳 못정함
 
     public void 보물() {
         this.이름 = "보물";
@@ -108,22 +104,26 @@ public class 몬스터 {
 
 
     public String 몬스터(int _인카운터, int _레벨) { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
+        몬스터 몬스터생성;
 
-        if (_인카운터 == 0){ //더미? 치트몬스터
-            this.이름 = "보물";
-        }
-        if (_인카운터 == 1) {
-            this.이름 = "고블린";
+//        if (_인카운터 == 0){ //더미? 치트몬스터
+//            this.이름 = "보물";
+//        }
+        if (_인카운터 == 0) {
+            this.고블린();
+
+        } else if (_인카운터 == 1) {
+//            this.이름 = "오크";
+            this.오크();
 
         } else if (_인카운터 == 2) {
-            this.이름 = "오크";
-
-        } else if (_인카운터 == 3) {
-            this.이름 = "오우거";
+//            this.이름 = "오우거";
+            this.오우거();
         }
 
-        else if (_인카운터 == 4){ //5레벨 이하면 못만남
-            this.이름 = "고블린킹";
+        else if (_인카운터 == 3){ //5레벨 이하면 못만남
+//            this.이름 = "고블린킹";
+            this.고블린킹();
         }
         return this.이름;
     }

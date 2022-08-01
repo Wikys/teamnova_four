@@ -10,7 +10,9 @@ public class 메인메뉴 {
     boolean 방어구중복 = false;
 
     public void 행동메뉴() {
+
         System.out.println("행동을 선택해주세요");
+        System.out.println("====================");
         System.out.println("1.탐색");
         System.out.println("2.휴식");
         System.out.println("3.상점");
@@ -19,6 +21,7 @@ public class 메인메뉴 {
         System.out.println("6.장비");
         System.out.println("7.스킬");
         System.out.println("0.끝내기");
+        System.out.println("====================");
     }
 
     public 캐릭터 유저상태_초기화(캐릭터 _플레이어, 스킬 _스킬상태) { // 버프나 기타등등으로 올라간 능력치 초기화
@@ -53,6 +56,7 @@ public class 메인메뉴 {
     }
 
     public void 스테이터스(캐릭터 _캐릭터) { //캐릭터의 스테이터스창
+        System.out.println("====================");
         System.out.println("이름 = " + _캐릭터.이름);
         System.out.println("레벨 = " + _캐릭터.레벨); //최대레벨 표시
         System.out.println("공격력 = " + _캐릭터.공격력); //크리티컬 시스템 추가?
@@ -61,6 +65,7 @@ public class 메인메뉴 {
         System.out.println("체력 = " + _캐릭터.체력 + "/" + _캐릭터.최대체력); //최대체력 표시
         System.out.println("마나 = " + _캐릭터.마나 + "/" + _캐릭터.최대마나); //최대마나 표시
         System.out.println("경험치 = " + _캐릭터.경험치 + "/" + _캐릭터.레벨업경험치); //최대경험치 표시
+        System.out.println("====================");
     }
 
     public void 소지품창(캐릭터 _캐릭터, 아이템 _아이템) { //아이템장착,버리기,퀵슬롯장착등의 기능을 수행하는메서드
@@ -91,8 +96,10 @@ public class 메인메뉴 {
                 System.out.println("아이템 설명: " + 장착아이템.설명);
                 System.out.println("====================");
                 System.out.println("정말로 장착하시겠습니까?");
+                System.out.println("====================");
                 System.out.println("1.예");
                 System.out.println("2.아니오");
+                System.out.println("====================");
                 입력 = in.nextInt();
                 if (입력 == 1 && 무기중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
@@ -115,8 +122,10 @@ public class 메인메뉴 {
                 System.out.println("아이템 설명: " + 장착아이템.설명);
                 System.out.println("====================");
                 System.out.println("정말로 장착하시겠습니까?");
+                System.out.println("====================");
                 System.out.println("1.예");
                 System.out.println("2.아니오");
+                System.out.println("====================");
                 입력 = in.nextInt();
                 if (입력 == 1 && 방어구중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
@@ -153,9 +162,11 @@ public class 메인메뉴 {
             아이템 버릴아이템 = _아이템.인벤토리.get(입력);
             //버릴아이템까진 선택됨
             System.out.println(버릴아이템.이름 + "을 정말 버리겠습니까?");
+            System.out.println("====================");
             System.out.println("1.예");
             System.out.println("2.아니오");
             System.out.println("0.나가기");
+            System.out.println("====================");
             입력 = in.nextInt();
             if (입력 == 1) {
                 System.out.println(버릴아이템.이름 + "을 버렸습니다");

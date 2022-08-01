@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 메서드정리 (전투메뉴)">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-07-25__12_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-07-25__12_05_________Changes_.xml" afterDir="false" />
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-07-25__12_05_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-07-25_오전_12_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/상점.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/상점.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659171364882</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비">
+      <created>1659283412729</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659283412729</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />
     <MESSAGE value="Changes 메서드정리 (전투메뉴)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes 메서드정리 (전투메뉴)" />
+    <MESSAGE value="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
