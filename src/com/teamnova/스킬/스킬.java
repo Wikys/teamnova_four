@@ -1,30 +1,29 @@
-package com.teamnova;
+package com.teamnova.스킬;
+
+import com.teamnova.플레이어.캐릭터;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class 스킬 {
-    Scanner in = new Scanner(System.in);
-    int 입력;
+    public Scanner in = new Scanner(System.in);
+    public int 입력;
+    public String 스킬이름;
+    public int 스킬공격력;
+    public int 마나소모;
+    public int 계열; // 공격계열일때 ,패시브일떄 ,회복계열일때랑 객체 다르게만들어야함 // 1.공격스킬, 2.회복스킬, 3.버프스킬
+    public boolean 스킬제한 = true;
+    public int 수치;
+    public int 효과; // 0공격관련버프 1방어관련버프
+    public int 마법력;
+    public String 설명;
+    public ArrayList<스킬> _스킬목록 = new ArrayList<>();
 
-    String 스킬이름;
-    int 스킬공격력;
-    int 마나소모;
-    int 계열; // 공격계열일때 ,패시브일떄 ,회복계열일때랑 객체 다르게만들어야함 // 1.공격스킬, 2.회복스킬, 3.버프스킬
-    boolean 스킬제한 = true;
-    int 수치;
-    int 효과; // 0공격관련버프 1방어관련버프
-    String 설명;
-
-
-    ArrayList<스킬> _스킬목록 = new ArrayList<>();
-
-    스킬() {
+    public 스킬() {
 
     }
 
-    스킬(String 스킬이름, int 마나소모, int 수치, int 계열, boolean 스킬제한, int 효과, String 설명) { // 회복스킬
+    public 스킬(String 스킬이름, int 마나소모, int 수치, int 계열, boolean 스킬제한, int 효과, String 설명) { // 회복스킬
         this.스킬이름 = 스킬이름;
         this.마나소모 = 마나소모;
         this.수치 = 수치;

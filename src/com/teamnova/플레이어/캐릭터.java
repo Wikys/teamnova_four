@@ -1,42 +1,53 @@
-package com.teamnova;
-import java.lang.reflect.Array;
+package com.teamnova.플레이어;
+import com.teamnova.스킬.스킬;
+import com.teamnova.아이템.아이템;
+
 import java.util.ArrayList;
 import java.util.Random;
-
+import java.util.Scanner;
 public class 캐릭터 { //구조체
-    String 이름;
-    int 레벨 = 1;
-    int 공격력 = 5;
-    int 전투중공격력 = 공격력; // 버프스킬등의 사용으로 증가되는 공격력 // 초기값은 기본공격력
-    int 방어력 = 0;
-    int 전투중방어력 = 방어력; // 버프스킬등의 사용으로 증가되는 방어력
-
-    int 회피율 = 5;
-    int 전투중회피율 = 회피율; // 버프스킬등의 사용으로 증가되는 방어력
-    int 체력 = 10;
-    int 전투중체력 = 체력;
-    int 최대체력 = 10;
-    int 마나 = 10;
-    int 전투중마나 = 마나;
-    int 최대마나 = 10;
-    int 돈 = 10;
-    int 경험치 = 0;
-    int 레벨업경험치; // 레벨 *5로 설정?
-    아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0); // 아이템호출
-    아이템 철검 = new 아이템("철검", 1, 1, 3, "단단한 철로 만들어진 날카로운 검이다",10);
-    아이템 고블린왕의_몽둥이 = new 아이템("고블린왕의_몽둥이", 1, 2, 5, "조악해 보이지만 한 종족의 왕이 썻던 무기인만큼 튼튼하다",0);
-    아이템 가죽갑옷 = new 아이템("가죽갑옷", 2, 100, 2, "초급 모험가들이 즐겨입는 가죽갑옷이다",15);
-    아이템 철갑옷 = new 아이템("철갑옷", 2, 101, 5, "철로 만들어져 꽤 강력한 공격까지 막아낼수 있을듯하다",30);
-    아이템 체력포션 = new 아이템("체력포션",3,900,5, "단순히 체력이 조금 회복될뿐인 싸구려 포션이다",5);
-    아이템 마나포션 = new 아이템("마나포션",4,901,5, "단순히 마나가 조금 회복될뿐인 싸구려 포션이다",5);
-    Random random = new Random();
-    스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1,"용기가 차오릅니다 방어력이 1 증가합니다");
+    public Scanner in = new Scanner(System.in);
+    public String 이름;
+    public int 입력;
+    public int 레벨 = 1;
+    public int 공격력 = 5;
+    public int 전투중공격력 = 공격력; // 버프스킬등의 사용으로 증가되는 공격력 // 초기값은 기본공격력
+    public int 방어력 = 0;
+    public int 전투중방어력 = 방어력; // 버프스킬등의 사용으로 증가되는 방어력
+    public int 회피율 = 5;
+    public int 전투중회피율 = 회피율; // 버프스킬등의 사용으로 증가되는 방어력
+    public int 체력 = 10;
+    public int 전투중체력 = 체력;
+    public int 최대체력 = 10;
+    public int 마나 = 10;
+    public int 전투중마나 = 마나;
+    public int 최대마나 = 10;
+    public int 마법력 = 0;
+    public int 전투중마법력 = 마법력;
+    public int 돈 = 10;
+    public int 경험치 = 0;
+    public int 레벨업경험치; // 레벨 *5로 설정?
+    public int 종족구분;
+    public int 종족;
+     public static 아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0,0); // 아이템호출
+     public static 아이템 철검 = new 아이템("철검", 1, 1, 3, "단단한 철로 만들어진 날카로운 검이다",10,0);
+     public static 아이템 고블린왕의_몽둥이 = new 아이템("고블린왕의_몽둥이", 1, 2, 5, "조악해 보이지만 한 종족의 왕이 썻던 무기인만큼 튼튼하다",0,0);
+     public static 아이템 가죽갑옷 = new 아이템("가죽갑옷", 2, 100, 2, "초급 모험가들이 즐겨입는 가죽갑옷이다",15,0);
+     public static 아이템 철갑옷 = new 아이템("철갑옷", 2, 101, 5, "철로 만들어져 꽤 강력한 공격까지 막아낼수 있을듯하다",30,0);
+     public static 아이템 체력포션 = new 아이템("체력포션",3,900,5, "단순히 체력이 조금 회복될뿐인 싸구려 포션이다",5,0);
+     public static 아이템 마나포션 = new 아이템("마나포션",4,901,5, "단순히 마나가 조금 회복될뿐인 싸구려 포션이다",5,0);
+     public static 아이템 조악한_완드 = new 아이템("조악한_완드",1,3,5,"허접하게 만들어진 완드지만 조금의 마법력은 남아있는듯하다",20,1);
+    public Random random = new Random();
+    public 스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1,"용기가 차오릅니다 방어력이 1 증가합니다");
 //    ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
 //    ArrayList<아이템> 장비창 = new ArrayList<아이템>();
 //    ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
 //    //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
 
-    public 캐릭터(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치) {
+
+
+
+    public 캐릭터(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치,int _마법력,int _종족구분,int _종족) {
         this.이름 = _이름;
         this.레벨 = _레벨;
         this.공격력 = _공격력;
@@ -49,7 +60,10 @@ public class 캐릭터 { //구조체
         this.돈 = _돈;
         this.경험치 = _경험치;
         this.레벨업경험치 = _레벨업경험치;
-    }
+        this.마법력 = _마법력;
+        this.종족구분 = _종족구분;
+        this.종족 = _종족;
+    } // 하위종족 클래스에 넣어야할듯
 
     public 캐릭터() {
 
@@ -70,8 +84,6 @@ public class 캐릭터 { //구조체
         System.out.println("기본스킬이 지급되었습니다");
         return _스킬인벤;
     }
-
-
     public int 공격받음(int _방어력, int _적공격력, int _회피율) {
 //        몬스터 몬스터 = new 몬스터();
         int 회피 = random.nextInt(100)+1;
@@ -89,8 +101,6 @@ public class 캐릭터 { //구조체
         }
         return _적공격력;
     }
-
-
     public int 포션꿀꺽(int 포션회복량, int 최대체마, int 전투체마){ // 포션회복 함수
         int _회복량 = 0;
         if(최대체마 == 전투체마 ){ // 최대 체력,마나가 현재 체력마나와 같으면 0 리턴
@@ -101,11 +111,8 @@ public class 캐릭터 { //구조체
         }else { // 아니면 그냥 포션회복량 +
          _회복량 =  전투체마 + 포션회복량;
         }
-
-
         return _회복량;
     }
-
     public 아이템 랜덤드랍(int _몬스터타입){
         int 아이템드랍 = random.nextInt(5)+1;
         아이템 드랍템 = null; //초기화
@@ -148,11 +155,6 @@ public class 캐릭터 { //구조체
         }
         return _해금;
     }
-
-
-
-
-
     }
 
 

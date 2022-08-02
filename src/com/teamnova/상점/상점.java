@@ -1,19 +1,22 @@
-package com.teamnova;
+package com.teamnova.상점;
 
-import java.util.ArrayList;
+import com.teamnova.아이템.아이템;
+import com.teamnova.플레이어.캐릭터;
+
 import java.util.Scanner;
 
 public class 상점 {
-    Scanner in = new Scanner(System.in);
-    int 입력;
-    캐릭터 캐릭터 = new 캐릭터();
-    아이템 낡은검가격 = new 아이템(0); // 아이템호출
-    아이템 철검가격 = new 아이템(10);
-    아이템 가죽갑옷가격 = new 아이템(15);
-    아이템 철갑옷가격 = new 아이템(30);
-    아이템 체력포션가격 = new 아이템(5);
-    아이템 마나포션가격 = new 아이템(5);
-    아이템 아이템 = new 아이템();
+    public Scanner in = new Scanner(System.in);
+    public int 입력;
+//  public   com.teamnova.플레이어.캐릭터 캐릭터 = new 캐릭터();
+//  public   com.teamnova.아이템.아이템 낡은검가격 = new 아이템(0); // 아이템호출
+    public 아이템 철검가격 = new 아이템(10);
+    public 아이템 가죽갑옷가격 = new 아이템(15);
+    public 아이템 철갑옷가격 = new 아이템(30);
+    public 아이템 체력포션가격 = new 아이템(5);
+    public 아이템 마나포션가격 = new 아이템(5);
+    public 아이템 조악한_완드가격 = new 아이템 (20);
+    public 아이템 아이템 = new 아이템();
 
 
     int 판매가격;
@@ -27,6 +30,7 @@ public class 상점 {
         System.out.println("3.철갑옷 "+철갑옷가격.가격+" Gold");
         System.out.println("4.체력포션 "+체력포션가격.가격+" Gold");
         System.out.println("5.마나포션 "+마나포션가격.가격+" Gold");
+        System.out.println("6.조악한 완드 "+조악한_완드가격.가격+" Gold");
         System.out.println();
         System.out.println("소지금 " + _캐릭터.돈 + " Gold");
         System.out.println();
@@ -153,6 +157,31 @@ public class 상점 {
                 this.판매목록(_캐릭터, _인벤토리);
             }
             else if(입력 == 1 && _캐릭터.돈 < _캐릭터.마나포션.가격){
+                System.out.println("소지금이 부족합니다!");
+                this.판매목록(_캐릭터, _인벤토리);
+            }
+            else if(입력 == 2){
+                this.판매목록(_캐릭터, _인벤토리);
+            }
+        }
+        else if (입력 == 6){ //구매선택하면 아이템정보 출력
+            System.out.println("====================");
+            System.out.println("아이템명: " + _캐릭터.조악한_완드.이름);
+            System.out.println("마법력: " + _캐릭터.조악한_완드.마법력);
+            System.out.println("아이템 설명: " + _캐릭터.조악한_완드.설명);
+            System.out.println("====================");
+
+            System.out.println(_캐릭터.조악한_완드.이름+"을 정말 구매하시겠습니까?");
+            System.out.println("1.예");
+            System.out.println("2.아니오");
+            입력 = in.nextInt();
+            if (입력 == 1 && _캐릭터.돈 >= _캐릭터.조악한_완드.가격){ // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                System.out.println("구매가 완료되었습니다");
+                _인벤토리.인벤토리.add(캐릭터.조악한_완드);
+                _캐릭터.돈 = _캐릭터.돈 - _캐릭터.조악한_완드.가격;
+                this.판매목록(_캐릭터, _인벤토리);
+            }
+            else if(입력 == 1 && _캐릭터.돈 < _캐릭터.조악한_완드.가격){
                 System.out.println("소지금이 부족합니다!");
                 this.판매목록(_캐릭터, _인벤토리);
             }

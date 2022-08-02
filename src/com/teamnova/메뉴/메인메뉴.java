@@ -1,13 +1,21 @@
-package com.teamnova;
+package com.teamnova.메뉴;
+
+import com.teamnova.스킬.스킬;
+import com.teamnova.아이템.아이템;
+import com.teamnova.플레이어.캐릭터;
 
 import java.util.Scanner;
 
 public class 메인메뉴 {
-    Scanner in = new Scanner(System.in);
-    boolean 전투종료 = false;
-    int 입력;
-    boolean 무기중복 = false;
-    boolean 방어구중복 = false;
+    public Scanner in = new Scanner(System.in);
+    public boolean 전투종료 = false;
+    public int 입력;
+    public boolean 무기중복 = false;
+    public boolean 방어구중복 = false;
+
+    public void 캐릭터작성() {
+
+    }
 
     public void 행동메뉴() {
 
@@ -41,6 +49,7 @@ public class 메인메뉴 {
 //        } else if (_플레이어.전투중회피율 > _플레이어.회피율) {
         _플레이어.전투중회피율 = _플레이어.회피율;
 //        }
+        _플레이어.전투중마법력 = _플레이어.마법력;
         _스킬상태.스킬제한 = false;
         this.전투종료 = true;
         return _플레이어;
@@ -59,7 +68,8 @@ public class 메인메뉴 {
         System.out.println("====================");
         System.out.println("이름 = " + _캐릭터.이름);
         System.out.println("레벨 = " + _캐릭터.레벨); //최대레벨 표시
-        System.out.println("공격력 = " + _캐릭터.공격력); //크리티컬 시스템 추가?
+        System.out.println("공격력 = " + _캐릭터.공격력);
+        System.out.println("마법력 = " + _캐릭터.마법력);
         System.out.println("방어력 = " + _캐릭터.방어력);
         System.out.println("회피율 = " + _캐릭터.회피율);
         System.out.println("체력 = " + _캐릭터.체력 + "/" + _캐릭터.최대체력); //최대체력 표시
@@ -89,7 +99,7 @@ public class 메인메뉴 {
             System.out.println("장착하실 아이템의 번호를 입력하세요");
             입력 = in.nextInt();
             아이템 장착아이템 = _아이템.인벤토리.get(입력);
-            if (장착아이템.타입 == 1) {
+            if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 0) { //일반무기 장착
                 System.out.println("====================");
                 System.out.println("아이템명: " + 장착아이템.이름);
                 System.out.println("공격력: " + 장착아이템.공격력);
@@ -104,6 +114,32 @@ public class 메인메뉴 {
                 if (입력 == 1 && 무기중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
                     _캐릭터.공격력 = _캐릭터.공격력 + 장착아이템.공격력;
+                    _아이템.장비창.add(장착아이템);
+                    _아이템.인벤토리.remove(장착아이템);
+                    무기중복 = true;
+                    this.소지품창(_캐릭터, _아이템);
+                } else if (입력 == 2) {
+                    this.소지품창(_캐릭터, _아이템);
+                }else{
+                    System.out.println("중복착용 하지마세요!");
+                    this.소지품창(_캐릭터, _아이템);
+                }
+            }
+            else if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 1) { //마법무기 장착
+                System.out.println("====================");
+                System.out.println("아이템명: " + 장착아이템.이름);
+                System.out.println("마법력: " + 장착아이템.마법력);
+                System.out.println("아이템 설명: " + 장착아이템.설명);
+                System.out.println("====================");
+                System.out.println("정말로 장착하시겠습니까?");
+                System.out.println("====================");
+                System.out.println("1.예");
+                System.out.println("2.아니오");
+                System.out.println("====================");
+                입력 = in.nextInt();
+                if (입력 == 1 && 무기중복 == false) {
+                    System.out.println(장착아이템.이름 + " 장착 되었습니다");
+                    _캐릭터.마법력 = _캐릭터.마법력 + 장착아이템.마법력;
                     _아이템.장비창.add(장착아이템);
                     _아이템.인벤토리.remove(장착아이템);
                     무기중복 = true;

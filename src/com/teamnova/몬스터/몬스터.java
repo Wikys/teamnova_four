@@ -1,22 +1,24 @@
-package com.teamnova;
+package com.teamnova.몬스터;
+
+import com.teamnova.아이템.아이템;
 
 import java.util.Random;
 
 
 public class 몬스터 {
-    String 이름;
-    int 공격력;
-    int 방어력;
-    int 체력;
-    int 마나;
-    int 회피율;
-    int 경험치;
-    int 골드;
-    int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터 아직은 딱히 쓰는덴없음
+    public String 이름;
+    public int 공격력;
+    public int 방어력;
+    public int 체력;
+    public int 마나;
+    public int 회피율;
+    public int 경험치;
+    public int 골드;
+    public int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터 아직은 딱히 쓰는덴없음
 //    int 아이템;
-    int 몬스터번호;
-    아이템 아이템드랍 = new 아이템();
-    Random random = new Random();
+    public int 몬스터번호;
+    public 아이템 아이템드랍 = new 아이템();
+    public Random random = new Random();
 
 
     public 몬스터(){}
@@ -81,6 +83,7 @@ public class 몬스터 {
         this.마나 = 0;
         this.공격력 = 5;
         this.방어력 = 2;
+        this.회피율 = 0;
         this.경험치 = 10;
         this.골드 = random.nextInt(15);
         this.몬스터타입 = 0;
@@ -102,31 +105,6 @@ public class 몬스터 {
 
     } //특수아이템 떨어뜨리게하기
 
-
-    public String 몬스터(int _인카운터, int _레벨) { //랜덤숫자 받아서 랜덤몬스터 이름 리턴
-        몬스터 몬스터생성;
-
-//        if (_인카운터 == 0){ //더미? 치트몬스터
-//            this.이름 = "보물";
-//        }
-        if (_인카운터 == 0) {
-            this.고블린();
-
-        } else if (_인카운터 == 1) {
-//            this.이름 = "오크";
-            this.오크();
-
-        } else if (_인카운터 == 2) {
-//            this.이름 = "오우거";
-            this.오우거();
-        }
-
-        else if (_인카운터 == 3){ //5레벨 이하면 못만남
-//            this.이름 = "고블린킹";
-            this.고블린킹();
-        }
-        return this.이름;
-    }
 
 
     public int 몹공격받음(int _방어력, int _적공격력, int _회피율) {
