@@ -7,15 +7,75 @@ import com.teamnova.플레이어.캐릭터;
 import java.util.Scanner;
 
 public class 메인메뉴 {
+    캐릭터 캐릭터;
+
     public Scanner in = new Scanner(System.in);
     public boolean 전투종료 = false;
     public int 입력;
     public boolean 무기중복 = false;
     public boolean 방어구중복 = false;
+    String 유저이름;
 
-    public void 캐릭터작성() {
-
-    }
+//    public 캐릭터 캐릭터작성(캐릭터 _캐릭터) {
+//
+//        System.out.println("1.시작하기");
+//        System.out.println("0.끝내기");
+//        입력 = in.nextInt();
+//        if (입력 == 1) {
+//            System.out.println("캐릭터 생성을 시작합니다");
+//            System.out.println("====================");
+//            System.out.println("종종분류를 선택해주세요");
+//            System.out.println("1.인간종 2.아인종 3.언데드");
+//            System.out.println("====================");
+//            입력 = in.nextInt();
+//
+//            if (입력 == 1) {
+//                System.out.println("종족을 선택해주세요");
+//                System.out.println("1.인간");
+//                System.out.println();
+//                System.out.println("0.뒤로가기");
+//                입력 = in.nextInt();
+//                if (입력 == 1) {
+//                    유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0);
+//                    System.out.println("인간을 선택하셨습니다");
+//                } else if (입력 == 0) {
+//                    this.캐릭터작성(_캐릭터);
+//                }
+//            } else if (입력 == 2) {
+//                System.out.println("종족을 선택해주세요");
+//                System.out.println("1.비스트맨");
+//                System.out.println();
+//                System.out.println("0.뒤로가기");
+//                입력 = in.nextInt();
+//                if (입력 == 1) {
+//                    유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1);
+//                    System.out.println("비스트맨을 선택하셨습니다");
+//                } else if (입력 == 0) {
+//                    this.캐릭터작성(_캐릭터);
+//                }
+//            } else if (입력 == 3) {
+//                System.out.println("종족을 선택해주세요");
+//                System.out.println("1.스켈레톤");
+//                System.out.println();
+//                System.out.println("0.뒤로가기");
+//                입력 = in.nextInt();
+//                if (입력 == 1) {
+//                    유저명 = new 스켈레톤(null, 1, 3, 0, 3, 15, 15, 20, 20, 0, 0, 10, 10, 2, 2);
+//                    System.out.println("스켈레톤을 선택하셨습니다");
+//                } else if (입력 == 0) {
+//                    this.캐릭터작성(_캐릭터);
+//                }
+//            }
+//        } return 유저명;
+//    }
+//    public void 캐릭터_이름(캐릭터 _캐릭터){
+//        System.out.println("캐릭터의 이름을 입력해주세요");
+//        유저이름 = in.next();
+//        _캐릭터.이름 = 유저이름;
+//        System.out.println("이름이 "+_캐릭터.이름+" 으로 결정되었습니다");
+//        System.out.println("당신은 모험을 시작합니다");
+//
+//    }
 
     public void 행동메뉴() {
 
@@ -37,7 +97,6 @@ public class 메인메뉴 {
 //            _플레이어.체력 = _플레이어.최대체력;
 //        } else if (_플레이어.전투중체력 <= _플레이어.최대체력) {
         _플레이어.체력 = _플레이어.전투중체력;
-
 //        } else if (_플레이어.전투중마나 > _플레이어.최대마나) {
 //            _플레이어.전투중마나 = _플레이어.최대마나;
 //        } else if (_플레이어.전투중마나 <= _플레이어.최대마나) {
@@ -50,6 +109,7 @@ public class 메인메뉴 {
         _플레이어.전투중회피율 = _플레이어.회피율;
 //        }
         _플레이어.전투중마법력 = _플레이어.마법력;
+        _플레이어.종족스킬_제한 = true;
         _스킬상태.스킬제한 = false;
         this.전투종료 = true;
         return _플레이어;
@@ -67,6 +127,7 @@ public class 메인메뉴 {
     public void 스테이터스(캐릭터 _캐릭터) { //캐릭터의 스테이터스창
         System.out.println("====================");
         System.out.println("이름 = " + _캐릭터.이름);
+        System.out.println("종족 = " + _캐릭터.종족이름);
         System.out.println("레벨 = " + _캐릭터.레벨); //최대레벨 표시
         System.out.println("공격력 = " + _캐릭터.공격력);
         System.out.println("마법력 = " + _캐릭터.마법력);

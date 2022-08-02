@@ -5,7 +5,9 @@ import com.teamnova.플레이어.캐릭터;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class 스킬 {
+
     public Scanner in = new Scanner(System.in);
     public int 입력;
     public String 스킬이름;
@@ -50,7 +52,6 @@ public class 스킬 {
         }
     }
     public int 스킬패널티(int _마나소모, int _현재마나) { //스킬의 패널티
-
         int _패널티 = _현재마나 - _마나소모;
         return _패널티;
     }
@@ -62,6 +63,7 @@ public class 스킬 {
         }
         System.out.println("====================");
         System.out.println("1.스킬정보");
+        System.out.println("2.종족스킬 정보");
         System.out.println("0.나가기");
         입력 = in.nextInt();
         if(입력 == 1) {
@@ -77,6 +79,33 @@ public class 스킬 {
                 this.스킬인벤(_캐릭터);
             }
         }
+        else if(입력 == 2){
+            if (_캐릭터.종족 == 0){
+                _캐릭터.용기설명();
+                System.out.println("00.돌아가기");
+                입력 = in.nextInt();
+                if(입력 == 00){
+                    this.스킬인벤(_캐릭터);
+                }
+            }
+            else if(_캐릭터.종족 == 1){
+                _캐릭터.강조설명();
+                System.out.println("00.돌아가기");
+                입력 = in.nextInt();
+                if(입력 == 00){
+                    this.스킬인벤(_캐릭터);
+                }
+            }
+            else if(_캐릭터.종족 == 2){
+                _캐릭터.부정한기운설명();
+                System.out.println("00.돌아가기");
+                입력 = in.nextInt();
+                if(입력 == 00){
+                    this.스킬인벤(_캐릭터);
+                }
+            }
+        }
+
     }// 나가는건 밖에다..
 }
 

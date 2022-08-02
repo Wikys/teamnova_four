@@ -6,6 +6,9 @@ import com.teamnova.몬스터.몬스터;
 import com.teamnova.상점.상점;
 import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
+import com.teamnova.플레이어.비스트맨;
+import com.teamnova.플레이어.스켈레톤;
+import com.teamnova.플레이어.인간;
 import com.teamnova.플레이어.캐릭터;
 import com.teamnova.장비창.장비창;
 
@@ -19,7 +22,7 @@ public class Main {
         int 선택; //정수형 스캐너
         String 사용; //문자열 스캐너
         String 이름; //캐릭터이름 입력
-    //    캐릭터 유저명 = new 캐릭터(null, 1, 5, 0, 5, 10, 10, 10, 10, 100, 0, 5, 0,null);
+        //    캐릭터 유저명 = new 캐릭터(null, 1, 5, 0, 5, 10, 10, 10, 10, 100, 0, 5, 0,null);
         몬스터 몬스터정보 = new 몬스터();
         몬스터 생성된몬스터 = new 몬스터();
         스킬 스킬사용 = new 스킬(); // 스킬사용 호출
@@ -32,28 +35,75 @@ public class Main {
         몬스터 몬스터 = new 몬스터();
         String 내캐릭터;
         Random 랜덤 = new Random(); // 몬스터 생성자
+        캐릭터 유저명;
 
-
-        System.out.println("RPG만들기 연습"); //타이틀
-        System.out.println("1.시작하기\n0.끝내기"); //시작
-        선택 = in.nextInt();
-        if (선택 == 1) {
-            System.out.println("\"캐릭터 작성을 시작합니다\n" +
-                    "이름을 입력 해주세요\""); // "(인풋값으로 이름받음")
-            이름 = in.next(); //여기서 이름입력받고 아래로 넘김
-            유저명.캐릭터이름(이름); // 캐릭터이름 결정 메서드
-            System.out.println("종족을 선택해주세요");
-
-            유저명.기본아이템(아이템.인벤토리);
-            유저명.기본스킬(스킬사용._스킬목록); //기본아이템,스킬 지급 메서드
-            System.out.println("계속하려면 아무숫자나 입력해주세요");
+        캐릭터작성:
+        while (true) {
+            System.out.println("1.시작하기");
+            System.out.println("0.끝내기");
             선택 = in.nextInt();
+            if (선택 == 1) {
+                System.out.println("캐릭터 생성을 시작합니다");
+                System.out.println("====================");
+                System.out.println("종종분류를 선택해주세요");
+                System.out.println("1.인간종 2.아인종 3.언데드");
+                System.out.println("====================");
+                선택 = in.nextInt();
 
-        } else {
-            return;
+                if (선택 == 1) {
+                    System.out.println("종족을 선택해주세요");
+                    System.out.println("1.인간");
+                    System.out.println();
+                    System.out.println("0.뒤로가기");
+                    선택 = in.nextInt();
+                    if (선택 == 1) {
+                        유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0,"인간",true);
+                        System.out.println("인간을 선택하셨습니다");
+
+                        break ;
+                    } else if (선택 == 0) {
+                        continue 캐릭터작성;
+                    }
+                } else if (선택 == 2) {
+                    System.out.println("종족을 선택해주세요");
+                    System.out.println("1.비스트맨");
+                    System.out.println();
+                    System.out.println("0.뒤로가기");
+                    선택 = in.nextInt();
+                    if (선택 == 1) {
+                        유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1,"비스트맨",true);
+                        System.out.println("비스트맨을 선택하셨습니다");
+
+                        break ;
+                    } else if (선택 == 0) {
+                        continue 캐릭터작성;
+                    }
+                } else if (선택 == 3) {
+                    System.out.println("종족을 선택해주세요");
+                    System.out.println("1.스켈레톤");
+                    System.out.println();
+                    System.out.println("0.뒤로가기");
+                    선택 = in.nextInt();
+                    if (선택 == 1) {
+                        유저명 = new 스켈레톤(null, 1, 3, 0, 3, 15, 15, 20, 20, 0, 0, 10, 10, 2, 2,"스켈레톤",true);
+                        System.out.println("스켈레톤을 선택하셨습니다");
+                        break ;
+                    } else if (선택 == 0) {
+                        continue 캐릭터작성;
+                    }
+                }
+            } else {
+                return;
+            }
         }
+            System.out.println("캐릭터의 이름을 입력해주세요");
+            이름 = in.next();
+            유저명.이름 = 이름;
+            System.out.println("이름이 "+유저명.이름+" 으로 결정되었습니다");
+            유저명.기본아이템(아이템.인벤토리);
+            System.out.println("당신은 모험을 시작합니다");
 
-        System.out.println("당신은 모험을 시작합니다");
+
         행동문:
         while (true) {
             고블린킹 = 유저명.보스_컨텐츠해금(유저명.레벨, 고블린킹); // 5레벨 컨텐츠 // 나중에 수정
@@ -90,10 +140,12 @@ public class Main {
                             전투메뉴.캐릭터공격(유저명, 몬스터, 아이템);
                             continue;
                         } else if (선택 == 3) {
+                            전투메뉴.종족스킬(유저명,몬스터);
+                            전투메뉴.캐릭터공격(유저명, 몬스터, 아이템);
                             //종족스킬
                             //끝나고 몹반격
                             //if 종족번호 0일때 인간클래스~ 이런식으로 하기
-                            if (선택 == 2){
+                            if (선택 == 2) {
 
                             }
                         }

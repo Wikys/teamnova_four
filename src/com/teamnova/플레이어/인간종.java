@@ -7,6 +7,5 @@ abstract public class 인간종 extends 캐릭터{
     public boolean 종족스킬_제한;
     public int 종족번호;
 
-    abstract public void 용기(); //추후 전직에따라 강화?
 
 }

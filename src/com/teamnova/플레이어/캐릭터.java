@@ -1,34 +1,37 @@
 package com.teamnova.플레이어;
+import com.teamnova.몬스터.몬스터;
 import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-public class 캐릭터 { //구조체
+public abstract class 캐릭터 { //구조체
     public Scanner in = new Scanner(System.in);
     public String 이름;
     public int 입력;
-    public int 레벨 = 1;
-    public int 공격력 = 5;
+    public int 레벨;
+    public int 공격력;
     public int 전투중공격력 = 공격력; // 버프스킬등의 사용으로 증가되는 공격력 // 초기값은 기본공격력
-    public int 방어력 = 0;
+    public int 방어력;
     public int 전투중방어력 = 방어력; // 버프스킬등의 사용으로 증가되는 방어력
-    public int 회피율 = 5;
+    public int 회피율;
     public int 전투중회피율 = 회피율; // 버프스킬등의 사용으로 증가되는 방어력
-    public int 체력 = 10;
+    public int 체력;
     public int 전투중체력 = 체력;
-    public int 최대체력 = 10;
-    public int 마나 = 10;
+    public int 최대체력;
+    public int 마나 ;
     public int 전투중마나 = 마나;
-    public int 최대마나 = 10;
-    public int 마법력 = 0;
+    public int 최대마나 ;
+    public int 마법력 ;
     public int 전투중마법력 = 마법력;
-    public int 돈 = 10;
-    public int 경험치 = 0;
+    public int 돈 ;
+    public int 경험치;
     public int 레벨업경험치; // 레벨 *5로 설정?
     public int 종족구분;
+    public String 종족이름;
     public int 종족;
+    public boolean 종족스킬_제한 = true;
      public static 아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0,0); // 아이템호출
      public static 아이템 철검 = new 아이템("철검", 1, 1, 3, "단단한 철로 만들어진 날카로운 검이다",10,0);
      public static 아이템 고블린왕의_몽둥이 = new 아이템("고블린왕의_몽둥이", 1, 2, 5, "조악해 보이지만 한 종족의 왕이 썻던 무기인만큼 튼튼하다",0,0);
@@ -39,40 +42,11 @@ public class 캐릭터 { //구조체
      public static 아이템 조악한_완드 = new 아이템("조악한_완드",1,3,5,"허접하게 만들어진 완드지만 조금의 마법력은 남아있는듯하다",20,1);
     public Random random = new Random();
     public 스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1,"용기가 차오릅니다 방어력이 1 증가합니다");
-//    ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
-//    ArrayList<아이템> 장비창 = new ArrayList<아이템>();
-//    ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
-//    //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
-
-
-
-
-    public 캐릭터(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치,int _마법력,int _종족구분,int _종족) {
-        this.이름 = _이름;
-        this.레벨 = _레벨;
-        this.공격력 = _공격력;
-        this.방어력 = _방어력;
-        this.회피율 = _회피율;
-        this.체력 = _체력;
-        this.최대체력 = _최대체력;
-        this.마나 = _마나;
-        this.최대마나 = _최대마나;
-        this.돈 = _돈;
-        this.경험치 = _경험치;
-        this.레벨업경험치 = _레벨업경험치;
-        this.마법력 = _마법력;
-        this.종족구분 = _종족구분;
-        this.종족 = _종족;
-    } // 하위종족 클래스에 넣어야할듯
 
     public 캐릭터() {
 
     }
-    public String 캐릭터이름(String _입력값 ) { //캐릭터의 이름을 기입해주는 메소드
-        System.out.println(_입력값+" 캐릭터가 생성되었습니다");
-        this.이름 = _입력값;
-        return _입력값;
-    }
+
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리){
         _인벤토리.add(낡은검);
         _인벤토리.add(가죽갑옷);
@@ -155,6 +129,28 @@ public class 캐릭터 { //구조체
         }
         return _해금;
     }
+    public void 용기설명(){ //종족스킬 설명 //스킬목록에 띄워주기용
+        System.out.println("============================");
+        System.out.println("스킬명 : 용기");
+        System.out.println("설명 : 방어력을 소폭 증가시켜줍니다");
+        System.out.println("============================");
+    }
+    public void 강조설명() {
+        System.out.println("============================");
+        System.out.println("스킬명 : 강조");
+        System.out.println("설명 : 손톱을 강화하여 공격력*3의 피해를 줍니다");
+        System.out.println("일반공격과 동시에 발동됩니다");
+        System.out.println("============================");
+    }
+    public void 부정한기운설명(){
+        System.out.println("============================");
+        System.out.println("스킬명 : 부정한기운");
+        System.out.println("설명 : 무기에 언데드의 부정한 기운을 둘러");
+        System.out.println("추가데미지를 줍니다");
+        System.out.println("일반공격과 마법 모두에 적용됩니다");
+        System.out.println("============================");
+    }
+    abstract public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터);
     }
 
 
