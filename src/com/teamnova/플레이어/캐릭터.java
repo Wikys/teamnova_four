@@ -1,6 +1,4 @@
 package com.teamnova.플레이어;
-import com.teamnova.몬스터.몬스터;
-import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 
 import java.util.ArrayList;
@@ -41,7 +39,7 @@ public abstract class 캐릭터 { //구조체
      public static 아이템 마나포션 = new 아이템("마나포션",4,901,5, "단순히 마나가 조금 회복될뿐인 싸구려 포션이다",5,0);
      public static 아이템 조악한_완드 = new 아이템("조악한_완드",1,3,5,"허접하게 만들어진 완드지만 조금의 마법력은 남아있는듯하다",20,1);
     public Random random = new Random();
-    public 스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1,"용기가 차오릅니다 방어력이 1 증가합니다");
+//    public 스킬 용기 = new 스킬("용기", 5, 1 , 3, false, 1,"용기가 차오릅니다 방어력이 1 증가합니다");
 
     public 캐릭터() {
 
@@ -53,11 +51,7 @@ public abstract class 캐릭터 { //구조체
         System.out.println("기본아이템이 지급되었습니다");
         return _인벤토리;
     }
-    public ArrayList<스킬> 기본스킬(ArrayList<스킬> _스킬인벤){
-        _스킬인벤.add(용기);
-        System.out.println("기본스킬이 지급되었습니다");
-        return _스킬인벤;
-    }
+
     public int 공격받음(int _방어력, int _적공격력, int _회피율) {
 //        몬스터 몬스터 = new 몬스터();
         int 회피 = random.nextInt(100)+1;
@@ -129,10 +123,10 @@ public abstract class 캐릭터 { //구조체
         }
         return _해금;
     }
-    public void 용기설명(){ //종족스킬 설명 //스킬목록에 띄워주기용
+    public void 사자의심장설명(){ //종족스킬 설명 //스킬목록에 띄워주기용
         System.out.println("============================");
-        System.out.println("스킬명 : 용기");
-        System.out.println("설명 : 방어력을 소폭 증가시켜줍니다");
+        System.out.println("스킬명 : 사자의심장");
+        System.out.println("설명 : 방어력을 레벨만큼 증가시켜줍니다");
         System.out.println("============================");
     }
     public void 강조설명() {
@@ -146,11 +140,11 @@ public abstract class 캐릭터 { //구조체
         System.out.println("============================");
         System.out.println("스킬명 : 부정한기운");
         System.out.println("설명 : 무기에 언데드의 부정한 기운을 둘러");
-        System.out.println("추가데미지를 줍니다");
+        System.out.println("레벨만큼 추가데미지를 줍니다");
         System.out.println("일반공격과 마법 모두에 적용됩니다");
         System.out.println("============================");
     }
-    abstract public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터);
+
     }
 
 

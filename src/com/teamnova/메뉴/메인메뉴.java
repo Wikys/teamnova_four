@@ -16,66 +16,6 @@ public class 메인메뉴 {
     public boolean 방어구중복 = false;
     String 유저이름;
 
-//    public 캐릭터 캐릭터작성(캐릭터 _캐릭터) {
-//
-//        System.out.println("1.시작하기");
-//        System.out.println("0.끝내기");
-//        입력 = in.nextInt();
-//        if (입력 == 1) {
-//            System.out.println("캐릭터 생성을 시작합니다");
-//            System.out.println("====================");
-//            System.out.println("종종분류를 선택해주세요");
-//            System.out.println("1.인간종 2.아인종 3.언데드");
-//            System.out.println("====================");
-//            입력 = in.nextInt();
-//
-//            if (입력 == 1) {
-//                System.out.println("종족을 선택해주세요");
-//                System.out.println("1.인간");
-//                System.out.println();
-//                System.out.println("0.뒤로가기");
-//                입력 = in.nextInt();
-//                if (입력 == 1) {
-//                    유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0);
-//                    System.out.println("인간을 선택하셨습니다");
-//                } else if (입력 == 0) {
-//                    this.캐릭터작성(_캐릭터);
-//                }
-//            } else if (입력 == 2) {
-//                System.out.println("종족을 선택해주세요");
-//                System.out.println("1.비스트맨");
-//                System.out.println();
-//                System.out.println("0.뒤로가기");
-//                입력 = in.nextInt();
-//                if (입력 == 1) {
-//                    유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1);
-//                    System.out.println("비스트맨을 선택하셨습니다");
-//                } else if (입력 == 0) {
-//                    this.캐릭터작성(_캐릭터);
-//                }
-//            } else if (입력 == 3) {
-//                System.out.println("종족을 선택해주세요");
-//                System.out.println("1.스켈레톤");
-//                System.out.println();
-//                System.out.println("0.뒤로가기");
-//                입력 = in.nextInt();
-//                if (입력 == 1) {
-//                    유저명 = new 스켈레톤(null, 1, 3, 0, 3, 15, 15, 20, 20, 0, 0, 10, 10, 2, 2);
-//                    System.out.println("스켈레톤을 선택하셨습니다");
-//                } else if (입력 == 0) {
-//                    this.캐릭터작성(_캐릭터);
-//                }
-//            }
-//        } return 유저명;
-//    }
-//    public void 캐릭터_이름(캐릭터 _캐릭터){
-//        System.out.println("캐릭터의 이름을 입력해주세요");
-//        유저이름 = in.next();
-//        _캐릭터.이름 = 유저이름;
-//        System.out.println("이름이 "+_캐릭터.이름+" 으로 결정되었습니다");
-//        System.out.println("당신은 모험을 시작합니다");
-//
-//    }
 
     public void 행동메뉴() {
 

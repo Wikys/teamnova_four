@@ -14,10 +14,10 @@ public class 스킬 {
     public int 스킬공격력;
     public int 마나소모;
     public int 계열; // 공격계열일때 ,패시브일떄 ,회복계열일때랑 객체 다르게만들어야함 // 1.공격스킬, 2.회복스킬, 3.버프스킬
-    public boolean 스킬제한 = true;
+    public boolean 스킬제한 = true; //전투당 한번밖에 못쓰는스킬들
     public int 수치;
-    public int 효과; // 0공격관련버프 1방어관련버프
-    public int 마법력;
+    public int 효과; // 0공격관련버프 1방어관련버프 2회복계열 3공격계열
+    public int 스킬마법력;
     public String 설명;
     public ArrayList<스킬> _스킬목록 = new ArrayList<>();
 
@@ -81,7 +81,7 @@ public class 스킬 {
         }
         else if(입력 == 2){
             if (_캐릭터.종족 == 0){
-                _캐릭터.용기설명();
+                _캐릭터.사자의심장설명();
                 System.out.println("00.돌아가기");
                 입력 = in.nextInt();
                 if(입력 == 00){
