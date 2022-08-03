@@ -4,6 +4,7 @@ import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class 메인메뉴 {
@@ -32,7 +33,7 @@ public class 메인메뉴 {
         System.out.println("====================");
     }
 
-    public 캐릭터 유저상태_초기화(캐릭터 _플레이어, 스킬 _스킬상태) { // 버프나 기타등등으로 올라간 능력치 초기화
+    public 캐릭터 유저상태_초기화(캐릭터 _플레이어) { // 버프나 기타등등으로 올라간 능력치 초기화
 //        if (_플레이어.전투중체력 > _플레이어.최대체력) {
 //            _플레이어.체력 = _플레이어.최대체력;
 //        } else if (_플레이어.전투중체력 <= _플레이어.최대체력) {
@@ -50,7 +51,7 @@ public class 메인메뉴 {
 //        }
         _플레이어.전투중마법력 = _플레이어.마법력;
         _플레이어.종족스킬_제한 = true;
-        _스킬상태.스킬제한 = false;
+//        _스킬상태.스킬제한 = false;
         this.전투종료 = true;
         return _플레이어;
     }
@@ -121,12 +122,11 @@ public class 메인메뉴 {
                     this.소지품창(_캐릭터, _아이템);
                 } else if (입력 == 2) {
                     this.소지품창(_캐릭터, _아이템);
-                }else{
+                } else {
                     System.out.println("중복착용 하지마세요!");
                     this.소지품창(_캐릭터, _아이템);
                 }
-            }
-            else if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 1) { //마법무기 장착
+            } else if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 1) { //마법무기 장착
                 System.out.println("====================");
                 System.out.println("아이템명: " + 장착아이템.이름);
                 System.out.println("마법력: " + 장착아이템.마법력);
@@ -147,7 +147,7 @@ public class 메인메뉴 {
                     this.소지품창(_캐릭터, _아이템);
                 } else if (입력 == 2) {
                     this.소지품창(_캐릭터, _아이템);
-                }else{
+                } else {
                     System.out.println("중복착용 하지마세요!");
                     this.소지품창(_캐릭터, _아이템);
                 }
@@ -222,26 +222,101 @@ public class 메인메뉴 {
             System.out.println("포션만 가능합니다");
             System.out.println("00.돌아가기");
             입력 = in.nextInt();
-            if (입력 == 00){
+            if (입력 == 00) {
                 this.소지품창(_캐릭터, _아이템);
             }
             아이템 퀵아이템 = _아이템.인벤토리.get(입력);
-            if (퀵아이템.타입 == 3 || 퀵아이템.타입 == 4){
-                System.out.println(퀵아이템.이름+"을 정말 퀵슬롯에 넣으시겠습니까?");
+            if (퀵아이템.타입 == 3 || 퀵아이템.타입 == 4) {
+                System.out.println(퀵아이템.이름 + "을 정말 퀵슬롯에 넣으시겠습니까?");
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1){
-                    System.out.println(퀵아이템.이름+"을 퀵슬롯에 넣었습니다");
+                if (입력 == 1) {
+                    System.out.println(퀵아이템.이름 + "을 퀵슬롯에 넣었습니다");
                     _아이템.전투인벤토리.add(퀵아이템);
                     _아이템.인벤토리.remove(퀵아이템);
-                }
-                else if(입력 == 2 ){
+                } else if (입력 == 2) {
                     this.소지품창(_캐릭터, _아이템);
                 }
 
             }
         }
     }
+
+    public void 스킬인벤( ArrayList<스킬> _공격스킬목록, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록,ArrayList<스킬> _종족스킬목록) { //메인메뉴 7번 스킬인벤
+        메인 :
+        while(true) {
+            System.out.println("====================");
+            System.out.println("1.공격계열");
+            System.out.println("2.버프계열");
+            System.out.println("3.회복계열");
+            System.out.println("4.종족스킬");
+            System.out.println("====================");
+            System.out.println("0.나가기");
+            입력 = in.nextInt();
+
+            if (입력 == 1) {
+                for (int i = 0; i < _공격스킬목록.size(); i++) {
+                    System.out.println("스킬 이름: " + i + ". " + _공격스킬목록.get(i).스킬이름);
+                }
+                System.out.println("설명을 보고싶은 스킬의 번호를 입력하세요");
+
+                입력 = in.nextInt();
+
+                스킬 선택스킬 = _공격스킬목록.get(입력);
+                선택스킬.스킬설명();
+                System.out.println("돌아가시려면 아무숫자나 눌러주세요");
+                입력 = in.nextInt();
+                continue 메인;
+            } else if (입력 == 2) {
+                for (int i = 0; i < _버프스킬목록.size(); i++) {
+                    System.out.println("스킬 이름: " + i + ". " + _버프스킬목록.get(i).스킬이름);
+                }
+                System.out.println("설명을 보고싶은 스킬의 번호를 입력하세요");
+
+                입력 = in.nextInt();
+
+                스킬 선택스킬 = _버프스킬목록.get(입력);
+                선택스킬.스킬설명();
+                System.out.println("돌아가시려면 아무숫자나 눌러주세요");
+                입력 = in.nextInt();
+                continue 메인;
+            } else if (입력 == 3) {
+                for (int i = 0; i < _회복스킬목록.size(); i++) {
+                    System.out.println("스킬 이름: " + i + ". " + _회복스킬목록.get(i).스킬이름);
+                }
+                System.out.println("설명을 보고싶은 스킬의 번호를 입력하세요");
+                입력 = in.nextInt();
+
+                스킬 선택스킬 = _회복스킬목록.get(입력);
+                선택스킬.스킬설명();
+                System.out.println("돌아가시려면 아무숫자나 눌러주세요");
+                입력 = in.nextInt();
+                continue 메인;
+            } else if (입력 == 4) {
+                for (int i = 0; i < _종족스킬목록.size(); i++) {
+                    System.out.println("스킬 이름: " + i + ". " + _종족스킬목록.get(i).스킬이름);
+                }
+                System.out.println("설명을 보고싶은 스킬의 번호를 입력하세요");
+                입력 = in.nextInt();
+
+                스킬 선택스킬 = _종족스킬목록.get(입력);
+                선택스킬.스킬설명();
+
+                System.out.println("돌아가시려면 아무숫자나 눌러주세요");
+                입력 = in.nextInt();
+                    continue 메인;
+
+            }
+            else if (입력 == 0){
+                return;
+            }else {
+                System.out.println("잘못 입력하셨습니다");
+            }
+        }
+
+
+    }
+
 }
 

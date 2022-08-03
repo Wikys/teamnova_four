@@ -123,27 +123,7 @@ public abstract class 캐릭터 { //구조체
         }
         return _해금;
     }
-    public void 사자의심장설명(){ //종족스킬 설명 //스킬목록에 띄워주기용
-        System.out.println("============================");
-        System.out.println("스킬명 : 사자의심장");
-        System.out.println("설명 : 방어력을 레벨만큼 증가시켜줍니다");
-        System.out.println("============================");
-    }
-    public void 강조설명() {
-        System.out.println("============================");
-        System.out.println("스킬명 : 강조");
-        System.out.println("설명 : 손톱을 강화하여 공격력*3의 피해를 줍니다");
-        System.out.println("일반공격과 동시에 발동됩니다");
-        System.out.println("============================");
-    }
-    public void 부정한기운설명(){
-        System.out.println("============================");
-        System.out.println("스킬명 : 부정한기운");
-        System.out.println("설명 : 무기에 언데드의 부정한 기운을 둘러");
-        System.out.println("레벨만큼 추가데미지를 줍니다");
-        System.out.println("일반공격과 마법 모두에 적용됩니다");
-        System.out.println("============================");
-    }
+
 
     }
 
