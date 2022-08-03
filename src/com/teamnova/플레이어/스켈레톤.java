@@ -1,7 +1,5 @@
 package com.teamnova.플레이어;
 
-import com.teamnova.몬스터.몬스터;
-
 public class 스켈레톤 extends 언데드 {
     public 스켈레톤(){
 
@@ -38,8 +36,6 @@ public 스켈레톤(String _이름, int _레벨, int _공격력, int _방어력,
 //    this.전투중마법력 = _전투중마법력;
 } // 하위종족 클래스에 넣어야할듯
 
-    public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터){
 
-    } //추후 전직에따라 강화? // 데미지증가 버프 마법에도 적용
 
 }

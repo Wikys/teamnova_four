@@ -1,7 +1,5 @@
 package com.teamnova.플레이어;
 
-import com.teamnova.몬스터.몬스터;
-
 public class 인간 extends 인간종 {
     public 인간(){
     }
@@ -37,8 +35,5 @@ public 인간(String _이름, int _레벨, int _공격력, int _방어력, int _
 //    this.전투중마법력 = _전투중마법력;
 } // 하위종족 클래스에 넣어야할듯
 
-    public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터){
-
-    } //추후 전직에따라 강화?
 
 }

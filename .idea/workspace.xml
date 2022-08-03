@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 클래스,메서드 정리 끝">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/강조.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/강조.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/공격계열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/버프계열.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/버프계열/버프계열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/부정한기운.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/부정한기운.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/사자의심장.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/사자의심장.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/비스트맨.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/비스트맨.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/종족스킬.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/회복계열.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/회복계열/회복계열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/실험용.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/실험용.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/스켈레톤.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/스켈레톤.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/언데드.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/언데드.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/인간.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/인간.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +51,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
   <component name="RunManager" selected="애플리케이션.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.teamnova.Main" />
@@ -150,7 +169,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />

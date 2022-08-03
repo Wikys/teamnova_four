@@ -1,7 +1,11 @@
 package com.teamnova.메뉴;
 
 import com.teamnova.몬스터.몬스터;
+import com.teamnova.스킬.공격계열.공격계열;
+import com.teamnova.스킬.공격계열.화염구;
+import com.teamnova.스킬.버프계열.버프계열;
 import com.teamnova.스킬.스킬;
+import com.teamnova.스킬.회복계열.회복계열;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
@@ -14,6 +18,7 @@ public class 전투메뉴 {
     public 몬스터 오크 = new 몬스터("오크", 15, 0, 3, 1, 3, 8, random.nextInt(10), 1, 0);
     public 몬스터 오우거 = new 몬스터("오우거", 30, 0, 5, 2, 0, 10, random.nextInt(15), 2, 0);
     public 몬스터 고블린킹 = new 몬스터("고블린킹", 200, 0, 10, 3, 5, 30, random.nextInt(100), 3, 1);
+    스킬 화염구 = new 화염구("화염구",5,5,"불덩어리를 날려 피해를 입힙니다");
 
     Scanner in = new Scanner(System.in);
     int 입력;
@@ -152,30 +157,66 @@ public class 전투메뉴 {
         }
     }
 
-    public void 스킬사용(스킬 _스킬목록, 캐릭터 _캐릭터) { //스킬목록 출력후 사용 메소드
-        for (int i = 0; i < _스킬목록._스킬목록.size(); i++) {
-            System.out.println(i + "." + _스킬목록._스킬목록.get(i).스킬이름);
+    public void 스킬사용(공격계열 _공격스킬목록, 버프계열 _버프스킬목록, 회복계열 _회복스킬목록, 캐릭터 _캐릭터) { //스킬목록 출력후 사용 메소드
+        System.out.println("1.공격계열");
+        System.out.println("2.버프계열");
+        System.out.println("3.회복계열");
+        입력 = in.nextInt();
+        if(입력 == 1){
+            _공격스킬목록._공격스킬목록.add(this.화염구);
+            for (int i = 0; i < _공격스킬목록._공격스킬목록.size(); i++) {
+            System.out.println(i + "." + _공격스킬목록._공격스킬목록.get(i).스킬이름);
         }
-        System.out.println();
+            System.out.println();
         System.out.println("사용할 스킬의 번호를 입력해주세요");
         입력 = in.nextInt(); //입력
-        스킬 사용스킬 = _스킬목록._스킬목록.get(입력);
+            스킬 사용스킬 = _공격스킬목록._공격스킬목록.get(입력);
         System.out.println("====================");
         System.out.println("스킬명 " + 사용스킬.스킬이름);
-        System.out.println("스킬계열 " + 사용스킬.계열);
-        System.out.println("스킬효과 " + 사용스킬.효과);
-        System.out.println("스킬수치 " + 사용스킬.수치);
+        System.out.println("스킬설명 " + 사용스킬.설명);
+        System.out.println("스킬데미지 " + 사용스킬.수치);
         System.out.println("====================");
         System.out.println("아무숫자나 누르시면 사용됩니다");
         입력 = in.nextInt();
+        사용스킬.;
 
-        if ((사용스킬.효과 == 0 || 사용스킬.효과 == 1) && 사용스킬.스킬제한 == false) {
-            _스킬목록.스킬사용(사용스킬.스킬이름, _캐릭터.전투중방어력, _캐릭터.전투중공격력, 사용스킬.마나소모, 사용스킬.수치, 사용스킬.효과, _캐릭터);
-            사용스킬.스킬제한 = true;
-            System.out.println(사용스킬.스킬이름 + "의 사용횟수가 소진되었습니다");
-        } else {
-            System.out.println("사용이 불가능합니다");
+            //뒤로가기
         }
+        else if(입력 == 2){
+            //버프스킬 어레이
+            //뒤로가기
+        }
+        else if (입력 == 3){
+            //회복스킬 어레이
+            //뒤로가기
+        }
+        else{
+            System.out.println("잘못 입력하셨습니다");
+        }
+        //스킬목록 나중에 지워야할수도?
+//        for (int i = 0; i < _스킬목록._스킬목록.size(); i++) {
+//            System.out.println(i + "." + _스킬목록._스킬목록.get(i).스킬이름);
+//        }
+//        System.out.println();
+//        System.out.println("사용할 스킬의 번호를 입력해주세요");
+//        입력 = in.nextInt(); //입력
+//        스킬 사용스킬 = _스킬목록._스킬목록.get(입력);
+//        System.out.println("====================");
+//        System.out.println("스킬명 " + 사용스킬.스킬이름);
+//        System.out.println("스킬계열 " + 사용스킬.계열);
+//        System.out.println("스킬효과 " + 사용스킬.효과);
+//        System.out.println("스킬수치 " + 사용스킬.수치);
+//        System.out.println("====================");
+//        System.out.println("아무숫자나 누르시면 사용됩니다");
+//        입력 = in.nextInt();
+//
+//        if ((사용스킬.효과 == 0 || 사용스킬.효과 == 1) && 사용스킬.스킬제한 == false) {
+//            _스킬목록.스킬사용(사용스킬.스킬이름, _캐릭터.전투중방어력, _캐릭터.전투중공격력, 사용스킬.마나소모, 사용스킬.수치, 사용스킬.효과, _캐릭터);
+//            사용스킬.스킬제한 = true;
+//            System.out.println(사용스킬.스킬이름 + "의 사용횟수가 소진되었습니다");
+//        } else {
+//            System.out.println("사용이 불가능합니다");
+//        }
     }
 //    public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터){
 //        if(_캐릭터.종족 == 0){

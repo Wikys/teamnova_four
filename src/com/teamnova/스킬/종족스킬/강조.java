@@ -1,4 +1,4 @@
-package com.teamnova.스킬;
+package com.teamnova.스킬.종족스킬;
 
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;

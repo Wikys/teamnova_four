@@ -4,10 +4,10 @@ import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.상점.상점;
-import com.teamnova.스킬.강조;
-import com.teamnova.스킬.부정한기운;
-import com.teamnova.스킬.사자의심장;
 import com.teamnova.스킬.스킬;
+import com.teamnova.스킬.종족스킬.강조;
+import com.teamnova.스킬.종족스킬.부정한기운;
+import com.teamnova.스킬.종족스킬.사자의심장;
 import com.teamnova.아이템.아이템;
 import com.teamnova.장비창.장비창;
 import com.teamnova.플레이어.비스트맨;
@@ -153,6 +153,7 @@ public class Main {
                                 비스트맨.종족스킬효과(유저명, 몬스터, 전투메뉴, 아이템);
                             else if(유저명.종족 == 2){
                                 스켈레톤.종족스킬효과(유저명,몬스터,전투메뉴,아이템);
+
                             }
 
 

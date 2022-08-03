@@ -20,6 +20,9 @@ public class 스킬 {
     public int 스킬마법력;
     public String 설명;
     public ArrayList<스킬> _스킬목록 = new ArrayList<>();
+//    public ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
+//    public ArrayList<스킬> _버프스킬목록 = new ArrayList<>();
+//    public ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
 
     public 스킬() {
 
