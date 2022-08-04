@@ -1,9 +1,10 @@
 package com.teamnova.스킬.종족스킬;
 
 import com.teamnova.몬스터.몬스터;
+import com.teamnova.스킬.스킬;
 import com.teamnova.플레이어.캐릭터;
 
-public class 강조 extends 종족스킬 {
+public class 강조 extends 스킬 {
 
     public 강조(String 스킬이름){
         this.스킬이름 = 스킬이름;

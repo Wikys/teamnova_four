@@ -16,7 +16,7 @@ public class 전투메뉴 {
     public 몬스터 오크 = new 몬스터("오크", 15, 0, 3, 1, 3, 8, random.nextInt(10), 1, 0);
     public 몬스터 오우거 = new 몬스터("오우거", 30, 0, 5, 2, 0, 10, random.nextInt(15), 2, 0);
     public 몬스터 고블린킹 = new 몬스터("고블린킹", 200, 0, 10, 3, 5, 30, random.nextInt(100), 3, 1);
-    스킬 화염구 = new 화염구("화염구", 5, 5, "불덩어리를 날려 피해를 입힙니다");
+    스킬 화염구 = new 화염구("화염구");
 
     Scanner in = new Scanner(System.in);
     int 입력;

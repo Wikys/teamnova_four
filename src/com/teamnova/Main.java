@@ -4,6 +4,9 @@ import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.상점.상점;
+import com.teamnova.스킬.공격계열.무기파괴;
+import com.teamnova.스킬.공격계열.사광연참;
+import com.teamnova.스킬.공격계열.화염구;
 import com.teamnova.스킬.스킬;
 import com.teamnova.스킬.종족스킬.강조;
 import com.teamnova.스킬.종족스킬.부정한기운;
@@ -27,8 +30,8 @@ public class Main {
         String 사용; //문자열 스캐너
         String 이름; //캐릭터이름 입력
         //    캐릭터 유저명 = new 캐릭터(null, 1, 5, 0, 5, 10, 10, 10, 10, 100, 0, 5, 0,null);
-        몬스터 몬스터정보 = new 몬스터();
-        몬스터 생성된몬스터 = new 몬스터();
+//        몬스터 몬스터정보 = new 몬스터();
+//        몬스터 생성된몬스터 = new 몬스터();
 //        스킬 스킬사용 = new 스킬(); // 스킬사용호출
 //       스킬 스킬 = new 화염구("화염구",5,5,"안녕");
 //        스킬 비스트맨 = new 강조();
@@ -37,6 +40,9 @@ public class Main {
         스킬 강조 = new 강조("강조");
         스킬 부정한기운 = new 부정한기운("부정한기운");
         스킬 사자의심장 = new 사자의심장("사자의심장");
+        스킬 무기파괴 = new 무기파괴("무기파괴");
+        스킬 사광연참 = new 사광연참("사광연참");
+        스킬 화염구 = new 화염구("화염구");
 
         boolean 고블린킹 = true;
         메인메뉴 메뉴 = new 메인메뉴();
@@ -49,6 +55,11 @@ public class Main {
         ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
         ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
         ArrayList<스킬> _종족스킬목록 = new ArrayList<>();
+        _공격스킬목록.add(무기파괴);
+        _공격스킬목록.add(화염구);
+        _공격스킬목록.add(사광연참); //실험용
+
+
         String 내캐릭터;
         Random 랜덤 = new Random(); // 몬스터 생성자
         캐릭터 유저명;

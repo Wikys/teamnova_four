@@ -1,5 +1,6 @@
 package com.teamnova.메뉴;
 
+import com.teamnova.스킬.공격계열.무기파괴;
 import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
@@ -16,6 +17,7 @@ public class 메인메뉴 {
     public boolean 무기중복 = false;
     public boolean 방어구중복 = false;
     String 유저이름;
+    무기파괴 무기파괴 = new 무기파괴();
 
 
     public void 행동메뉴() {
@@ -53,6 +55,7 @@ public class 메인메뉴 {
         _플레이어.종족스킬_제한 = true;
 //        _스킬상태.스킬제한 = false;
         this.전투종료 = true;
+        무기파괴.무기파괴_초기화();
         return _플레이어;
     }
 
