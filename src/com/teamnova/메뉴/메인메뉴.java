@@ -1,6 +1,5 @@
 package com.teamnova.메뉴;
 
-import com.teamnova.스킬.공격계열.무기파괴;
 import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
@@ -17,7 +16,7 @@ public class 메인메뉴 {
     public boolean 무기중복 = false;
     public boolean 방어구중복 = false;
     String 유저이름;
-    무기파괴 무기파괴 = new 무기파괴();
+
 
 
     public void 행동메뉴() {
@@ -31,11 +30,12 @@ public class 메인메뉴 {
         System.out.println("5.스테이터스");
         System.out.println("6.장비");
         System.out.println("7.스킬");
+        System.out.println("8.전직");
         System.out.println("0.끝내기");
         System.out.println("====================");
     }
 
-    public 캐릭터 유저상태_초기화(캐릭터 _플레이어) { // 버프나 기타등등으로 올라간 능력치 초기화
+    public 캐릭터 유저상태_초기화(캐릭터 _플레이어 , ArrayList<스킬> _공격스킬초기화, ArrayList<스킬> _버프스킬초기화, ArrayList<스킬> _회복스킬초기화) { // 버프나 기타등등으로 올라간 능력치 초기화
 //        if (_플레이어.전투중체력 > _플레이어.최대체력) {
 //            _플레이어.체력 = _플레이어.최대체력;
 //        } else if (_플레이어.전투중체력 <= _플레이어.최대체력) {
@@ -55,7 +55,17 @@ public class 메인메뉴 {
         _플레이어.종족스킬_제한 = true;
 //        _스킬상태.스킬제한 = false;
         this.전투종료 = true;
-        무기파괴.무기파괴_초기화();
+        for (int i = 0; i < _공격스킬초기화.size(); i++) {
+            _공격스킬초기화.get(i).스킬초기화();
+        }
+        for (int i = 0; i < _버프스킬초기화.size(); i++) {
+            _버프스킬초기화.get(i).스킬초기화();
+        }
+        for (int i = 0; i < _회복스킬초기화.size(); i++) {
+            _회복스킬초기화.get(i).스킬초기화();
+        }
+
+
         return _플레이어;
     }
 

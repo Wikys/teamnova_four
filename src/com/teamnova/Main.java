@@ -13,6 +13,7 @@ import com.teamnova.스킬.종족스킬.부정한기운;
 import com.teamnova.스킬.종족스킬.사자의심장;
 import com.teamnova.아이템.아이템;
 import com.teamnova.장비창.장비창;
+import com.teamnova.전직.전직;
 import com.teamnova.플레이어.비스트맨;
 import com.teamnova.플레이어.스켈레톤;
 import com.teamnova.플레이어.인간;
@@ -29,6 +30,7 @@ public class Main {
         int 선택; //정수형 스캐너
         String 사용; //문자열 스캐너
         String 이름; //캐릭터이름 입력
+        전직 전직 = new 전직();
         //    캐릭터 유저명 = new 캐릭터(null, 1, 5, 0, 5, 10, 10, 10, 10, 100, 0, 5, 0,null);
 //        몬스터 몬스터정보 = new 몬스터();
 //        몬스터 생성된몬스터 = new 몬스터();
@@ -58,11 +60,11 @@ public class Main {
         _공격스킬목록.add(무기파괴);
         _공격스킬목록.add(화염구);
         _공격스킬목록.add(사광연참); //실험용
-
-
-        String 내캐릭터;
-        Random 랜덤 = new Random(); // 몬스터 생성자
+//        String 내캐릭터;
+//        Random 랜덤 = new Random(); // 몬스터 생성자
         캐릭터 유저명;
+
+
 
         캐릭터작성:
         while (true) {
@@ -85,7 +87,10 @@ public class Main {
                     System.out.println("0.뒤로가기");
                     선택 = in.nextInt();
                     if (선택 == 1) {
-                        유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0, "인간", true);
+//                        유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0, "인간", true);
+                        유저명 = new 인간();
+                        유저명.스탯();
+
                         System.out.println("인간을 선택하셨습니다");
                         _종족스킬목록.add(사자의심장);
 
@@ -100,7 +105,9 @@ public class Main {
                     System.out.println("0.뒤로가기");
                     선택 = in.nextInt();
                     if (선택 == 1) {
-                        유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1, "비스트맨", true);
+//                        유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1, "비스트맨", true);
+                        유저명 = new 비스트맨();
+                        유저명.스탯();
                         System.out.println("비스트맨을 선택하셨습니다");
                         _종족스킬목록.add(강조);
 
@@ -115,7 +122,8 @@ public class Main {
                     System.out.println("0.뒤로가기");
                     선택 = in.nextInt();
                     if (선택 == 1) {
-                        유저명 = new 스켈레톤(null, 1, 3, 0, 3, 15, 15, 20, 20, 0, 0, 10, 10, 2, 2, "스켈레톤", true);
+                        유저명 = new 스켈레톤();
+                        유저명.스탯();
                         System.out.println("스켈레톤을 선택하셨습니다");
                         _종족스킬목록.add(부정한기운);
                         break;
@@ -138,7 +146,8 @@ public class Main {
         행동문:
         while (true) {
             고블린킹 = 유저명.보스_컨텐츠해금(유저명.레벨, 고블린킹); // 5레벨 컨텐츠 // 나중에 수정
-            메뉴.유저상태_초기화(유저명); //버프나 기타등등으로 올라간 능력치 초기화
+            전직.전직여부(유저명);
+            메뉴.유저상태_초기화(유저명, _공격스킬목록,_버프스킬목록,_회복스킬목록); //버프나 기타등등으로 올라간 능력치 초기화,제한스킬 초기화
             메뉴.행동메뉴(); // 행동메뉴 호출 메서드
             선택 = in.nextInt();
 
@@ -219,7 +228,11 @@ public class Main {
                 if (선택 == 0) {
                     continue 행동문;
                 }
-            } else if (선택 == 0) {
+            }else if(선택 == 8){
+                //전직
+                전직.전직메뉴(유저명);
+            }
+            else if (선택 == 0) {
                 return;
             }
         }

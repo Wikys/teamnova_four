@@ -3,37 +3,28 @@ package com.teamnova.플레이어;
 public class 인간 extends 인간종 {
     public 인간(){
     }
-//    public int 용기_방어력;
 
-//    public boolean 종족스킬_제한;
-public 인간(String _이름, int _레벨, int _공격력, int _방어력, int _회피율, int _체력, int _최대체력, int _마나, int _최대마나, int _돈, int _경험치, int _레벨업경험치,int _마법력,int _종족구분,int _종족,String _종족이름,boolean _종족스킬제한) {
-    this.이름 = _이름;
-    this.레벨 = _레벨;
-    this.공격력 = _공격력;
-    this.방어력 = _방어력;
-    this.회피율 = _회피율;
-    this.체력 = _체력;
-    this.최대체력 = _최대체력;
-    this.전투중체력 = this.체력;
-    this.마나 = _마나;
-    this.최대마나 = _최대마나;
-    this.전투중마나 = this.마나;
-    this.돈 = _돈;
-    this.경험치 = _경험치;
-    this.레벨업경험치 = _레벨업경험치;
-    this.마법력 = _마법력;
-    this.종족구분 = _종족구분;
-    this.종족 = _종족;
-    this.종족이름=_종족이름;
-    this.종족스킬_제한 =_종족스킬제한;
-//    ,int _전투중공격력, int _전투중방어력, int _전투중회피율,int _전투중체력, int _전투중마나, int _전투중마법력
-//    this.전투중공격력 = _전투중공격력;
-//    this.전투중방어력 = _전투중방어력;
-//    this.전투중회피율 = _전투중회피율;
-//    this.전투중체력 = _전투중체력;
-//    this.전투중마나 = _전투중마나;
-//    this.전투중마법력 = _전투중마법력;
-} // 하위종족 클래스에 넣어야할듯
+public void 스탯(){
+    this.이름 = "인간";
+    this.레벨 = 1;
+    this.공격력 = 5;
+    this.방어력 = 0;
+    this.회피율 = 5;
+    this.체력 = 10;
+    this.최대체력 = 10;
+    this.전투중체력 = 10;
+    this.마나 = 10;
+    this.최대마나 = 10;
+    this.전투중마나 = 10;
+    this.돈 = 0;
+    this.경험치 = 0;
+    this.레벨업경험치 = 10;
+    this.마법력 = 10;
+    this.종족구분 = 0;
+    this.종족 = 0;
+    this.종족이름 = "인간" ;
+    this.종족스킬_제한 = true;
+}
 
 
 }

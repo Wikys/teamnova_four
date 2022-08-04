@@ -223,40 +223,9 @@ public class 전투메뉴 {
             } else {
                 System.out.println("잘못 입력하셨습니다");
             }
-            //스킬목록 나중에 지워야할수도?
-//        for (int i = 0; i < _스킬목록._스킬목록.size(); i++) {
-//            System.out.println(i + "." + _스킬목록._스킬목록.get(i).스킬이름);
-//        }
-//        System.out.println();
-//        System.out.println("사용할 스킬의 번호를 입력해주세요");
-//        입력 = in.nextInt(); //입력
-//        스킬 사용스킬 = _스킬목록._스킬목록.get(입력);
-//        System.out.println("====================");
-//        System.out.println("스킬명 " + 사용스킬.스킬이름);
-//        System.out.println("스킬계열 " + 사용스킬.계열);
-//        System.out.println("스킬효과 " + 사용스킬.효과);
-//        System.out.println("스킬수치 " + 사용스킬.수치);
-//        System.out.println("====================");
-//        System.out.println("아무숫자나 누르시면 사용됩니다");
-//        입력 = in.nextInt();
-//
-//        if ((사용스킬.효과 == 0 || 사용스킬.효과 == 1) && 사용스킬.스킬제한 == false) {
-//            _스킬목록.스킬사용(사용스킬.스킬이름, _캐릭터.전투중방어력, _캐릭터.전투중공격력, 사용스킬.마나소모, 사용스킬.수치, 사용스킬.효과, _캐릭터);
-//            사용스킬.스킬제한 = true;
-//            System.out.println(사용스킬.스킬이름 + "의 사용횟수가 소진되었습니다");
-//        } else {
-//            System.out.println("사용이 불가능합니다");
-//        }
+
         }
 
-//    public void 종족스킬(캐릭터 _캐릭터, 몬스터 _몬스터){
-//        if(_캐릭터.종족 == 0){
-//            //용기
-//        }
-//        else if (_캐릭터.종족 == 1){
-//            _캐릭터.종족스킬(_캐릭터,_몬스터);
-//        }
-//    }
 
     public void 퀵슬롯(아이템 _인벤토리, 캐릭터 _캐릭터) {
         for (int i = 0; i < _인벤토리.전투인벤토리.size(); i++) {

@@ -71,7 +71,7 @@ public class 몬스터 {
         this.공격력 = 3;
         this.방어력 = 1;
         this.회피율 = 3;
-        this.경험치 = 8;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(10);
         this.몬스터타입 = 0;
         this.몬스터번호 = 1;

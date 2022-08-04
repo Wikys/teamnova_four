@@ -5,5 +5,5 @@ abstract public class 아인종 extends 캐릭터{
     public boolean 종족스킬_제한;
     public int 종족번호;
 
-     //추후 전직에따라 강화?
+
 }

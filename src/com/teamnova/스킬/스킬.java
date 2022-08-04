@@ -38,6 +38,7 @@ public abstract class 스킬 {
 //    }
     public abstract void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터);
     public abstract void 스킬설명();
+    public abstract void 스킬초기화();
 
 //    public void 스킬사용(String _스킬이름,int _방어력,int _공격력, int _사용마나, int _수치, int _효과, 캐릭터 _대상) { //버프스킬 효과0 공격 , 1방어관련
 //

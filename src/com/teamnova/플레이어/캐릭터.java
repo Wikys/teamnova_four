@@ -28,7 +28,9 @@ public abstract class 캐릭터 { //구조체
     public int 레벨업경험치; // 레벨 *5로 설정?
     public int 종족구분;
     public String 종족이름;
+    public int 직업번호; // 0
     public int 종족;
+
     public boolean 종족스킬_제한 = true;
      public static 아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0,0); // 아이템호출
      public static 아이템 철검 = new 아이템("철검", 1, 1, 3, "단단한 철로 만들어진 날카로운 검이다",10,0);
@@ -44,6 +46,7 @@ public abstract class 캐릭터 { //구조체
     public 캐릭터() {
 
     }
+    public abstract void 스탯();
 
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리){
         _인벤토리.add(낡은검);

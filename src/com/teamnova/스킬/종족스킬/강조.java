@@ -25,9 +25,13 @@ public class 강조 extends 스킬 {
             // 쓰레드 배우고 출혈상태이상 구현해보기?
             _캐릭터.종족스킬_제한 = false;
         }
+
         else if (_캐릭터.종족스킬_제한 == false){
             System.out.println("종족스킬은 전투한번만 한번만 사용가능합니다");
         }
+
+    }
+    public void 스킬초기화(){
 
     }
 

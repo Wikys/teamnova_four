@@ -23,7 +23,9 @@ public class 부정한기운 extends 스킬 {
         }
 
     }
+    public void 스킬초기화(){
 
+    }
     @Override
     public void 스킬설명() {
         System.out.println("============================");

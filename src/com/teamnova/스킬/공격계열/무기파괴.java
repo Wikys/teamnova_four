@@ -17,10 +17,19 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
     }
     public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터){
 
+
         if(_몬스터.공격력 >= this.수치 && this.스킬제한 == true){
             _몬스터.공격력 = _몬스터.공격력 - this.수치;
             this.스킬제한 = false;
-            System.out.println("적의 무기를 파괴하였습니다");
+            System.out.println("적의 무기를 파괴하였습니다 적의 공격력이 감소합니다");
+            if(_캐릭터.종족==1){
+                _몬스터.방어력 = _몬스터.방어력 - this.수치;
+                System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
+                System.out.println("적의 방어력이 감소합니다");
+            }
+            else if(_캐릭터.종족==1 && _몬스터.방어력 <=0){
+                System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
+            }
         }
         else if(_몬스터.공격력 < this.수치 && this.스킬제한 == true){
             _몬스터.공격력 = 0;
@@ -32,7 +41,7 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
         }
 
     }
-    public void 무기파괴_초기화(){
+    public void 스킬초기화(){
         this.스킬제한 = true;
     }
 
@@ -43,6 +52,7 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
         System.out.println("패널티 : 전투당 한번만 사용가능합니다");
         System.out.println("스킬데미지 : 없음");
         System.out.println("마나소모 : "+this.마나소모);
+        System.out.println("tip : 비스트맨이 사용시 특수효과가 있습니다");
         System.out.println("========================================");
     }
 
