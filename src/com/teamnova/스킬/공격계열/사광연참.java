@@ -8,11 +8,13 @@ public class 사광연참 extends 스킬 {
 
     public int 적_회피증가 = 3;
     public int 마나소모 = 5;
+    public 사광연참(){}
     public 사광연참(String 스킬이름) {
         this.스킬이름 = 스킬이름;
 
 
     }
+
 
 
     public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터){

@@ -12,10 +12,11 @@ import java.util.Scanner;
 
 public class 전투메뉴 {
     Random random = new Random();
-    public 몬스터 고블린 = new 몬스터("고블린", 10, 0, 1, 0, 2, 5, random.nextInt(5), 0, 0);
-    public 몬스터 오크 = new 몬스터("오크", 15, 0, 3, 1, 3, 8, random.nextInt(10), 1, 0);
-    public 몬스터 오우거 = new 몬스터("오우거", 30, 0, 5, 2, 0, 10, random.nextInt(15), 2, 0);
-    public 몬스터 고블린킹 = new 몬스터("고블린킹", 200, 0, 10, 3, 5, 30, random.nextInt(100), 3, 1);
+    public 몬스터 고블린 = new 몬스터(0);
+    public 몬스터 오크 = new 몬스터(1);
+    public 몬스터 오우거 = new 몬스터(2);
+    public 몬스터 고블린킹 = new 몬스터(3);
+    몬스터 몬스터= new 몬스터();
     스킬 화염구 = new 화염구("화염구");
 
     Scanner in = new Scanner(System.in);

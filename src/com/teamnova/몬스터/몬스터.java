@@ -24,18 +24,19 @@ public class 몬스터 {
     public 몬스터(){}
 
 
-    public 몬스터(String 이름, int 체력,int 마나, int 공격력, int 방어력,int 회피율, int 경험치, int 골드, int 몬스터번호, int 몬스터타입) {
-        this.이름 = 이름;
-        this.공격력 = 공격력;
-        this.방어력 = 방어력;
-        this.체력 = 체력;
-        this.마나 = 마나;
-        this.회피율 = 회피율;
-        this.경험치 = 경험치;
-        this.골드 = 골드;
+//    public 몬스터(String 이름, int 체력,int 마나, int 공격력, int 방어력,int 회피율, int 경험치, int 골드, int 몬스터번호, int 몬스터타입) {
+public 몬스터( int 몬스터번호) {
+//        this.이름 = 이름;
+//        this.공격력 = 공격력;
+//        this.방어력 = 방어력;
+//        this.체력 = 체력;
+//        this.마나 = 마나;
+//        this.회피율 = 회피율;
+//        this.경험치 = 경험치;
+//        this.골드 = 골드;
         this.몬스터번호 = 몬스터번호;
-        this.몬스터타입 = 몬스터타입;
-    } //아직쓸곳 못정함
+
+    }
 
     public void 보물() {
         this.이름 = "보물";
@@ -93,9 +94,9 @@ public class 몬스터 {
 
     public void 고블린킹() {
         this.이름 = "고블린킹";
-        this.체력 = 200;
+        this.체력 = 100;
         this.마나 = 0;
-        this.공격력 = 10;
+        this.공격력 = 7;
         this.방어력 = 3;
         this.회피율 = 5;
         this.경험치 = 30;

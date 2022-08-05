@@ -35,7 +35,7 @@ public class 강조 extends 스킬 {
 
     }
 
-    @Override
+
     public void 스킬설명() {
         System.out.println("============================");
         System.out.println("스킬명 : 강조");

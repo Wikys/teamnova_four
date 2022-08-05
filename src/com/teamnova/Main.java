@@ -4,15 +4,15 @@ import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.상점.상점;
-import com.teamnova.스킬.공격계열.무기파괴;
-import com.teamnova.스킬.공격계열.사광연참;
-import com.teamnova.스킬.공격계열.화염구;
+import com.teamnova.스킬.공격계열.*;
 import com.teamnova.스킬.스킬;
+import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.스킬.종족스킬.강조;
 import com.teamnova.스킬.종족스킬.부정한기운;
 import com.teamnova.스킬.종족스킬.사자의심장;
 import com.teamnova.아이템.아이템;
 import com.teamnova.장비창.장비창;
+import com.teamnova.전직.전사;
 import com.teamnova.전직.전직;
 import com.teamnova.플레이어.비스트맨;
 import com.teamnova.플레이어.스켈레톤;
@@ -45,6 +45,15 @@ public class Main {
         스킬 무기파괴 = new 무기파괴("무기파괴");
         스킬 사광연참 = new 사광연참("사광연참");
         스킬 화염구 = new 화염구("화염구");
+        스킬샵 스킬샵 = new 스킬샵();
+        ArrayList<스킬> _판매스킬목록 = new ArrayList<>();
+        스킬 육광연참 = new 육광연참("육광연참",5,1);
+        스킬 영혼흡수 = new 영혼흡수("정기흡수",5,1);
+        스킬 헬파이어 = new 헬파이어("헬파이어",5,1);
+
+        _판매스킬목록.add(육광연참);
+        _판매스킬목록.add(영혼흡수);
+        _판매스킬목록.add(헬파이어);
 
         boolean 고블린킹 = true;
         메인메뉴 메뉴 = new 메인메뉴();
@@ -57,9 +66,11 @@ public class Main {
         ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
         ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
         ArrayList<스킬> _종족스킬목록 = new ArrayList<>();
+
         _공격스킬목록.add(무기파괴);
         _공격스킬목록.add(화염구);
         _공격스킬목록.add(사광연참); //실험용
+        캐릭터 전사 = new 전사();
 //        String 내캐릭터;
 //        Random 랜덤 = new Random(); // 몬스터 생성자
         캐릭터 유저명;
@@ -68,6 +79,7 @@ public class Main {
 
         캐릭터작성:
         while (true) {
+
 
             System.out.println("1.시작하기");
             System.out.println("0.끝내기");
@@ -89,7 +101,7 @@ public class Main {
                     if (선택 == 1) {
 //                        유저명 = new 인간(null, 1, 5, 0, 5, 10, 10, 10, 10, 0, 0, 10, 10, 0, 0, "인간", true);
                         유저명 = new 인간();
-                        유저명.스탯();
+                        유저명.스탯(유저명);
 
                         System.out.println("인간을 선택하셨습니다");
                         _종족스킬목록.add(사자의심장);
@@ -107,7 +119,7 @@ public class Main {
                     if (선택 == 1) {
 //                        유저명 = new 비스트맨(null, 1, 5, 0, 10, 10, 10, 5, 5, 0, 0, 10, 3, 1, 1, "비스트맨", true);
                         유저명 = new 비스트맨();
-                        유저명.스탯();
+                        유저명.스탯(유저명);
                         System.out.println("비스트맨을 선택하셨습니다");
                         _종족스킬목록.add(강조);
 
@@ -123,7 +135,7 @@ public class Main {
                     선택 = in.nextInt();
                     if (선택 == 1) {
                         유저명 = new 스켈레톤();
-                        유저명.스탯();
+                        유저명.스탯(유저명);
                         System.out.println("스켈레톤을 선택하셨습니다");
                         _종족스킬목록.add(부정한기운);
                         break;
@@ -141,6 +153,8 @@ public class Main {
         System.out.println("이름이 " + 유저명.이름 + " 으로 결정되었습니다");
         유저명.기본아이템(아이템.인벤토리);
         System.out.println("당신은 모험을 시작합니다");
+
+
 
 
         행동문:
@@ -231,6 +245,10 @@ public class Main {
             }else if(선택 == 8){
                 //전직
                 전직.전직메뉴(유저명);
+            }else if (선택 == 9){
+                //스킬샵
+                스킬샵.스킬구매목록(유저명,_판매스킬목록, _버프스킬목록,_회복스킬목록,_공격스킬목록);
+
             }
             else if (선택 == 0) {
                 return;

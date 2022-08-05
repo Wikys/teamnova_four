@@ -2,7 +2,11 @@ package com.teamnova.전직;
 
 import com.teamnova.플레이어.캐릭터;
 
+import java.util.Scanner;
+
 public class 전직{
+    Scanner in = new Scanner(System.in);
+    int 입력;
 
     public void 전직여부(캐릭터 _캐릭터){
         if (_캐릭터.레벨 <3){
@@ -19,26 +23,51 @@ public class 전직{
         }
     }
     public void 전직메뉴(캐릭터 _캐릭터){
-        스켈레톤_메이지 스켈레톤메이지 = null;
-        if (_캐릭터.레벨 <3){
+
+        if (_캐릭터.레벨 <0){
             System.out.println("3레벨 달성하고 다시오세요!");
             return;
         }
         System.out.println("전직이 가능합니다 진행하시겠습니까?");
-        if(_캐릭터.레벨 >=3 && _캐릭터.종족 == 0){
-            //전사
-            //전사로 전직하셨습니다
+        System.out.println("1.예");
+        System.out.println("2.아니오");
+        입력 = in.nextInt();
+        if(입력 == 1) {
+            if (_캐릭터.레벨 >= 3 && _캐릭터.종족 == 0) {
+                캐릭터 전사 = new 전사();
+//
+                전사.스탯(_캐릭터);
+//                System.out.println(전사.최대체력);
+                _캐릭터 = 전사;
+                System.out.println("전사로 전직하셨습니다");
+                System.out.println("전사의 강직함으로 최대체력이 10 상승하였습니다");
+
+
+            } else if (_캐릭터.레벨 >= 3 && _캐릭터.종족 == 1) {
+                //몽크
+                //몽크로 전직하셨습니다
+                //몽크의 기민함으로 인해 회피율이 5 증가합니다
+                캐릭터 몽크 = new 몽크();
+                몽크.스탯(_캐릭터);
+                _캐릭터 = 몽크;
+                System.out.println("몽크로 전직하셨습니다");
+                System.out.println("몽크의 기민함으로 인해 회피율이 5 증가합니다");
+
+
+            } else if (_캐릭터.레벨 >= 3 && _캐릭터.종족 == 2) {
+                //메이지
+                //메이지로 전직하셨습니다
+                //불사자의 마력으로 마법력이 5 올랐습니다
+                캐릭터 메이지 = new 스켈레톤_메이지();
+                메이지.스탯(_캐릭터);
+                _캐릭터 = 메이지;
+                System.out.println("스켈레톤 메이지로 전직하셨습니다");
+                System.out.println("불사자의 마력으로 마법력이 5 올랐습니다");
+            }
         }
-        else if(_캐릭터.레벨>=3 && _캐릭터.종족 == 1){
-            //몽크
-            //몽크로 전직하셨습니다
-        }
-        else if (_캐릭터.레벨>=3 && _캐릭터.종족 == 2){
-            //메이지
-            //메이지로 전직하셨습니다
-
-
-
+        else {
+            return;
         }
     }
+
 }

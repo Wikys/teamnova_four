@@ -1,14 +1,13 @@
 package com.teamnova.플레이어;
 
 public class 스켈레톤 extends 언데드 {
-
     public 스켈레톤(){
 
     }
 
-public void 스탯(){
+public void 스탯(캐릭터 _캐릭터){
 
-    this.이름 = "스켈레톤";
+    this.이름 = _캐릭터.이름;
     this.레벨 = 1;
     this.공격력 = 3;
     this.방어력 = 0;

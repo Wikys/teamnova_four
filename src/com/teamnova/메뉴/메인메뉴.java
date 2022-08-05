@@ -29,8 +29,9 @@ public class 메인메뉴 {
         System.out.println("4.소지품");
         System.out.println("5.스테이터스");
         System.out.println("6.장비");
-        System.out.println("7.스킬");
+        System.out.println("7.보유스킬");
         System.out.println("8.전직");
+        System.out.println("9.스킬배우기");
         System.out.println("0.끝내기");
         System.out.println("====================");
     }
@@ -82,6 +83,7 @@ public class 메인메뉴 {
         System.out.println("====================");
         System.out.println("이름 = " + _캐릭터.이름);
         System.out.println("종족 = " + _캐릭터.종족이름);
+        System.out.println("직업 = "+_캐릭터.직업이름);
         System.out.println("레벨 = " + _캐릭터.레벨); //최대레벨 표시
         System.out.println("공격력 = " + _캐릭터.공격력);
         System.out.println("마법력 = " + _캐릭터.마법력);

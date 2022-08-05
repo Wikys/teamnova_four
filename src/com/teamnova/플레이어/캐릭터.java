@@ -30,6 +30,10 @@ public abstract class 캐릭터 { //구조체
     public String 종족이름;
     public int 직업번호; // 0
     public int 종족;
+    public String 직업이름;
+    public int 전사의강직함;
+    public int 몽크의기민함;
+    public int 불사자의마력;
 
     public boolean 종족스킬_제한 = true;
      public static 아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0,0); // 아이템호출
@@ -46,7 +50,7 @@ public abstract class 캐릭터 { //구조체
     public 캐릭터() {
 
     }
-    public abstract void 스탯();
+    public abstract void 스탯(캐릭터 _캐릭터);
 
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리){
         _인벤토리.add(낡은검);

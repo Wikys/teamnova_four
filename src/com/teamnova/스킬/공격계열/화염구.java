@@ -7,13 +7,12 @@ import com.teamnova.플레이어.캐릭터;
 public class 화염구 extends 스킬 {
     public int 마나소모 = 5;
     public int 수치 = 5;
+    public 화염구(){}
 
     public 화염구(String 스킬이름) { // 회복스킬
         this.스킬이름 = 스킬이름;
-
-
     }
-    int 화염구_계수 = 5;
+
     public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터){
         if(_캐릭터.전투중마나 >= this.마나소모) {
             int 화염구 = this.수치 + _캐릭터.마법력;
