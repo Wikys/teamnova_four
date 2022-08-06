@@ -212,7 +212,6 @@ public class 메인메뉴 {
                 this.소지품창(_캐릭터, _아이템);
             }
             아이템 버릴아이템 = _아이템.인벤토리.get(입력);
-            //버릴아이템까진 선택됨
             System.out.println(버릴아이템.이름 + "을 정말 버리겠습니까?");
             System.out.println("====================");
             System.out.println("1.예");

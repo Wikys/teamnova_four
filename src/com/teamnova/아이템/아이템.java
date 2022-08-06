@@ -12,8 +12,8 @@ public class 아이템 {
     public int 마나회복;
     public int 아이템번호; //1 부터
     public int 가격;
-    public int 마법무기; //0이면 아님 1이면 마법무기
-    public int 특수; // 특수아이템이거나 보스드랍 전용이라거나~
+    public int 마법무기; //0: 일반무기 1: 마법무기
+    public int 특수; // 0: 일반아이템, 1:특수아이템 2:보스드랍전용
     public String 설명;
     //    boolean 중복장착 = false;
     public boolean 무기중복 = false;
@@ -22,6 +22,9 @@ public class 아이템 {
     public ArrayList<아이템> 장비창 = new ArrayList<아이템>();
     public ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
     //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
+
+//    public abstract 아이템_설명();
+//    public abstract 아이템_효과();
 
 
     public 아이템() {

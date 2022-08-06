@@ -1,7 +1,6 @@
 package com.teamnova.메뉴;
 
 import com.teamnova.몬스터.몬스터;
-import com.teamnova.스킬.공격계열.화염구;
 import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
@@ -16,15 +15,16 @@ public class 전투메뉴 {
     public 몬스터 오크 = new 몬스터(1);
     public 몬스터 오우거 = new 몬스터(2);
     public 몬스터 고블린킹 = new 몬스터(3);
-    몬스터 몬스터= new 몬스터();
-    스킬 화염구 = new 화염구("화염구");
+//    몬스터 몬스터= new 몬스터();
+//    스킬 화염구 = new 화염구("화염구");
 
     Scanner in = new Scanner(System.in);
     int 입력;
     boolean 도주카운터 = true;
 
     public void 몬스터_인카운터(몬스터 _몬스터, 캐릭터 _캐릭터레벨) {
-        int _인카운터 = random.nextInt(2);
+//        int _인카운터 = random.nextInt(2);
+        int _인카운터 = (int)(Math.random()*2);
 
         if (_캐릭터레벨.레벨 < 5) { //보스컨텐츠 x
             if (_인카운터 == this.고블린.몬스터번호) {
@@ -34,7 +34,7 @@ public class 전투메뉴 {
             }
         }
         if (_캐릭터레벨.레벨 >= 5) {//레벨5부터 보스or 새로운몬스터 on
-            _인카운터 = random.nextInt(3);
+            _인카운터 = (int)(Math.random()*3)+1;
             if (_인카운터 == this.오크.몬스터번호) {
                 _몬스터.오크();
             } else if (_인카운터 == this.오우거.몬스터번호) {
