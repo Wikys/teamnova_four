@@ -1,7 +1,5 @@
 package com.teamnova.아이템;
 
-import java.util.ArrayList;
-
 public class 아이템 {
     public String 이름;
     public int 타입;  // 1:무기 2:방어구 3:체력포션 4:마나포션
@@ -18,9 +16,9 @@ public class 아이템 {
     //    boolean 중복장착 = false;
     public boolean 무기중복 = false;
     public boolean 방어구중복 = false;
-    public ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
-    public ArrayList<아이템> 장비창 = new ArrayList<아이템>();
-    public ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
+//    public ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
+//    public ArrayList<아이템> 장비창 = new ArrayList<아이템>();
+//    public ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
     //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
 
 //    public abstract 아이템_설명();
