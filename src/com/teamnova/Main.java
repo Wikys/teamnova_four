@@ -3,6 +3,7 @@ package com.teamnova;
 import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
+import com.teamnova.몬스터.몬스터_인카운터;
 import com.teamnova.상점.상점;
 import com.teamnova.스킬.공격계열.*;
 import com.teamnova.스킬.스킬;
@@ -10,7 +11,6 @@ import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.스킬.종족스킬.강조;
 import com.teamnova.스킬.종족스킬.부정한기운;
 import com.teamnova.스킬.종족스킬.사자의심장;
-import com.teamnova.아이템.아이템;
 import com.teamnova.장비창.장비창;
 import com.teamnova.전직.전사;
 import com.teamnova.전직.전직;
@@ -40,9 +40,10 @@ public class Main {
         스킬 화염구 = new 화염구("화염구");
         스킬샵 스킬샵 = new 스킬샵();
         ArrayList<스킬> _판매스킬목록 = new ArrayList<>();
-        스킬 육광연참 = new 육광연참("육광연참",5,1);
-        스킬 영혼흡수 = new 영혼흡수("정기흡수",5,1);
-        스킬 헬파이어 = new 헬파이어("헬파이어",5,1);
+        스킬 육광연참 = new 육광연참();
+        스킬 영혼흡수 = new 영혼흡수();
+        스킬 헬파이어 = new 헬파이어();
+        몬스터_인카운터 인카운터 = new 몬스터_인카운터();
 
         _판매스킬목록.add(육광연참);
         _판매스킬목록.add(영혼흡수);
@@ -52,9 +53,9 @@ public class Main {
         메인메뉴 메뉴 = new 메인메뉴();
         전투메뉴 전투메뉴 = new 전투메뉴();
         상점 상점 = new 상점();
-        아이템 아이템 = new 아이템();
+//        아이템 아이템 = new 아이템();
         장비창 장비창 = new 장비창();
-        몬스터 몬스터 = new 몬스터();
+//        몬스터 몬스터 = new 몬스터();
         ArrayList<스킬> _버프스킬목록 = new ArrayList<>();
         ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
         ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
@@ -159,7 +160,7 @@ public class Main {
             선택 = in.nextInt();
 
             if (선택 == 1) {
-                전투메뉴.몬스터_인카운터(몬스터, 유저명); // 랜덤몬스터 정보 생성 메서드
+                몬스터 몬스터 = 인카운터.몬스터_인카운터(); // 랜덤몬스터 정보 생성 메서드
 
                 while (true) {
                     전투메뉴.캐릭터_전투_스테이터스(유저명); // 유저 상태창
@@ -174,7 +175,7 @@ public class Main {
                         if (선택 == 1) { //일반적인 공격 선택시
                             전투메뉴.몬스터공격(유저명, 몬스터); // 플레이어 -> 몬스터공격
                             // 적이 죽고나서도 반격하는거 방지
-                            전투메뉴.캐릭터공격(유저명, 몬스터, 아이템);
+                            전투메뉴.캐릭터공격(유저명, 몬스터);
 
                             if (유저명.전투중체력 <= 0) { //캐릭터 죽음
                                 System.out.println("사망하셨습니다");
@@ -183,9 +184,9 @@ public class Main {
                                 continue 행동문; // 초기반복문으로 되돌아가기
                             }
                         } else if (선택 == 2) { //스킬사용 선택시
-                            전투메뉴.스킬사용(유저명,몬스터,아이템,_공격스킬목록,_버프스킬목록,_회복스킬목록,_종족스킬목록);
+                            전투메뉴.스킬사용(유저명,몬스터,_공격스킬목록,_버프스킬목록,_회복스킬목록,_종족스킬목록);
 
-                            전투메뉴.캐릭터공격(유저명, 몬스터, 아이템);
+                            전투메뉴.캐릭터공격(유저명, 몬스터);
                             if (유저명.전투중체력 <= 0) { //캐릭터 죽음
                                 System.out.println("사망하셨습니다");
                                 return; // 사망했으니 종료
@@ -197,7 +198,7 @@ public class Main {
                         }
                     } else if (선택 == 2) { //퀵슬롯
                         전투메뉴.퀵슬롯(유저명);
-                        전투메뉴.캐릭터공격(유저명, 몬스터, 아이템);
+                        전투메뉴.캐릭터공격(유저명, 몬스터);
 //
                     } else if (선택 == 3) { // 도주선택시
                         전투메뉴.도주(메뉴);

@@ -96,7 +96,9 @@ public class 메인메뉴 {
     }
 
     public void 소지품창(캐릭터 _캐릭터) { //아이템장착,버리기,퀵슬롯장착등의 기능을 수행하는메서드
-        System.out.println("====================");
+        입구:
+        while (true){
+            System.out.println("====================");
         for (int i = 0; i < _캐릭터.인벤토리.size(); i++) {
             System.out.println(i + "." + _캐릭터.인벤토리.get(i).이름);
         }
@@ -117,11 +119,7 @@ public class 메인메뉴 {
             입력 = in.nextInt();
             아이템 장착아이템 = _캐릭터.인벤토리.get(입력);
             if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 0) { //일반무기 장착
-                System.out.println("====================");
-                System.out.println("아이템명: " + 장착아이템.이름);
-                System.out.println("공격력: " + 장착아이템.공격력);
-                System.out.println("아이템 설명: " + 장착아이템.설명);
-                System.out.println("====================");
+                장착아이템.아이템_설명();
                 System.out.println("정말로 장착하시겠습니까?");
                 System.out.println("====================");
                 System.out.println("1.예");
@@ -130,24 +128,20 @@ public class 메인메뉴 {
                 입력 = in.nextInt();
                 if (입력 == 1 && 무기중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
-                    _캐릭터.공격력 = _캐릭터.공격력 + 장착아이템.공격력;
+//                    _캐릭터.공격력 = _캐릭터.공격력 + 장착아이템.공격력;
+                    장착아이템.아이템_효과(_캐릭터);
                     _캐릭터.장비창.add(장착아이템);
                     _캐릭터.인벤토리.remove(장착아이템);
                     무기중복 = true;
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else if (입력 == 2) {
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else {
                     System.out.println("중복착용 하지마세요!");
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 }
             } else if (장착아이템.타입 == 1 && 장착아이템.마법무기 == 1) { //마법무기 장착
-                System.out.println("====================");
-                System.out.println("아이템명: " + 장착아이템.이름);
-                System.out.println("마법력: " + 장착아이템.마법력);
-                System.out.println("아이템 설명: " + 장착아이템.설명);
-                System.out.println("====================");
-                System.out.println("정말로 장착하시겠습니까?");
+                장착아이템.아이템_설명();
                 System.out.println("====================");
                 System.out.println("1.예");
                 System.out.println("2.아니오");
@@ -155,23 +149,22 @@ public class 메인메뉴 {
                 입력 = in.nextInt();
                 if (입력 == 1 && 무기중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
-                    _캐릭터.마법력 = _캐릭터.마법력 + 장착아이템.마법력;
+//                    _캐릭터.마법력 = _캐릭터.마법력 + 장착아이템.마법력;
+                    장착아이템.아이템_효과(_캐릭터);
                     _캐릭터.장비창.add(장착아이템);
+
                     _캐릭터.인벤토리.remove(장착아이템);
                     무기중복 = true;
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else if (입력 == 2) {
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else {
                     System.out.println("중복착용 하지마세요!");
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 }
             }
             if (장착아이템.타입 == 2) {
-                System.out.println("====================");
-                System.out.println("아이템명: " + 장착아이템.이름);
-                System.out.println("방어력: " + 장착아이템.방어력);
-                System.out.println("아이템 설명: " + 장착아이템.설명);
+                장착아이템.아이템_설명();
                 System.out.println("====================");
                 System.out.println("정말로 장착하시겠습니까?");
                 System.out.println("====================");
@@ -181,23 +174,24 @@ public class 메인메뉴 {
                 입력 = in.nextInt();
                 if (입력 == 1 && 방어구중복 == false) {
                     System.out.println(장착아이템.이름 + " 장착 되었습니다");
-                    _캐릭터.방어력 = _캐릭터.방어력 + 장착아이템.방어력;
+//                    _캐릭터.방어력 = _캐릭터.방어력 + 장착아이템.방어력;
+                    장착아이템.아이템_효과(_캐릭터);
                     _캐릭터.장비창.add(장착아이템);
                     _캐릭터.인벤토리.remove(장착아이템);
                     방어구중복 = true;
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else if (입력 == 2) {
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 } else {
                     System.out.println("중복착용 하지마세요!");
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 }
             } else if (장착아이템.타입 == 3) {
                 System.out.println("포션류는 장착이 불가능합니다");
-                this.소지품창(_캐릭터);
+                continue 입구;
             } else if (장착아이템.타입 == 4) {
                 System.out.println("포션류는 장착이 불가능합니다");
-                this.소지품창(_캐릭터);
+                continue 입구;
             }
         } else if (입력 == 2) {
             System.out.println("====================");
@@ -206,10 +200,10 @@ public class 메인메뉴 {
             }
             System.out.println("====================");
             System.out.println("버리실 아이템의 번호를 입력하세요");
-            System.out.println("00.돌아가기");
+            System.out.println("90.돌아가기");
             입력 = in.nextInt();
-            if (입력 == 00) {
-                this.소지품창(_캐릭터);
+            if (입력 == 10) {
+                continue 입구;
             }
             아이템 버릴아이템 = _캐릭터.인벤토리.get(입력);
             System.out.println(버릴아이템.이름 + "을 정말 버리겠습니까?");
@@ -222,9 +216,9 @@ public class 메인메뉴 {
             if (입력 == 1) {
                 System.out.println(버릴아이템.이름 + "을 버렸습니다");
                 _캐릭터.인벤토리.remove(버릴아이템);
-                this.소지품창(_캐릭터);
+                continue 입구;
             } else if (입력 == 2) {
-                this.소지품창(_캐릭터);
+                continue 입구;
             }
         } else if (입력 == 3) {
             System.out.println("====================");
@@ -234,10 +228,10 @@ public class 메인메뉴 {
             System.out.println("====================");
             System.out.println("퀵슬롯에 장착할 아이템 번호를 입력해주세요");
             System.out.println("포션만 가능합니다");
-            System.out.println("00.돌아가기");
+            System.out.println("90.돌아가기");
             입력 = in.nextInt();
-            if (입력 == 00) {
-                this.소지품창(_캐릭터);
+            if (입력 == 90) {
+                continue 입구;
             }
             아이템 퀵아이템 = _캐릭터.인벤토리.get(입력);
             if (퀵아이템.타입 == 3 || 퀵아이템.타입 == 4) {
@@ -250,11 +244,17 @@ public class 메인메뉴 {
                     _캐릭터.전투인벤토리.add(퀵아이템);
                     _캐릭터.인벤토리.remove(퀵아이템);
                 } else if (입력 == 2) {
-                    this.소지품창(_캐릭터);
+                    continue 입구;
                 }
 
             }
         }
+        else if(입력 == 0){
+            return;
+        }else{
+            return;
+        }
+    }
     }
 
     public void 스킬인벤( ArrayList<스킬> _공격스킬목록, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록,ArrayList<스킬> _종족스킬목록) { //메인메뉴 7번 스킬인벤

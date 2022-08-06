@@ -7,10 +7,10 @@ import com.teamnova.플레이어.캐릭터;
 public class 영혼흡수 extends 스킬 {
     public int 수치;
     public boolean 스킬제한 = true;
-    public 영혼흡수(String 스킬이름,int 가격, int 계열){
-        this.가격 = 가격;
-        this.계열 = 계열;
-        this.스킬이름 = 스킬이름;
+    public 영혼흡수(){
+        this.가격 = 5;
+        this.계열 = 1;
+        this.스킬이름 = "영혼흡수";
     }
     @Override
     public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터) {

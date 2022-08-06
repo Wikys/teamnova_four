@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 클래스,메서드 정리 끝">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-06__11_25_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-06__11_25_________Changes_.xml" afterDir="false" />
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/상점/상점.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/상점/상점.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/사광연참.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/사광연참.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/실험용.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/실험용.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬샵/스킬샵.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬샵/스킬샵.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/마법무기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/마법무기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/무기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/무기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/방어구.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/방어구.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/조악한_완드.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/조악한_완드.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/포션.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/포션.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/아이템.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/장비창/장비창.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/장비창/장비창.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659339631921</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만">
+      <created>1659787037704</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659787037704</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,7 +176,8 @@
     <MESSAGE value="Changes 메서드정리 (전투메뉴)" />
     <MESSAGE value="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비" />
     <MESSAGE value="Changes 클래스,메서드 정리 끝" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes 클래스,메서드 정리 끝" />
+    <MESSAGE value="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

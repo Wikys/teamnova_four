@@ -4,12 +4,13 @@ import com.teamnova.몬스터.몬스터;
 import com.teamnova.플레이어.캐릭터;
 
 public class 육광연참 extends 사광연참 {
-    public 육광연참(){}
-    public 육광연참(String 스킬이름,int 가격, int 계열){
-        this.가격 = 가격;
-        this.계열 = 계열;
-        this.스킬이름 = 스킬이름;
-    }
+
+
+    public 육광연참(){
+        this.가격 = 5;
+        this.계열 = 1;
+        this.스킬이름 = "육광연참";
+   }
     public int 적_회피증가 = 5;
     public int 마나소모 = 7;
 

@@ -24,7 +24,7 @@ public class 전직{
     }
     public void 전직메뉴(캐릭터 _캐릭터){
 
-        if (_캐릭터.레벨 <0){
+        if (_캐릭터.레벨 <3){
             System.out.println("3레벨 달성하고 다시오세요!");
             return;
         }

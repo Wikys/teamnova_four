@@ -1,11 +1,13 @@
 package com.teamnova.몬스터;
 
+import com.teamnova.아이템.분류.잡템;
 import com.teamnova.아이템.아이템;
+import com.teamnova.플레이어.캐릭터;
 
 import java.util.Random;
 
 
-public class 몬스터 {
+public abstract class 몬스터 {
     public String 이름;
     public int 공격력;
     public int 방어력;
@@ -17,8 +19,9 @@ public class 몬스터 {
     public int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터 아직은 딱히 쓰는덴없음
 //    int 아이템;
     public int 몬스터번호;
-    public 아이템 아이템드랍 = new 아이템();
+
     public Random random = new Random();
+    아이템 잡템 = new 잡템();
 
 
     public 몬스터(){}
@@ -37,74 +40,76 @@ public 몬스터( int 몬스터번호) {
         this.몬스터번호 = 몬스터번호;
 
     }
+    public abstract void 몬스터_정보(몬스터 _몬스터);
+    public abstract void 몬스터_드랍(캐릭터 _캐릭터);
 
-    public void 보물() {
-        this.이름 = "보물";
-        this.체력 = 1;
-        this.마나 = 0;
-        this.공격력 = 0;
-        this.방어력 = 0;
-        this.회피율 = 0;
-        this.경험치 = 1000;
-        this.골드 = random.nextInt(1000);
-        this.몬스터타입 = 1;
-        this.몬스터번호 = 999;
+//    public void 보물() {
+//        this.이름 = "보물";
+//        this.체력 = 1;
+//        this.마나 = 0;
+//        this.공격력 = 0;
+//        this.방어력 = 0;
+//        this.회피율 = 0;
+//        this.경험치 = 1000;
+//        this.골드 = random.nextInt(1000);
+//        this.몬스터타입 = 1;
+//        this.몬스터번호 = 999;
+//
+//    }
 
-    }
+//    public void 고블린() {
+//        this.이름 = "고블린";
+//        this.체력 = 10;
+//        this.마나 = 0;
+//        this.공격력 = 1;
+//        this.방어력 = 0;
+//        this.회피율 = 2;
+//        this.경험치 = 5;
+//        this.골드 = random.nextInt(5);
+//        this.몬스터타입 = 0;
+//        this.몬스터번호 = 0;
+//    }
 
-    public void 고블린() {
-        this.이름 = "고블린";
-        this.체력 = 10;
-        this.마나 = 0;
-        this.공격력 = 1;
-        this.방어력 = 0;
-        this.회피율 = 2;
-        this.경험치 = 5;
-        this.골드 = random.nextInt(5);
-        this.몬스터타입 = 0;
-        this.몬스터번호 = 0;
-    }
+//    public void 오크() {
+//        this.이름 = "오크";
+//        this.체력 = 15;
+//        this.마나 = 0;
+//        this.공격력 = 3;
+//        this.방어력 = 1;
+//        this.회피율 = 3;
+//        this.경험치 = 1000;
+//        this.골드 = random.nextInt(10);
+//        this.몬스터타입 = 0;
+//        this.몬스터번호 = 1;
+//    }
 
-    public void 오크() {
-        this.이름 = "오크";
-        this.체력 = 15;
-        this.마나 = 0;
-        this.공격력 = 3;
-        this.방어력 = 1;
-        this.회피율 = 3;
-        this.경험치 = 1000;
-        this.골드 = random.nextInt(10);
-        this.몬스터타입 = 0;
-        this.몬스터번호 = 1;
-    }
+//    public void 오우거() {
+//        this.이름 = "오우거";
+//        this.체력 = 30;
+//        this.마나 = 0;
+//        this.공격력 = 5;
+//        this.방어력 = 2;
+//        this.회피율 = 0;
+//        this.경험치 = 10;
+//        this.골드 = random.nextInt(15);
+//        this.몬스터타입 = 0;
+//        this.몬스터번호 = 2;
+//
+//    }
 
-    public void 오우거() {
-        this.이름 = "오우거";
-        this.체력 = 30;
-        this.마나 = 0;
-        this.공격력 = 5;
-        this.방어력 = 2;
-        this.회피율 = 0;
-        this.경험치 = 10;
-        this.골드 = random.nextInt(15);
-        this.몬스터타입 = 0;
-        this.몬스터번호 = 2;
-
-    }
-
-    public void 고블린킹() {
-        this.이름 = "고블린킹";
-        this.체력 = 100;
-        this.마나 = 0;
-        this.공격력 = 7;
-        this.방어력 = 3;
-        this.회피율 = 5;
-        this.경험치 = 30;
-        this.골드 = random.nextInt(100);
-        this.몬스터타입 = 1;
-        this.몬스터번호 = 3;
-
-    } //특수아이템 떨어뜨리게하기
+//    public void 고블린킹() {
+//        this.이름 = "고블린킹";
+//        this.체력 = 100;
+//        this.마나 = 0;
+//        this.공격력 = 7;
+//        this.방어력 = 3;
+//        this.회피율 = 5;
+//        this.경험치 = 30;
+//        this.골드 = random.nextInt(100);
+//        this.몬스터타입 = 1;
+//        this.몬스터번호 = 3;
+//
+//    } //특수아이템 떨어뜨리게하기
 
 
 
