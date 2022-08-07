@@ -1,6 +1,5 @@
 package com.teamnova.몬스터;
 
-import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.아이템.분류.잡템;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
@@ -23,7 +22,7 @@ public abstract class 몬스터 {
 
     public Random random = new Random();
     아이템 잡템 = new 잡템();
-    전투메뉴 전투메뉴 = new 전투메뉴();
+//    전투메뉴 전투메뉴 = new 전투메뉴();
 
 
     public 몬스터(){}

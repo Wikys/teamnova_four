@@ -1,6 +1,13 @@
 package com.teamnova.플레이어;
 
 import com.teamnova.메뉴.메인메뉴;
+import com.teamnova.스킬.공격계열.무기파괴;
+import com.teamnova.스킬.공격계열.사광연참;
+import com.teamnova.스킬.공격계열.화염구;
+import com.teamnova.스킬.스킬;
+import com.teamnova.스킬.종족스킬.강조;
+import com.teamnova.스킬.종족스킬.부정한기운;
+import com.teamnova.스킬.종족스킬.사자의심장;
 import com.teamnova.아이템.분류.가죽갑옷;
 import com.teamnova.아이템.분류.낡은검;
 import com.teamnova.아이템.아이템;
@@ -43,6 +50,16 @@ public abstract class 캐릭터 { //구조체
     public ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
     public ArrayList<아이템> 장비창 = new ArrayList<아이템>();
     public ArrayList<아이템> 전투인벤토리 = new ArrayList<아이템>();
+    public ArrayList<스킬> _버프스킬목록 = new ArrayList<>(); //스킬 어레이
+    public ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
+    public ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
+    public ArrayList<스킬> _종족스킬목록 = new ArrayList<>();
+    스킬 무기파괴 = new 무기파괴("무기파괴");
+    스킬 사광연참 = new 사광연참("사광연참");
+    스킬 화염구 = new 화염구("화염구");
+    스킬 강조 = new 강조("강조"); //기본스킬
+    스킬 부정한기운 = new 부정한기운("부정한기운");
+    스킬 사자의심장 = new 사자의심장("사자의심장");
 
     public boolean 종족스킬_제한 = true;
     //     public static 아이템 낡은검 = new 아이템("낡은검", 1, 0, 1, "다 낡아빠진 검이다",0,0); // 아이템호출
@@ -67,7 +84,23 @@ public abstract class 캐릭터 { //구조체
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리) {
         _인벤토리.add(낡은검);
         _인벤토리.add(가죽갑옷);
+        this._공격스킬목록.add(사광연참);
+        this._공격스킬목록.add(화염구);
+        this._공격스킬목록.add(무기파괴);
         System.out.println("기본아이템이 지급되었습니다");
+        System.out.println("기본스킬이 지급되었습니다");
+        if (this.종족 == 0){
+            this._종족스킬목록.add(사자의심장);
+            System.out.println("종족스킬 사자의심장 획득하셨습니다");
+        }
+        else if (this.종족 == 1){
+            this._종족스킬목록.add(강조);
+            System.out.println("종족스킬 강조 획득하셨습니다");
+        }
+        else if (this.종족 == 2){
+            this._종족스킬목록.add(부정한기운);
+            System.out.println("종족스킬 부정한기운 획득하셨습니다");
+        }
         return _인벤토리;
     }
 

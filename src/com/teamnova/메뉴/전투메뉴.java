@@ -6,7 +6,6 @@ import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,6 +19,9 @@ public class 전투메뉴 {
     Scanner in = new Scanner(System.in);
     int 입력;
     boolean 도주카운터 = true;
+
+    //    캐릭터생성 캐릭터생성 = new 캐릭터생성();
+    행동문 행동메뉴 = new 행동문();
 
 
     public 캐릭터 캐릭터_전투_스테이터스(캐릭터 _플레이어) {
@@ -87,20 +89,16 @@ public class 전투메뉴 {
             _캐릭터.전투중체력 = _캐릭터.전투중체력 - _랜덤공격;
             System.out.println(_몬스터.이름 + "이(가) 반격합니다 데미지를 "
                     + _랜덤공격 + "받았습니다");
-        }
-        else if(_몬스터.체력 > 0 && _몬스터.몬스터타입 == 1){
+        } else if (_몬스터.체력 > 0 && _몬스터.몬스터타입 == 1) {
             int 스킬 = random.nextInt(100);
-            if(스킬 < 30){
-                ((보스)_몬스터).보스_스킬(_캐릭터);
-            }
-            else if (스킬 >= 30){
+            if (스킬 < 30) {
+                ((보스) _몬스터).보스_스킬(_캐릭터);
+            } else if (스킬 >= 30) {
                 _캐릭터.전투중체력 = _캐릭터.전투중체력 - _랜덤공격;
                 System.out.println(_몬스터.이름 + "이(가) 반격합니다 데미지를 "
                         + _랜덤공격 + "받았습니다");
             }
-        }
-
-        else if (_몬스터.체력 <= 0) { //전투종료시 재화획득
+        } else if (_몬스터.체력 <= 0) { //전투종료시 재화획득
 
             this.전투종료(_몬스터, _캐릭터);
 
@@ -148,10 +146,11 @@ public class 전투메뉴 {
             System.out.println("============================");
 
         }
+        this.행동메뉴.행동문(_캐릭터, this);
 
     }
 
-    public void 스킬사용(캐릭터 _캐릭터, 몬스터 _몬스터, ArrayList<스킬> _공격스킬목록, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _종족스킬목록) { //스킬목록 출력후 사용 메소드
+    public void 스킬사용(캐릭터 _캐릭터, 몬스터 _몬스터) { //스킬목록 출력후 사용 메소드
 
         System.out.println("1.공격계열");
         System.out.println("2.버프계열");
@@ -159,14 +158,14 @@ public class 전투메뉴 {
         System.out.println("4.종족스킬");
         입력 = in.nextInt();
         if (입력 == 1) {
-//            _공격스킬목록.add(this.화염구);
-            for (int i = 0; i < _공격스킬목록.size(); i++) {
-                System.out.println(i + "." + _공격스킬목록.get(i).스킬이름);
+//            _캐릭터._공격스킬목록.add(this.화염구);
+            for (int i = 0; i < _캐릭터._공격스킬목록.size(); i++) {
+                System.out.println(i + "." + _캐릭터._공격스킬목록.get(i).스킬이름);
             }
             System.out.println();
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
-            스킬 사용스킬 = _공격스킬목록.get(입력);
+            스킬 사용스킬 = _캐릭터._공격스킬목록.get(입력);
             사용스킬.스킬설명();
             System.out.println("아무숫자나 누르시면 사용됩니다");
             입력 = in.nextInt();
@@ -175,13 +174,13 @@ public class 전투메뉴 {
 
         } else if (입력 == 2) {
             //버프스킬 어레이
-            for (int i = 0; i < _버프스킬목록.size(); i++) {
-                System.out.println(i + "." + _버프스킬목록.get(i).스킬이름);
+            for (int i = 0; i < _캐릭터._버프스킬목록.size(); i++) {
+                System.out.println(i + "." + _캐릭터._버프스킬목록.get(i).스킬이름);
             }
             System.out.println();
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
-            스킬 사용스킬 = _버프스킬목록.get(입력);
+            스킬 사용스킬 = _캐릭터._버프스킬목록.get(입력);
             사용스킬.스킬설명();
             System.out.println("아무숫자나 누르시면 사용됩니다");
             입력 = in.nextInt();
@@ -190,13 +189,13 @@ public class 전투메뉴 {
 
         } else if (입력 == 3) {
             //회복스킬 어레이
-            for (int i = 0; i < _회복스킬목록.size(); i++) {
-                System.out.println(i + "." + _회복스킬목록.get(i).스킬이름);
+            for (int i = 0; i < _캐릭터._회복스킬목록.size(); i++) {
+                System.out.println(i + "." + _캐릭터._회복스킬목록.get(i).스킬이름);
             }
             System.out.println();
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
-            스킬 사용스킬 = _회복스킬목록.get(입력);
+            스킬 사용스킬 = _캐릭터._회복스킬목록.get(입력);
             사용스킬.스킬설명();
             System.out.println("아무숫자나 누르시면 사용됩니다");
             입력 = in.nextInt();
@@ -204,13 +203,13 @@ public class 전투메뉴 {
 //                this.캐릭터공격(_캐릭터, _몬스터, _아이템); //스킬사용즉시 적반격
 
         } else if (입력 == 4) {
-            for (int i = 0; i < _종족스킬목록.size(); i++) {
-                System.out.println(i + "." + _종족스킬목록.get(i).스킬이름);
+            for (int i = 0; i < _캐릭터._종족스킬목록.size(); i++) {
+                System.out.println(i + "." + _캐릭터._종족스킬목록.get(i).스킬이름);
             }
             System.out.println();
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
-            스킬 사용스킬 = _종족스킬목록.get(입력);
+            스킬 사용스킬 = _캐릭터._종족스킬목록.get(입력);
             사용스킬.스킬설명();
             System.out.println("아무숫자나 누르시면 사용됩니다");
             입력 = in.nextInt();
@@ -225,22 +224,33 @@ public class 전투메뉴 {
 
 
     public void 퀵슬롯(캐릭터 _캐릭터) {
-        for (int i = 0; i < _캐릭터.전투인벤토리.size(); i++) {
-            System.out.println(i + "." + _캐릭터.전투인벤토리.get(i).이름);
-        }
-        System.out.println("사용할 아이템 번호를 입력해주세요");
-        입력 = in.nextInt();
-        아이템 사용아이템 = _캐릭터.전투인벤토리.get(입력);
-        System.out.println("====================");
-        System.out.println("아이템명: " + 사용아이템.이름);
-        System.out.println("회복량: " + 사용아이템.체력회복);
-        System.out.println("아이템 설명: " + 사용아이템.설명);
-        System.out.println("====================");
-        System.out.println("아무숫자나 누르시면 사용됩니다");
-        입력 = in.nextInt();
+        입구:
+        while (true) {
+            System.out.println("퀵슬롯");
+            System.out.println("1.물약사용");
+            System.out.println("0.나가기");
+            입력 = in.nextInt();
+            if (입력 == 1) {
+                for (int i = 0; i < _캐릭터.전투인벤토리.size(); i++) {
+                    System.out.println(i + "." + _캐릭터.전투인벤토리.get(i).이름);
+                }
+                System.out.println("사용할 아이템 번호를 입력해주세요");
+                입력 = in.nextInt();
+                아이템 사용아이템 = _캐릭터.전투인벤토리.get(입력);
 
-        사용아이템.아이템_효과(_캐릭터);
-        _캐릭터.전투인벤토리.remove(사용아이템);
+                사용아이템.아이템_설명();
+                System.out.println("아무숫자나 누르시면 사용됩니다");
+                입력 = in.nextInt();
+
+                사용아이템.아이템_효과(_캐릭터);
+                _캐릭터.전투인벤토리.remove(사용아이템);
+            } else if (입력 == 0) {
+                break;
+            } else {
+                System.out.println("잘못 입력하셨습니다");
+                continue 입구;
+            }
+
 
 //        if (사용아이템.타입 == 3) { //체력포션 사용
 ////            _캐릭터.전투중체력 = _캐릭터.포션꿀꺽(사용아이템.체력회복, _캐릭터.최대체력, _캐릭터.전투중체력);
@@ -253,35 +263,45 @@ public class 전투메뉴 {
 ////            사용아이템.아이템_효과(_캐릭터);
 //            _캐릭터.전투인벤토리.remove(사용아이템);
 //        }
-
+        }
 
     }
 
-    public void 도주(메인메뉴 _전투종료) {
+    public void 도주(캐릭터 _캐릭터,행동문 _행동문, 몬스터 _몬스터) {
         System.out.println("도주를 시도합니다");
         int 도주확률 = random.nextInt(100);
 
         if (도주확률 <= 50 && this.도주카운터 == true) { // 도주확률이 50안쪽이면 도망성공
             System.out.println("도주에 성공하셨습니다");
-            _전투종료.전투종료 = true;
+            _행동문.행동문(_캐릭터,this);
+
+
+//            _전투종료.전투종료 = true;
         } else if (도주확률 > 50 && 도주카운터 == true) { // 도주카운터가 51~100이뜨면 도주실패
             System.out.println("도주에 실패하셨습니다");
             도주카운터 = false;
-            _전투종료.전투종료 = false;
+//            _전투종료.전투종료 = false;
         } else if (this.도주카운터 == false) { // 도주시도는 단 한번만 가능
             System.out.println("이미 적에게 발각당하셨습니다");
             System.out.println("도망칠수 없습니다");
-            _전투종료.전투종료 = false;
+//            _전투종료.전투종료 = false;
+        } else if (_몬스터.몬스터타입 == 1){
+            System.out.println("보스전에선 도주할수 없습니다");
         }
 
     }
-    public void 사망(캐릭터 _캐릭터, 몬스터 _몬스터){
+
+    public void 사망(캐릭터 _캐릭터, 몬스터 _몬스터) {
         if (_캐릭터.전투중체력 <= 0) { //캐릭터 죽음
             System.out.println("사망하셨습니다");
-            return; // 사망했으니 종료
-        }
-        else if(_몬스터.체력 <= 0){
-            return;dd // 초기반복문으로 되돌아가기
+//            행동메뉴.행동문(_캐릭터);
+            System.exit(0);
+
+
+        } else if (_몬스터.체력 <= 0) {
+            this.전투종료(_몬스터, _캐릭터);
+//            행동메뉴.행동문(_캐릭터);
+
         }
     }
 }
