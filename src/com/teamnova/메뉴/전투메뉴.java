@@ -11,6 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class 전투메뉴 {
+    메인메뉴 메인메뉴 = new 메인메뉴();
     Random random = new Random();
 
 //    몬스터 몬스터= new 몬스터();
@@ -147,6 +148,7 @@ public class 전투메뉴 {
             System.out.println("============================");
 
         }
+
     }
 
     public void 스킬사용(캐릭터 _캐릭터, 몬스터 _몬스터, ArrayList<스킬> _공격스킬목록, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _종족스킬목록) { //스킬목록 출력후 사용 메소드

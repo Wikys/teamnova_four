@@ -114,12 +114,7 @@ public abstract class 캐릭터 { //구조체
         return _해금;
     }
 
-    public void 브아악() {
-        if (this.전투중체력 <= 0) {
-            System.out.println("사망하셨습니다");
-            메인메뉴.행동메뉴(this);
-        }
-    }
+
 
 
 }
