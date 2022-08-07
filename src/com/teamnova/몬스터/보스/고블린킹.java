@@ -5,7 +5,7 @@ import com.teamnova.아이템.분류.고블린왕의_몽둥이;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
-public class 고블린킹 extends 몬스터 {
+public class 고블린킹 extends 보스 {
     아이템 고블린왕의_몽둥이 = new 고블린왕의_몽둥이();
     public 고블린킹(){
         this.이름 = "고블린킹";
@@ -51,6 +51,14 @@ public class 고블린킹 extends 몬스터 {
             System.out.println("아이템을 발견하지 못했습니다");
         }
 
+
+    }
+
+    @Override
+    public void 보스_스킬(캐릭터 _캐릭터) { // 보스몬스터의 기술
+        System.out.println("고블린킹이 방어구 궤뚫기를 사용합니다");
+        System.out.println(_캐릭터.이름+"이(가) 방어력 무시 데미지 "+this.공격력+"을 받습니다");
+        _캐릭터.전투중체력 = _캐릭터.전투중체력 - this.공격력;
 
     }
 }

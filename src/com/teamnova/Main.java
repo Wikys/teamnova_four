@@ -1,6 +1,7 @@
 package com.teamnova;
 
 import com.teamnova.메뉴.메인메뉴;
+import com.teamnova.메뉴.보스전;
 import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.몬스터.몬스터_인카운터;
@@ -68,6 +69,7 @@ public class Main {
 //        String 내캐릭터;
 //        Random 랜덤 = new Random(); // 몬스터 생성자
         캐릭터 유저명;
+        보스전 보스전 = new 보스전();
 
 
 
@@ -153,10 +155,11 @@ public class Main {
 
         행동문:
         while (true) {
+
             고블린킹 = 유저명.보스_컨텐츠해금(유저명.레벨, 고블린킹); // 5레벨 컨텐츠 // 나중에 수정
             전직.전직여부(유저명);
             메뉴.유저상태_초기화(유저명, _공격스킬목록,_버프스킬목록,_회복스킬목록); //버프나 기타등등으로 올라간 능력치 초기화,제한스킬 초기화
-            메뉴.행동메뉴(); // 행동메뉴 호출 메서드
+            메뉴.행동메뉴(유저명); // 행동메뉴 호출 메서드
             선택 = in.nextInt();
 
             if (선택 == 1) {
@@ -243,6 +246,9 @@ public class Main {
                 //스킬샵
                 스킬샵.스킬구매목록(유저명,_판매스킬목록, _버프스킬목록,_회복스킬목록,_공격스킬목록);
 
+            }
+            else if (선택 == 10){
+                보스전.보스메뉴(유저명);
             }
             else if (선택 == 0) {
                 return;

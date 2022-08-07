@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만">
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-03__7_54_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-03__7_54_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-04__11_12_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-04__11_12_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-04__7_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-04__7_30_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-06__11_25_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-06__11_25_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/상점/상점.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/상점/상점.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬샵/스킬샵.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬샵/스킬샵.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/마법무기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/마법무기.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/무기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/무기.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/방어구.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/방어구.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/조악한_완드.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/조악한_완드.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/포션.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/분류/포션.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/아이템/아이템.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/아이템/아이템.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/장비창/장비창.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/장비창/장비창.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터/보스/고블린킹.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터/보스/고블린킹.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +46,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="애플리케이션.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.teamnova.Main" />
@@ -169,7 +167,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />
