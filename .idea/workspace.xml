@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes">
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터/몬스터.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +38,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RunManager" selected="애플리케이션.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.teamnova.Main" />
@@ -169,6 +160,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />

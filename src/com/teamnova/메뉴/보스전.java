@@ -30,11 +30,11 @@ public class 보스전 extends 전투메뉴{
                 this.전투행동();
                 입력 = in.nextInt();
                 switch (입력){
-                    case 1: this.몬스터공격(_캐릭터, 보스);
+                    case 1: this.몬스터공격(_캐릭터, 보스); //공격
                     this.캐릭터공격(_캐릭터,보스);
                     _캐릭터.끄아악();
                     보스.브아악(_캐릭터);
-                    case 2: this.퀵슬롯(_캐릭터);
+                    case 2: this.퀵슬롯(_캐릭터); //퀵슬롯
                         this.캐릭터공격(_캐릭터, 보스);
                 }
             }

@@ -275,4 +275,13 @@ public class 전투메뉴 {
         }
 
     }
+    public void 사망(캐릭터 _캐릭터, 몬스터 _몬스터){
+        if (_캐릭터.전투중체력 <= 0) { //캐릭터 죽음
+            System.out.println("사망하셨습니다");
+            return; // 사망했으니 종료
+        }
+        else if(_몬스터.체력 <= 0){
+            return;dd // 초기반복문으로 되돌아가기
+        }
+    }
 }
