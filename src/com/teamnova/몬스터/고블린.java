@@ -11,7 +11,7 @@ public class 고블린 extends 몬스터{
         this.공격력 = 1;
         this.방어력 = 0;
         this.회피율 = 2;
-        this.경험치 = 5;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(5);
         this.몬스터타입 = 0;
         this.몬스터번호 = 0;
@@ -27,7 +27,7 @@ public class 고블린 extends 몬스터{
         this.공격력 = 1;
         this.방어력 = 0;
         this.회피율 = 2;
-        this.경험치 = 5;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(5);
         this.몬스터타입 = 0;
         this.몬스터번호 = 0;

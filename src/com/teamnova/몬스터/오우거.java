@@ -11,7 +11,7 @@ public class 오우거 extends 몬스터{
         this.공격력 = 5;
         this.방어력 = 2;
         this.회피율 = 0;
-        this.경험치 = 10;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(15);
         this.몬스터타입 = 0;
         this.몬스터번호 = 2;
@@ -27,7 +27,7 @@ public class 오우거 extends 몬스터{
         this.공격력 = 5;
         this.방어력 = 2;
         this.회피율 = 0;
-        this.경험치 = 10;
+        this.경험치 = 1000;
         this.골드 = random.nextInt(15);
         this.몬스터타입 = 0;
         this.몬스터번호 = 2;

@@ -1,6 +1,7 @@
 package com.teamnova.메뉴;
 
 import com.teamnova.스킬.스킬;
+import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
@@ -16,6 +17,7 @@ public class 메인메뉴 {
     public boolean 무기중복 = false;
     public boolean 방어구중복 = false;
     String 유저이름;
+
 
 
 
@@ -55,7 +57,7 @@ public class 메인메뉴 {
     }
 
 
-    public 캐릭터 유저상태_초기화(캐릭터 _캐릭터 ) { // 버프나 기타등등으로 올라간 능력치 초기화
+    public 캐릭터 유저상태_초기화(캐릭터 _캐릭터, 스킬샵 _스킬샵) { // 버프나 기타등등으로 올라간 능력치 초기화
 
         _캐릭터.체력 = _캐릭터.전투중체력;
         _캐릭터.마나 = _캐릭터.전투중마나;
@@ -74,6 +76,7 @@ public class 메인메뉴 {
         for (int i = 0; i < _캐릭터._회복스킬목록.size(); i++) {
             _캐릭터._회복스킬목록.get(i).스킬초기화();
         }
+
         return _캐릭터;
     }
 

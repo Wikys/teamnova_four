@@ -139,7 +139,7 @@ public class 전투메뉴 {
             System.out.println("레벨이 " + _캐릭터.레벨 + "이 되었습니다");
             System.out.println("공격력이 " + _캐릭터.공격력 + "이 되었습니다");
             System.out.println("방어력이 " + _캐릭터.방어력 + "이 되었습니다");
-            System.out.println("방어력이 " + _캐릭터.마법력 + "이 되었습니다");
+            System.out.println("마법력이 " + _캐릭터.마법력 + "이 되었습니다");
             System.out.println("최대체력이 " + _캐릭터.최대체력 + "이 되었습니다");
             System.out.println("최대마나가 " + _캐릭터.최대마나 + "이 되었습니다");
             System.out.println("체력과 마나가 전부 회복되었습니다");
@@ -271,13 +271,13 @@ public class 전투메뉴 {
         System.out.println("도주를 시도합니다");
         int 도주확률 = random.nextInt(100);
 
-        if (도주확률 <= 50 && this.도주카운터 == true) { // 도주확률이 50안쪽이면 도망성공
+        if (도주확률 <= 50 && this.도주카운터 == true && _몬스터.몬스터타입 == 0) { // 도주확률이 50안쪽이면 도망성공
             System.out.println("도주에 성공하셨습니다");
             _행동문.행동문(_캐릭터,this);
 
 
 //            _전투종료.전투종료 = true;
-        } else if (도주확률 > 50 && 도주카운터 == true) { // 도주카운터가 51~100이뜨면 도주실패
+        } else if (도주확률 > 50 && 도주카운터 == true&& _몬스터.몬스터타입 == 0) { // 도주카운터가 51~100이뜨면 도주실패
             System.out.println("도주에 실패하셨습니다");
             도주카운터 = false;
 //            _전투종료.전투종료 = false;
@@ -286,7 +286,7 @@ public class 전투메뉴 {
             System.out.println("도망칠수 없습니다");
 //            _전투종료.전투종료 = false;
         } else if (_몬스터.몬스터타입 == 1){
-            System.out.println("보스전에선 도주할수 없습니다");
+            System.out.println("보스에게선 도주할수 없습니다");
         }
 
     }

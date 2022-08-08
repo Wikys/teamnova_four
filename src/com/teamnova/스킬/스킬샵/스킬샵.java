@@ -1,5 +1,8 @@
 package com.teamnova.스킬.스킬샵;
 
+import com.teamnova.스킬.공격계열.영혼흡수;
+import com.teamnova.스킬.공격계열.육광연참;
+import com.teamnova.스킬.공격계열.헬파이어;
 import com.teamnova.스킬.스킬;
 import com.teamnova.플레이어.캐릭터;
 
@@ -10,9 +13,26 @@ public class 스킬샵 {
     Scanner in = new Scanner(System.in);
     int 선택;
     int 입력;
+    ArrayList<스킬> _판매스킬목록;
+    스킬 육광연참;
+    스킬 영혼흡수;
+    스킬 헬파이어;
+
+    public 스킬샵(){
+        _판매스킬목록 = new ArrayList<>();
+        육광연참 = new 육광연참();
+        영혼흡수 = new 영혼흡수();
+        헬파이어 = new 헬파이어();
+        _판매스킬목록.add(육광연참);
+        _판매스킬목록.add(영혼흡수);
+        _판매스킬목록.add(헬파이어);
+
+    }
 
 
-    public void 스킬구매목록 (캐릭터 _캐릭터,ArrayList<스킬> _판매스킬목록, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _공격스킬목록) {
+
+    public void 스킬구매목록 (캐릭터 _캐릭터, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _공격스킬목록) {
+
         입구 :
         while (true) {
             System.out.println("스킬상점입니다 원하시는 스킬계열을 선택해주세요");
