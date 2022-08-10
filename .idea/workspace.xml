@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 완료, 발표준비">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-10__11_06_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-10__11_06_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/행동문.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/행동문.java" afterDir="false" />
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 스테이터스창 만들었음 쓰레드적용?">
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/실험용.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/실험용.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/쓰레드연습.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/쓰레드연습.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659896878991</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changes 스테이터스창 만들었음 쓰레드적용?">
+      <created>1660147090228</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660147090228</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,7 +208,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="Changes 캐릭터생성, 메인 변경전 백업" />
     <MESSAGE value="Changes 완료, 발표준비" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes 완료, 발표준비" />
+    <MESSAGE value="Changes 스테이터스창 만들었음 쓰레드적용?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 스테이터스창 만들었음 쓰레드적용?" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
