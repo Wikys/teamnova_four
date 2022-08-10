@@ -6,12 +6,19 @@ import com.teamnova.스킬.스킬;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
 public class 전투메뉴 {
+
+    JFrame 캐릭터_스테이터스 = new JFrame("캐릭터 스테이터스");
+    JFrame 몬스터_스테이터스 = new JFrame("몬스터 스테이터스");
+    JLabel 캐릭터_텍스트 = new JLabel("캐릭터 스테이터스");
+    JLabel 몬스터_텍스트 = new JLabel("몬스터 스테이터스");
     메인메뉴 메인메뉴 = new 메인메뉴();
     Random random = new Random();
+
 
 //    몬스터 몬스터= new 몬스터();
 //    스킬 화염구 = new 화염구("화염구");
@@ -24,31 +31,64 @@ public class 전투메뉴 {
     행동문 행동메뉴 = new 행동문();
 
 
-    public 캐릭터 캐릭터_전투_스테이터스(캐릭터 _플레이어) {
-        System.out.println("=====================");
-        System.out.println("이름 : " + _플레이어.이름);
-        System.out.println("체력 : " + _플레이어.전투중체력);
-        System.out.println("마나 : " + _플레이어.전투중마나);
-        System.out.println("공격력 : " + _플레이어.전투중공격력);
-        System.out.println("마법력 : " + _플레이어.전투중마법력);
-        System.out.println("방어력 : " + _플레이어.전투중방어력);
-        System.out.println("회피율 : " + _플레이어.전투중회피율);
-        System.out.println("=====================");
-        return _플레이어;
+    public void 캐릭터_전투_스테이터스(캐릭터 _플레이어, 몬스터 _몬스터) {
+
+        this.캐릭터_스테이터스.setSize(500, 500);
+        this.캐릭터_텍스트.setText("" +
+                "<html>=====================" +
+                "<br>이름 : " + _플레이어.이름+
+                "<br>체력 : "+_플레이어.전투중체력+
+                "<br>마나 : "+_플레이어.전투중마나+
+                "<br>공격력 : "+_플레이어.전투중공격력+
+                "<br>마법력 : "+_플레이어.전투중마법력+
+                "<br>방어력 : "+_플레이어.전투중방어력+
+                "<br>회피율 : "+_플레이어.전투중회피율+
+                "<br><html>=====================");
+        this.캐릭터_스테이터스.add(캐릭터_텍스트);
+        this.캐릭터_스테이터스.setLocation(200,400);
+        this.캐릭터_스테이터스.pack();
+        this.캐릭터_스테이터스.setVisible(true);
+
+
+//        System.out.println("=====================");
+//        System.out.println("이름 : " + _플레이어.이름);
+//        System.out.println("체력 : " + _플레이어.전투중체력);
+//        System.out.println("마나 : " + _플레이어.전투중마나);
+//        System.out.println("공격력 : " + _플레이어.전투중공격력);
+//        System.out.println("마법력 : " + _플레이어.전투중마법력);
+//        System.out.println("방어력 : " + _플레이어.전투중방어력);
+//        System.out.println("회피율 : " + _플레이어.전투중회피율);
+//        System.out.println("=====================");
+
     }
 
-    public 몬스터 몬스터_전투_스테이터스(몬스터 _몬스터) {
-        System.out.println("=====================");
-        System.out.println("이름 : " + _몬스터.이름);
-        System.out.println("체력 : " + _몬스터.체력);
-        System.out.println("마나 : " + _몬스터.마나);
-        System.out.println("공격력 : " + _몬스터.공격력);
-        System.out.println("방어력 : " + _몬스터.방어력);
-        System.out.println("회피율 : " + _몬스터.회피율);
-        System.out.println("=====================");
+    public void 몬스터_전투_스테이터스(몬스터 _몬스터, 캐릭터 _캐릭터) {
 
-        return _몬스터;
-    }
+        this.몬스터_스테이터스.setSize(500, 500);
+        this.몬스터_텍스트.setText("" +
+                "<html>=====================" +
+                "<br>이름 : " + _몬스터.이름+
+                "<br>체력 : "+_몬스터.체력+
+                "<br>마나 : "+_몬스터.마나+
+                "<br>공격력 : "+_몬스터.공격력+
+                "<br>방어력 : "+_몬스터.방어력+
+                "<br>회피율 : "+ _몬스터.회피율+
+                "<br><html>=====================");
+        this.몬스터_스테이터스.add(몬스터_텍스트);
+        this.몬스터_스테이터스.setLocation(400,400);
+        this.몬스터_스테이터스.pack();
+        this.몬스터_스테이터스.setVisible(true);
+
+//        System.out.println("=====================");
+//        System.out.println("이름 : " + _몬스터.이름);
+//        System.out.println("체력 : " + _몬스터.체력);
+//        System.out.println("마나 : " + _몬스터.마나);
+//        System.out.println("공격력 : " + _몬스터.공격력);
+//        System.out.println("방어력 : " + _몬스터.방어력);
+//        System.out.println("회피율 : " + _몬스터.회피율);
+//        System.out.println("=====================");
+
+            }
 
     public void 전투행동() {
         System.out.println("전투행동을 선택해주세요");
@@ -108,7 +148,10 @@ public class 전투메뉴 {
     }
 
     public void 전투종료(몬스터 _몬스터, 캐릭터 _캐릭터) { //전투결과
-
+        this.몬스터_스테이터스.setVisible(false);
+        this.몬스터_스테이터스.dispose();
+        this.캐릭터_스테이터스.setVisible(false);
+        this.캐릭터_스테이터스.dispose();
         int 획득골드 = _몬스터.골드;
         System.out.println("==============================");
         System.out.println(_몬스터.이름 + "을(를) 처치하였습니다");

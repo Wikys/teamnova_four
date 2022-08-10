@@ -1,8 +1,27 @@
 package com.teamnova;
 
+import javax.swing.*;
+
 public class 쓰레드연습 {
 
     public static void main(String[] args) {
+        JFrame 캐릭터_스테이터스 = new JFrame("캐릭터 스테이터스");
+        JLabel 캐릭터_텍스트 = new JLabel("캐릭터 스테이터스");
+        for (int i=0; i<=10; i++) {
+            캐릭터_스테이터스.setLocation(200,400);
+            캐릭터_스테이터스.setVisible(true);
+            System.out.println(i);
+
+            if (i == 5){
+                캐릭터_스테이터스.setVisible(false);
+                캐릭터_스테이터스.dispose();
+            }
+            try {
+                Thread.sleep(1000);
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
 
 
 
