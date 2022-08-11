@@ -3,6 +3,7 @@ package com.teamnova.몬스터;
 import com.teamnova.플레이어.캐릭터;
 
 public class 몬스터_인카운터 extends 몬스터 {
+
     public 몬스터 고블린 ;
     public 몬스터 오크 ;
     public 몬스터 오우거 ;

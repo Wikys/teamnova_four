@@ -5,6 +5,8 @@ import com.teamnova.메뉴.캐릭터생성;
 import com.teamnova.메뉴.행동문;
 import com.teamnova.플레이어.캐릭터;
 
+import static com.teamnova.몬스터.몬스터.유저명;
+
 public class Main {
     public static void main(String[] args) {
         캐릭터생성 캐릭터생성 = new 캐릭터생성();
@@ -42,8 +44,8 @@ public class Main {
 //        _공격스킬목록.add(화염구);
 //        _공격스킬목록.add(사광연참); //실험용
 //        보스전 보스전 = new 보스전();
-        캐릭터 유저명 = null;
-        유저명 = 캐릭터생성.캐릭터생성(유저명); //캐릭터생성 메소드
+//        캐릭터 유저명 = null;
+        유저명 = 캐릭터생성.캐릭터생성(); //캐릭터생성 메소드
         행동메뉴.행동문(유저명,전투메뉴); // 메인메뉴 메소드
 
 

@@ -9,6 +9,8 @@ import com.teamnova.플레이어.캐릭터;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.teamnova.몬스터.몬스터.유저명;
+
 public class 캐릭터생성 {
     Scanner in = new Scanner(System.in);
     int 선택; //정수형 스캐너
@@ -27,10 +29,10 @@ public class 캐릭터생성 {
 
 
 
-    public 캐릭터 캐릭터생성(캐릭터 _캐릭터) {
-//        _캐릭터._공격스킬목록.add(무기파괴);
-//        _캐릭터._공격스킬목록.add(화염구);
-//        _캐릭터._공격스킬목록.add(사광연참); //실험용
+    public 캐릭터 캐릭터생성() {
+//        유저명._공격스킬목록.add(무기파괴);
+//        유저명._공격스킬목록.add(화염구);
+//        유저명._공격스킬목록.add(사광연참); //실험용
         캐릭터작성:
         while (true) {
 
@@ -52,10 +54,10 @@ public class 캐릭터생성 {
                     System.out.println("0.뒤로가기");
                     선택 = in.nextInt();
                     if (선택 == 1) {
-                        _캐릭터 = new 인간();
-                        _캐릭터.스탯(_캐릭터);
+                        유저명 = new 인간();
+                        유저명.스탯();
                         System.out.println("인간을 선택하셨습니다");
-//                        _캐릭터._종족스킬목록.add(사자의심장);
+//                        유저명._종족스킬목록.add(사자의심장);
                         break;
                     } else if (선택 == 0) {
                         continue 캐릭터작성;
@@ -68,10 +70,10 @@ public class 캐릭터생성 {
                     선택 = in.nextInt();
                     if (선택 == 1) {
 
-                        _캐릭터 = new 비스트맨();
-                        _캐릭터.스탯(_캐릭터);
+                        유저명 = new 비스트맨();
+                        유저명.스탯();
                         System.out.println("비스트맨을 선택하셨습니다");
-//                        _캐릭터._종족스킬목록.add(강조);
+//                        유저명._종족스킬목록.add(강조);
 
                         break;
                     } else if (선택 == 0) {
@@ -84,10 +86,10 @@ public class 캐릭터생성 {
                     System.out.println("0.뒤로가기");
                     선택 = in.nextInt();
                     if (선택 == 1) {
-                        _캐릭터 = new 스켈레톤();
-                        _캐릭터.스탯(_캐릭터);
+                        유저명 = new 스켈레톤();
+                        유저명.스탯();
                         System.out.println("스켈레톤을 선택하셨습니다");
-//                        _캐릭터._종족스킬목록.add(부정한기운);
+//                        유저명._종족스킬목록.add(부정한기운);
                         break;
                     } else if (선택 == 0) {
                         continue 캐릭터작성;
@@ -97,10 +99,10 @@ public class 캐릭터생성 {
         }
         System.out.println("캐릭터의 이름을 입력해주세요");
         이름 = in.next();
-        _캐릭터.이름 = 이름;
-        System.out.println("이름이 " + _캐릭터.이름 + " 으로 결정되었습니다");
-        _캐릭터.기본아이템(_캐릭터.인벤토리);
+        유저명.이름 = 이름;
+        System.out.println("이름이 " + 유저명.이름 + " 으로 결정되었습니다");
+        유저명.기본아이템(유저명.인벤토리);
         System.out.println("당신은 모험을 시작합니다");
-        return _캐릭터;
+        return 유저명;
     }
 }

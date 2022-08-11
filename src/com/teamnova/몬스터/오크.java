@@ -49,4 +49,17 @@ public class 오크 extends 몬스터{
 
 
     }
+    @Override
+    public void run() {
+        while(true) {
+            this.캐릭터공격();
+            try {
+                Thread.sleep(1000);
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+
+            }
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package com.teamnova.플레이어;
 
 import com.teamnova.메뉴.메인메뉴;
+import com.teamnova.몬스터.몬스터;
 import com.teamnova.스킬.공격계열.무기파괴;
 import com.teamnova.스킬.공격계열.사광연참;
 import com.teamnova.스킬.공격계열.화염구;
@@ -16,12 +17,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public abstract class 캐릭터 { //구조체
+public abstract class 캐릭터 extends Thread{ //구조체
+
     public Scanner in = new Scanner(System.in);
     public String 이름;
     public int 입력;
     public int 레벨;
     public int 공격력;
+
     public int 전투중공격력 = 공격력; // 버프스킬등의 사용으로 증가되는 공격력 // 초기값은 기본공격력
     public int 방어력;
     public int 전투중방어력 = 방어력; // 버프스킬등의 사용으로 증가되는 방어력
@@ -79,7 +82,7 @@ public abstract class 캐릭터 { //구조체
 
     }
 
-    public abstract void 스탯(캐릭터 _캐릭터);
+    public abstract void 스탯();
 
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리) {
         _인벤토리.add(낡은검);

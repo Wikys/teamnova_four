@@ -1,13 +1,15 @@
 package com.teamnova.플레이어;
 
 
+import static com.teamnova.몬스터.몬스터.유저명;
+
 public class 비스트맨 extends 아인종 {
     public 비스트맨() {
 
     }
 
-    public void 스탯(캐릭터 _캐릭터) {
-        this.이름 = _캐릭터.이름;
+    public void 스탯() {
+        this.이름 = 유저명.이름;
         this.레벨 = 1;
         this.공격력 = 5;
         this.방어력 = 0;
