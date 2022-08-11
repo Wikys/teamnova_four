@@ -1,7 +1,7 @@
 package com.teamnova.스킬.공격계열;
 
-import com.teamnova.몬스터.몬스터;
-import com.teamnova.플레이어.캐릭터;
+import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 
 public class 헬파이어 extends 화염구 {
@@ -14,17 +14,17 @@ public class 헬파이어 extends 화염구 {
     }
 
     @Override
-    public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터) {
-        if(_캐릭터.전투중마나 >= this.마나소모) {
-            int 헬파이어 = this.수치 + _캐릭터.마법력;
-            System.out.println(_캐릭터.이름 + "이(가) 헬파이어를 날렸습니다");
-            System.out.println(_몬스터.이름 + "에게 " + 헬파이어 + "의 데미지를 입혔습니다");
-            _몬스터.체력 = _몬스터.체력 - 헬파이어;
-            if(_캐릭터.종족 == 2){
+    public void 스킬효과() {
+        if(유저명.전투중마나 >= this.마나소모) {
+            int 헬파이어 = this.수치 + 유저명.마법력;
+            System.out.println(유저명.이름 + "이(가) 헬파이어를 날렸습니다");
+            System.out.println(몬스터.이름 + "에게 " + 헬파이어 + "의 데미지를 입혔습니다");
+            몬스터.체력 = 몬스터.체력 - 헬파이어;
+            if(유저명.종족 == 2){
                 System.out.println("마나가 사용되지 않았습니다");
             }
-            else if(_캐릭터.종족 !=2){
-                _캐릭터.전투중마나 = _캐릭터.전투중마나 - this.마나소모;
+            else if(유저명.종족 !=2){
+                유저명.전투중마나 = 유저명.전투중마나 - this.마나소모;
             }
         }
         else{

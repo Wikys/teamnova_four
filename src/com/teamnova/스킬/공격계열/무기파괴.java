@@ -1,8 +1,10 @@
 package com.teamnova.스킬.공격계열;
 
-import com.teamnova.몬스터.몬스터;
 import com.teamnova.스킬.스킬;
-import com.teamnova.플레이어.캐릭터;
+
+import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
+
 
 public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
     int 수치 = 3;
@@ -15,24 +17,24 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
     public 무기파괴(String 스킬이름) { // 불린처리 다시하기
         this.스킬이름 = 스킬이름;
     }
-    public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터){
+    public void 스킬효과(){
 
 
-        if(_몬스터.공격력 >= this.수치 && this.스킬제한 == true){
-            _몬스터.공격력 = _몬스터.공격력 - this.수치;
+        if(몬스터.공격력 >= this.수치 && this.스킬제한 == true){
+            몬스터.공격력 = 몬스터.공격력 - this.수치;
             this.스킬제한 = false;
             System.out.println("적의 무기를 파괴하였습니다 적의 공격력이 감소합니다");
-            if(_캐릭터.종족==1){
-                _몬스터.방어력 = _몬스터.방어력 - this.수치;
+            if(유저명.종족==1){
+                몬스터.방어력 = 몬스터.방어력 - this.수치;
                 System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
                 System.out.println("적의 방어력이 감소합니다");
             }
-            else if(_캐릭터.종족==1 && _몬스터.방어력 <=0){
+            else if(유저명.종족==1 && 몬스터.방어력 <=0){
                 System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
             }
         }
-        else if(_몬스터.공격력 < this.수치 && this.스킬제한 == true){
-            _몬스터.공격력 = 0;
+        else if(몬스터.공격력 < this.수치 && this.스킬제한 == true){
+            몬스터.공격력 = 0;
             this.스킬제한 = false;
             System.out.println("적의 무기를 파괴하였습니다");
         }

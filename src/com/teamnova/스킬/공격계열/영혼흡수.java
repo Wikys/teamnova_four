@@ -1,8 +1,8 @@
 package com.teamnova.스킬.공격계열;
 
-import com.teamnova.몬스터.몬스터;
 import com.teamnova.스킬.스킬;
-import com.teamnova.플레이어.캐릭터;
+
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 영혼흡수 extends 스킬 {
     public int 수치;
@@ -13,10 +13,10 @@ public class 영혼흡수 extends 스킬 {
         this.스킬이름 = "영혼흡수";
     }
     @Override
-    public void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터) {
+    public void 스킬효과() {
         if(this.스킬제한 == true){
             System.out.println("주변의 영혼을 흡수하여 마나를 전부 회복합니다");
-            _캐릭터.전투중마나 = _캐릭터.최대마나;
+            유저명.전투중마나 = 유저명.최대마나;
             this.스킬제한 = false;
         }
         else if(this.스킬제한 == false){

@@ -4,10 +4,11 @@ import com.teamnova.스킬.공격계열.영혼흡수;
 import com.teamnova.스킬.공격계열.육광연참;
 import com.teamnova.스킬.공격계열.헬파이어;
 import com.teamnova.스킬.스킬;
-import com.teamnova.플레이어.캐릭터;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 스킬샵 {
     Scanner in = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class 스킬샵 {
 
 
 
-    public void 스킬구매목록 (캐릭터 _캐릭터, ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _공격스킬목록) {
+    public void 스킬구매목록 (ArrayList<스킬> _버프스킬목록, ArrayList<스킬> _회복스킬목록, ArrayList<스킬> _공격스킬목록) {
 
         입구 :
         while (true) {
@@ -44,7 +45,7 @@ public class 스킬샵 {
             System.out.println("3.회복계열(미구현)");
             System.out.println("0.나가기");
             System.out.println();
-            System.out.println("소지금 : "+_캐릭터.돈+" gold");
+            System.out.println("소지금 : "+유저명.돈+" gold");
             선택 = in.nextInt();
 
             if (선택 == 1) { //공격계열
@@ -62,10 +63,10 @@ public class 스킬샵 {
                     System.out.println("1.예");
                     System.out.println("2.아니오");
                     입력 = in.nextInt();
-                    if (입력 == 1 && _캐릭터.돈 >= 선택스킬.가격) {
+                    if (입력 == 1 && 유저명.돈 >= 선택스킬.가격) {
                         System.out.println(선택스킬.스킬이름 + " 구매가 완료되었습니다");
                         _공격스킬목록.add(선택스킬);
-                        _캐릭터.돈 = _캐릭터.돈 - 선택스킬.가격;
+                        유저명.돈 = 유저명.돈 - 선택스킬.가격;
                         continue 입구;
                     }
                     else if(입력 == 2){

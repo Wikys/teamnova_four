@@ -4,7 +4,6 @@ import com.teamnova.스킬.스킬;
 import com.teamnova.플레이어.비스트맨;
 import com.teamnova.플레이어.스켈레톤;
 import com.teamnova.플레이어.인간;
-import com.teamnova.플레이어.캐릭터;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -29,7 +28,7 @@ public class 캐릭터생성 {
 
 
 
-    public 캐릭터 캐릭터생성() {
+    public void 캐릭터생성() {
 //        유저명._공격스킬목록.add(무기파괴);
 //        유저명._공격스킬목록.add(화염구);
 //        유저명._공격스킬목록.add(사광연참); //실험용
@@ -103,6 +102,7 @@ public class 캐릭터생성 {
         System.out.println("이름이 " + 유저명.이름 + " 으로 결정되었습니다");
         유저명.기본아이템(유저명.인벤토리);
         System.out.println("당신은 모험을 시작합니다");
-        return 유저명;
+
+
     }
 }

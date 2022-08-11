@@ -2,9 +2,10 @@ package com.teamnova.상점;
 
 import com.teamnova.아이템.분류.*;
 import com.teamnova.아이템.아이템;
-import com.teamnova.플레이어.캐릭터;
 
 import java.util.Scanner;
+
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 상점 {
     public Scanner in = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class 상점 {
 
     int 판매가격;
 
-    public void 판매목록(캐릭터 _캐릭터) {
+    public void 판매목록() {
         입구 :
         while (true) {
             System.out.println("구매할 물건 번호를 입력 해주세요");
@@ -43,7 +44,7 @@ public class 상점 {
             System.out.println("5.마나포션 " + this.마나포션.가격 + " Gold");
             System.out.println("6.조악한 완드 " + this.조악한완드.가격 + " Gold");
             System.out.println();
-            System.out.println("소지금 " + _캐릭터.돈 + " Gold");
+            System.out.println("소지금 " + 유저명.돈 + " Gold");
             System.out.println();
             System.out.println("0.나가기");
             입력 = in.nextInt();
@@ -58,12 +59,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.철검.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.철검.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.철검);
-                    _캐릭터.돈 = _캐릭터.돈 - this.철검.가격;
+                    유저명.인벤토리.add(this.철검);
+                    유저명.돈 = 유저명.돈 - this.철검.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.철검.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.철검.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {
@@ -77,12 +78,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.가죽갑옷.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.가죽갑옷.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.가죽갑옷);
-                    _캐릭터.돈 = _캐릭터.돈 - this.가죽갑옷.가격;
+                    유저명.인벤토리.add(this.가죽갑옷);
+                    유저명.돈 = 유저명.돈 - this.가죽갑옷.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.가죽갑옷.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.가죽갑옷.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {
@@ -95,12 +96,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.철갑옷.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.철갑옷.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.철갑옷);
-                    _캐릭터.돈 = _캐릭터.돈 - this.철갑옷.가격;
+                    유저명.인벤토리.add(this.철갑옷);
+                    유저명.돈 = 유저명.돈 - this.철갑옷.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.철갑옷.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.철갑옷.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {
@@ -113,12 +114,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.체력포션.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.체력포션.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.체력포션);
-                    _캐릭터.돈 = _캐릭터.돈 - this.체력포션.가격;
+                    유저명.인벤토리.add(this.체력포션);
+                    유저명.돈 = 유저명.돈 - this.체력포션.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.체력포션.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.체력포션.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {
@@ -131,12 +132,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.마나포션.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.마나포션.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.마나포션);
-                    _캐릭터.돈 = _캐릭터.돈 - this.마나포션.가격;
+                    유저명.인벤토리.add(this.마나포션);
+                    유저명.돈 = 유저명.돈 - this.마나포션.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.마나포션.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.마나포션.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {
@@ -151,12 +152,12 @@ public class 상점 {
                 System.out.println("1.예");
                 System.out.println("2.아니오");
                 입력 = in.nextInt();
-                if (입력 == 1 && _캐릭터.돈 >= this.조악한완드.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
+                if (입력 == 1 && 유저명.돈 >= this.조악한완드.가격) { // 입려값과 돈이 템가격보다 많은지보고 없으면 else직행
                     System.out.println("구매가 완료되었습니다");
-                    _캐릭터.인벤토리.add(this.조악한완드);
-                    _캐릭터.돈 = _캐릭터.돈 - this.조악한완드.가격;
+                    유저명.인벤토리.add(this.조악한완드);
+                    유저명.돈 = 유저명.돈 - this.조악한완드.가격;
                     continue 입구;
-                } else if (입력 == 1 && _캐릭터.돈 < this.조악한완드.가격) {
+                } else if (입력 == 1 && 유저명.돈 < this.조악한완드.가격) {
                     System.out.println("소지금이 부족합니다!");
                     continue 입구;
                 } else if (입력 == 2) {

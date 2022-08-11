@@ -1,6 +1,6 @@
 package com.teamnova.아이템.분류;
 
-import com.teamnova.플레이어.캐릭터;
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 철검 extends 무기{
     public 철검() {
@@ -15,15 +15,15 @@ public class 철검 extends 무기{
 
     }
     @Override
-    public void 아이템_효과(캐릭터 _캐릭터) {
-        _캐릭터.공격력 = _캐릭터.공격력 + this.수치;
+    public void 아이템_효과() {
+        유저명.공격력 = 유저명.공격력 + this.수치;
         System.out.println("이정도는 되야 쓸만한 검이라고 할수있지.");
 
     }
 
     @Override
-    public void 아이템_장착해제(캐릭터 _캐릭터) {
-        _캐릭터.공격력 = _캐릭터.공격력 - this.수치;
+    public void 아이템_장착해제() {
+        유저명.공격력 = 유저명.공격력 - this.수치;
         System.out.println("착용이 해제되었습니다");
 
     }

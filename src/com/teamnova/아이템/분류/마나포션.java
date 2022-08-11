@@ -1,6 +1,6 @@
 package com.teamnova.아이템.분류;
 
-import com.teamnova.플레이어.캐릭터;
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 마나포션 extends 포션{
     public 마나포션(){
@@ -13,20 +13,20 @@ public class 마나포션 extends 포션{
     }
 
     @Override
-    public void 아이템_효과(캐릭터 _캐릭터) {
-        if (_캐릭터.전투중마나 == _캐릭터.전투중마나){ // 최대 체력,마나가 현재 체력마나와 같으면 회복없음
+    public void 아이템_효과() {
+        if (유저명.전투중마나 == 유저명.전투중마나){ // 최대 체력,마나가 현재 체력마나와 같으면 회복없음
             System.out.println("최대 마나인데 왜먹는지 모르겠다..");
         }
-        else if(this.수치+_캐릭터.전투중마나 > _캐릭터.최대마나){ // 포션회복량으로 최대체력 넘길거같으면 그냥 최대체력 리턴
-            _캐릭터.전투중마나 = _캐릭터.최대마나;
+        else if(this.수치+유저명.전투중마나 > 유저명.최대마나){ // 포션회복량으로 최대체력 넘길거같으면 그냥 최대체력 리턴
+            유저명.전투중마나 = 유저명.최대마나;
         }else{
-            _캐릭터.전투중마나 = _캐릭터.전투중마나 + this.수치; // 아니면 그냥 회복
+            유저명.전투중마나 = 유저명.전투중마나 + this.수치; // 아니면 그냥 회복
         }
 
     }
 
     @Override
-    public void 아이템_장착해제(캐릭터 _캐릭터) {
+    public void 아이템_장착해제() {
     }
 
     @Override

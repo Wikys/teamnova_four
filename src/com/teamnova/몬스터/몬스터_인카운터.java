@@ -1,16 +1,15 @@
 package com.teamnova.몬스터;
 
-import com.teamnova.플레이어.캐릭터;
-
 public class 몬스터_인카운터 extends 몬스터 {
 
     public 몬스터 고블린 ;
     public 몬스터 오크 ;
     public 몬스터 오우거 ;
+    public static 몬스터 몬스터 = null;
 //    public 몬스터 고블린킹 = new 고블린킹();
     public 몬스터 몬스터_인카운터() {
         String 몬스터이름 = null;
-        몬스터 몬스터 = null;
+
 
 //        int _인카운터 = random.nextInt(2);
         int _인카운터 = (int)(Math.random()*3);
@@ -39,12 +38,12 @@ public class 몬스터_인카운터 extends 몬스터 {
     }
 
     @Override
-    public void 몬스터_정보(몬스터 _몬스터) {
+    public void 몬스터_정보() {
 
     }
 
     @Override
-    public void 몬스터_드랍(캐릭터 _캐릭터) {
+    public void 몬스터_드랍() {
 
     }
 }

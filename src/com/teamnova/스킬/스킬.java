@@ -1,8 +1,5 @@
 package com.teamnova.스킬;
 
-import com.teamnova.몬스터.몬스터;
-import com.teamnova.플레이어.캐릭터;
-
 import java.util.Scanner;
 
 
@@ -34,7 +31,7 @@ public abstract class 스킬 {
 //        this.설명 = 설명;
 //
 //    }
-    public abstract void 스킬효과(캐릭터 _캐릭터, 몬스터 _몬스터); //스킬발동되면 나오는 효과
+    public abstract void 스킬효과(); //스킬발동되면 나오는 효과
     public abstract void 스킬설명(); //스킬설명
     public abstract void 스킬초기화(); // 제한이 있는스킬들 전투끝나고 초기화시켜주는 메소드
 

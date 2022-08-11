@@ -1,6 +1,6 @@
 package com.teamnova.아이템.분류;
 
-import com.teamnova.플레이어.캐릭터;
+import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 조악한_완드 extends 마법무기 {
 //    public String 이름 = "조악한완드";
@@ -22,15 +22,15 @@ public class 조악한_완드 extends 마법무기 {
         this.마법력 = this.수치;
         this.특수 = 0;
     }
-    public void 아이템_효과(캐릭터 _캐릭터){
-        _캐릭터.마법력 = _캐릭터.마법력 + this.수치;
+    public void 아이템_효과(){
+        유저명.마법력 = 유저명.마법력 + this.수치;
         System.out.println("몸에 미약한 마력이 감돕니다");
 
     }
 
     @Override
-    public void 아이템_장착해제(캐릭터 _캐릭터) {
-        _캐릭터.마법력 = _캐릭터.마법력 - this.수치;
+    public void 아이템_장착해제() {
+        유저명.마법력 = 유저명.마법력 - this.수치;
         System.out.println("착용이 해제되었습니다");
     }
 

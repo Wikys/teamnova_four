@@ -1,6 +1,5 @@
 package com.teamnova.아이템;
 
-import com.teamnova.플레이어.캐릭터;
 
 public abstract class 아이템 {
     public String 이름;
@@ -25,8 +24,8 @@ public abstract class 아이템 {
     //   ArrayList<아이템> 드랍테이블 = new ArrayList<아이템>();
 
 
-    public abstract void 아이템_효과(캐릭터 _캐릭터);
-    public abstract void 아이템_장착해제(캐릭터 _캐릭터);
+    public abstract void 아이템_효과();
+    public abstract void 아이템_장착해제();
     public abstract void 아이템_설명();
 
 
@@ -41,7 +40,6 @@ public abstract class 아이템 {
         this.설명 = 설명;
         this.가격 = 가격;
         this.마법무기 = 마법무기;
-
 
         if (타입 == 1) { //무기
             if (마법무기 == 0) {
@@ -81,93 +79,6 @@ public abstract class 아이템 {
         this.가격 = 가격;
     }
 
-//    public void 낡은검() { //아이템 정보들 (기능x)
-//        this.이름 = "낡은검";
-//        this.타입 = 1;
-//        this.공격력 = 1;
-//        this.아이템번호 = 0;
-//        this.가격 = 0;
-//        this.무기중복 = false;
-//        this.특수 = 0;
-//        this.설명 = "다 낡아빠진 검이다";
-//    }
-//
-//    public void 철검() {
-//        this.이름 = "철검";
-//        this.타입 = 1;
-//        this.공격력 = 3;
-//        this.아이템번호 = 1;
-//        this.가격 = 10;
-//        this.무기중복 = false;
-//        this.특수 = 0;
-//        this.설명 = "단단한 철로 만들어진 날카로운 검이다";
-//    }
-//
-//    public void 고블린왕의_몽둥이() {
-//        this.이름 = "고블린왕의_몽둥이";
-//        this.타입 = 1;
-//        this.공격력 = 5;
-//        this.아이템번호 = 2;
-//        this.가격 = 0;
-//        this.무기중복 = false;
-//        this.특수 = 1;
-//        this.설명 = "조악해 보이지만 한 종족의 왕이 썻던 무기인만큼 튼튼하다";
-//
-//    }
-//
-//    public void 조악한_완드() {
-//        this.이름 = "조악한_완드";
-//        this.타입 = 1;
-//        this.공격력 = 3;
-//        this.마법력 = 5;
-//        this.아이템번호 = 3;
-//        this.가격 = 0;
-//        this.무기중복 = false;
-//        this.특수 = 0;
-//        this.설명 = "허접하게 만들어진 완드지만 조금의 마법력은 남아있는듯하다";
-//
-//    }
-//
-//    public void 가죽갑옷() {
-//        this.이름 = "가죽갑옷";
-//        this.타입 = 2;
-//        this.방어력 = 2;
-//        this.아이템번호 = 100;
-//        this.가격 = 15;
-//        this.방어구중복 = false;
-//        this.특수 = 0;
-//        this.설명 = "초급 모험가들이 즐겨입는 가죽갑옷이다";
-//    }
-//
-//    public void 철갑옷() { //이름 리턴시켜주는 메소드,정보
-//        this.이름 = "철갑옷";
-//        this.타입 = 2;
-//        this.방어력 = 5;
-//        this.아이템번호 = 101;
-//        this.가격 = 30;
-//        this.방어구중복 = false;
-//        this.특수 = 0;
-//        this.설명 = "철로 만들어져 꽤 강력한 공격까지 막아낼수 있을듯하다";
-//    }
-//
-//    public void 체력포션() {
-//        this.이름 = "체력포션";
-//        this.타입 = 3;
-//        this.체력회복 = 5;
-//        this.아이템번호 = 900;
-//        this.가격 = 5;
-//        this.특수 = 0;
-//        this.설명 = "단순히 체력이 조금 회복될뿐인 싸구려 포션이다";
-//    }
-//
-//    public void 마나포션() {
-//        this.이름 = "마나포션";
-//        this.타입 = 4;
-//        this.마나회복 = 5;
-//        this.아이템번호 = 901;
-//        this.가격 = 5;
-//        this.특수 = 0;
-//        this.설명 = "단순히 마나가 조금 회복될뿐인 싸구려 포션이다";
-//    }
+
 
 }
