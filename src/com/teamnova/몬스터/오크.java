@@ -18,6 +18,22 @@ public class 오크 extends 몬스터{
         this.몬스터타입 = 0;
         this.몬스터번호 = 1;
         this.상태 = "일반";
+
+    }
+    @Override
+    public void 광폭화(){
+        this.이름 = "광폭화된 오크";
+        this.체력 = this.체력*2;
+        this.마나 = 0;
+        this.공격력 = this.공격력 *2;
+        this.방어력 = 0;
+        this.회피율 = 0;
+        this.경험치 = this.경험치 *2;
+        this.골드 = this.골드*2;
+        this.몬스터타입 = 0;
+        this.몬스터번호 = 0;
+        this.상태 = "광폭화";
+
     }
 
 

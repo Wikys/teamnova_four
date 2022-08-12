@@ -1,6 +1,5 @@
 package com.teamnova.몬스터;
 
-import com.teamnova.몬스터.보스.보스;
 import com.teamnova.아이템.분류.잡템;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
@@ -57,6 +56,8 @@ public abstract class 몬스터 extends Thread {
 
     public abstract void 몬스터_드랍();
 
+    public abstract void 광폭화();
+
 //
 
     public int 몹공격받음(int _방어력, int _적공격력, int _회피율) {
@@ -78,65 +79,30 @@ public abstract class 몬스터 extends Thread {
     public int 캐릭터공격() {
         // 몬스터 반격
         int _랜덤공격 = 유저명.공격받음(유저명.전투중방어력, this.공격력, 유저명.회피율);
-//        if (this.체력 > 0 && this.몬스터타입 == 0 ) {
-//            유저명.전투중체력 = 유저명.전투중체력 - _랜덤공격;
-//            this.몬스터_텍스트.setText("<html>==========================================" +
-//                    "<br>" + this.이름 + "이(가) 공격합니다 데미지를 "
-//                    + _랜덤공격 + "받았습니다" +
-//                    "<br>==========================================");
-//            this.몬스터_공격창.add(this.몬스터_텍스트);
-//            this.몬스터_공격창.setLocation(500, 500);
-//            this.몬스터_공격창.pack();
-//            this.몬스터_공격창.setVisible(true);
-//            if (유저명.전투중체력 <= 0 || this.체력 <= 0) {
-//
-//                this.몬스터_공격창.dispose();
-//            }
-////
-//        }
-//            else if (this.체력 > 0 && this.몬스터타입 == 1) {
-//                int 스킬 = random.nextInt(100);
-//                if (스킬 < 30) {
-//                    ((보스) this).보스_스킬();
-//                    if (유저명.전투중체력 <= 0 || this.체력 <= 0) {
-//
-//                        this.몬스터_공격창.dispose();
-//
-//                    }
-//                }
-//                else if (스킬 >= 30) {
-//                    유저명.전투중체력 = 유저명.전투중체력 - _랜덤공격;
-//                    this.몬스터_텍스트.setText("<html>==========================================" +
-//                            "<br>" + this.이름 + "이(가) 공격합니다 데미지를 "
-//                            + _랜덤공격 + "받았습니다" +
-//                            "<br>==========================================");
-//                    this.몬스터_공격창.add(this.몬스터_텍스트);
-//                    this.몬스터_공격창.setLocation(500, 500);
-//                    this.몬스터_공격창.pack();
-//                    this.몬스터_공격창.setVisible(true);
-//                }
-//                if (유저명.전투중체력 <= 0 || this.체력 <= 0) {
-//                    this.몬스터_공격창.dispose();
-//
-//                }
-//    }
 
     return _랜덤공격;
     }
     public void run() {
+        boolean 제한 = true;
+
         while(true) {
             this.캐릭터공격();
+            if (밤 == true && 제한 == true){
+                this.광폭화();
+                System.out.println("몬스터가 광폭화했습니다");
+
+                제한 = false;
+
+            }
+
             if(유저명.전투중체력 <=0 || this.체력 <= 0){
                 this.interrupt();
                 break;
             }
-
             try {
                 Thread.sleep(2000);
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
-
             }
         }
     }

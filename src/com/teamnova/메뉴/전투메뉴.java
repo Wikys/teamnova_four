@@ -115,6 +115,7 @@ public class 전투메뉴 extends Thread {
         System.out.println("2.아이템사용");
         System.out.println("3.도주하기");
         System.out.println("====================");
+
     }
 
     public void 전투방식() {
@@ -298,13 +299,14 @@ public class 전투메뉴 extends Thread {
 
     }
 
-    public void 도주() { //손봐야할듯 // 행동문으로 옮기는꼼수 이제 못씀
+    public int 도주() { //손봐야할듯 // 행동문으로 옮기는꼼수 이제 못씀
+        int 도주 = 0;
         System.out.println("도주를 시도합니다");
         int 도주확률 = random.nextInt(100);
 
         if (도주확률 <= 50 && this.도주카운터 == true && 몬스터.몬스터타입 == 0) { // 도주확률이 50안쪽이면 도망성공
             System.out.println("도주에 성공하셨습니다");
-            return;
+            도주 = 1;
 
 
 //            _전투종료.전투종료 = true;
@@ -319,10 +321,11 @@ public class 전투메뉴 extends Thread {
         } else if (몬스터.몬스터타입 == 1) {
             System.out.println("보스에게선 도주할수 없습니다");
         }
-
+        return 도주;
     }
 
-    public boolean 사망(boolean _전투종료) {
+    public boolean 사망() {
+        boolean 사망 = false;
          // 메인으로 보내기위해서 만든 불린
         if (유저명.전투중체력 <= 0) { //캐릭터 죽음
             System.out.println("사망하셨습니다");
@@ -331,12 +334,14 @@ public class 전투메뉴 extends Thread {
 
 
         } else if (몬스터.체력 <= 0) {
-            _전투종료 = true;
+//            _전투종료 = true;
+            사망 = true;
             this.전투종료();
 
 //            행동메뉴.행동문(유저명);
 
         }
-        return _전투종료;
+        return 사망;
+//        return _전투종료;
     }
 }

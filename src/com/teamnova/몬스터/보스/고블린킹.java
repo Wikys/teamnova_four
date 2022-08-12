@@ -53,6 +53,11 @@ public class 고블린킹 extends 보스 {
     }
 
     @Override
+    public void 광폭화() {
+
+    }
+
+    @Override
     public void 보스_스킬() { // 보스몬스터의 기술
         System.out.println("고블린킹이 방어구 궤뚫기를 사용합니다");
         System.out.println(유저명.이름+"이(가) 방어력 무시 데미지 "+this.공격력+"을 받습니다");

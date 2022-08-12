@@ -18,7 +18,7 @@ public class 몬스터_인카운터 extends 몬스터 {
               오크 = new 오크();
               오우거 = new 오우거();
             if (_인카운터 == this.고블린.몬스터번호) {
-                몬스터 = this.고블린.(몬스터)(몬스터_정보());
+                몬스터 = this.고블린;
                 몬스터이름 = this.고블린.이름;
 
             } else if (_인카운터 == this.오크.몬스터번호) {
@@ -37,6 +37,15 @@ public class 몬스터_인카운터 extends 몬스터 {
 
     }
 
+//    @Override
+//    public void run() {
+//        if (밤 == true){
+//            this.몬스터_인카운터();
+//
+//        }
+//
+//    }
+
     @Override
     public void 몬스터_정보() {
 
@@ -47,5 +56,8 @@ public class 몬스터_인카운터 extends 몬스터 {
 
     }
 
+    @Override
+    public void 광폭화() {
 
+    }
 }
