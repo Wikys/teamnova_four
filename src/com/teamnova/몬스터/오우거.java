@@ -1,6 +1,9 @@
 package com.teamnova.몬스터;
 
+import com.teamnova.몬스터.보스.보스;
 import com.teamnova.아이템.아이템;
+
+import static com.teamnova.메뉴.행동문.밤;
 
 public class 오우거 extends 몬스터{
     public 오우거(){
@@ -15,6 +18,7 @@ public class 오우거 extends 몬스터{
         this.골드 = random.nextInt(15);
         this.몬스터타입 = 0;
         this.몬스터번호 = 2;
+        this.상태 = "일반";
     }
 
 
@@ -32,6 +36,21 @@ public class 오우거 extends 몬스터{
         this.골드 = random.nextInt(15);
         this.몬스터타입 = 0;
         this.몬스터번호 = 2;
+        this.상태 = "일반";
+        if (밤 == true){
+            this.이름 = "광폭화된 오우거";
+            this.체력 = 30*2;
+            this.마나 = 0;
+//        this.공격력 = 5;
+            this.공격력 = 0*2;
+            this.방어력 = 0;
+            this.회피율 = 0;
+            this.경험치 = 1000*2;
+            this.골드 = random.nextInt(15)*2;
+            this.몬스터타입 = 0;
+            this.몬스터번호 = 2;
+            this.상태 = "광폭화";
+        }
     }
 
     @Override
@@ -50,24 +69,8 @@ public class 오우거 extends 몬스터{
 
 
     }
-    @Override
-    public void run() {
-        while(true) {
-            this.캐릭터공격();
-            if(유저명.전투중체력 <=0 || this.체력 <= 0){
-                this.interrupt();
 
-                break;
-            }
 
-            try {
-                Thread.sleep(1000);
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
 
-            }
-        }
-
-    }
 }

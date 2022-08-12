@@ -59,4 +59,6 @@ public class 고블린킹 extends 보스 {
         유저명.전투중체력 = 유저명.전투중체력 - this.공격력;
 
     }
+
+
 }

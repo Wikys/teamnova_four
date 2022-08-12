@@ -2,6 +2,7 @@ package com.teamnova.플레이어;
 
 import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.몬스터.몬스터;
+import com.teamnova.몬스터.몬스터_인카운터;
 import com.teamnova.스킬.공격계열.무기파괴;
 import com.teamnova.스킬.공격계열.사광연참;
 import com.teamnova.스킬.공격계열.화염구;
@@ -17,7 +18,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public abstract class 캐릭터 extends Thread{ //구조체
+import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
+
+public abstract class 캐릭터{ //구조체
 
     public Scanner in = new Scanner(System.in);
     public String 이름;
@@ -115,25 +119,38 @@ public abstract class 캐릭터 extends Thread{ //구조체
             _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
         } else if (회피 <= _회피율) {
             _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
-            System.out.println("완벽하게 회피하였습니다");
+            System.out.println("몬스터의 공격을 완벽하게 회피하였습니다");
         } else {
 //            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
             _적공격력 = _적공격력 - _방어력;
         }
         return _적공격력;
     }
-//    public int 포션꿀꺽(int 포션회복량, int 최대체마, int 전투체마){ // 포션회복 함수
-//        int _회복량 = 0;
-//        if(최대체마 == 전투체마 ){ // 최대 체력,마나가 현재 체력마나와 같으면 0 리턴
-//            _회복량 = 최대체마;
+
+    public int 몬스터공격() { //몬스터 공격 메세지 출력 // 일반적인 공격할때 이거씀
+
+        int _랜덤공격 = 몬스터_인카운터.몬스터.몹공격받음(몬스터_인카운터.몬스터.방어력, 유저명.전투중공격력, 몬스터_인카운터.몬스터.회피율);
+        몬스터_인카운터.몬스터.체력 = 몬스터_인카운터.몬스터.체력 - _랜덤공격;
+        System.out.println(몬스터_인카운터.몬스터.이름 + "을(를) 공격하셨습니다 데미지를 "
+                + _랜덤공격 + "주었습니다");
+
+    return _랜덤공격;
+    }
+//    public void run() {
+//        while(true) {
+//            this.몬스터공격();
+//            if(몬스터.체력 <=0 || this.체력 <= 0){
+//                this.interrupt();
+//                break;
+//            }
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 //        }
-//        else if(포션회복량+전투체마 > 최대체마){ // 포션회복량으로 최대체력 넘길거같으면 그냥 최대체력 리턴
-//            _회복량 = 최대체마;
-//        }else { // 아니면 그냥 포션회복량 +
-//         _회복량 =  전투체마 + 포션회복량;
-//        }
-//        return _회복량;
 //    }
+
 
     public boolean 보스_컨텐츠해금(int _캐릭터레벨, boolean _해금) { //캐릭터레벨이 5일때 고블린킹 컨텐츠해금
 

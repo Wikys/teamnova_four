@@ -5,6 +5,7 @@ import com.teamnova.아이템.아이템;
 
 import java.util.Scanner;
 
+import static com.teamnova.메뉴.행동문.밤;
 import static com.teamnova.몬스터.몬스터.유저명;
 
 public class 상점 {
@@ -34,8 +35,13 @@ public class 상점 {
     int 판매가격;
 
     public void 판매목록() {
+        if (밤 == true){
+            System.out.println("상점이 닫혀있습니다");
+            return;
+        }
         입구 :
         while (true) {
+
             System.out.println("구매할 물건 번호를 입력 해주세요");
             System.out.println("1.철검 " + this.철검.가격 + " Gold");
             System.out.println("2.가죽갑옷 " + this.가죽갑옷.가격 + " Gold");

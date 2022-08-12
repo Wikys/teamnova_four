@@ -23,6 +23,7 @@ public class 메인메뉴 {
 
 
 
+
     public void 행동메뉴() {
         if (유저명.레벨 <5) {
 
