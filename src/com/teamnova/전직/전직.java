@@ -41,7 +41,9 @@ public class 전직{
         입력 = in.nextInt();
         if(입력 == 1) {
             if (유저명.레벨 >= 0 && 유저명.종족 == 0) {
-                캐릭터 전사 = new 전사();
+                전사 전사 = new 전사();
+//                System.out.println(전사.직업이름);
+//                System.out.println(전사.직업번호);
 //                캐릭터 임시 = new 전사();
 //                임시.스탯();
 //                임시 = 유저명;
@@ -50,6 +52,8 @@ public class 전직{
 //                System.out.println(전사.최대체력);
 
                 유저명 = 전사;
+                System.out.println(유저명.직업이름);
+                System.out.println(유저명.직업번호);
 
 
                 System.out.println("전사로 전직하셨습니다");

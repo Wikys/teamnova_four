@@ -23,7 +23,7 @@ public abstract class 몬스터 extends Thread {
     public int 회피율;
     public int 경험치;
     public int 골드;
-    public int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터 아직은 딱히 쓰는덴없음
+    public int 몬스터타입; // 0 일반몬스터 , 1 보스몬스터
     //    int 아이템;
     public int 몬스터번호;
     public String 상태;

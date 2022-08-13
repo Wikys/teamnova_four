@@ -6,9 +6,7 @@ import com.teamnova.상점.상점;
 import com.teamnova.스킬.스킬;
 import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.장비창.장비창;
-import com.teamnova.전직.전사;
 import com.teamnova.전직.전직;
-import com.teamnova.플레이어.캐릭터;
 
 import java.util.ArrayList;
 
@@ -66,6 +64,7 @@ public class 행동문 extends 캐릭터생성{
 
         행동문:
         while (true) {
+            System.out.println(유저명.직업이름);
 
             전투종료 = false;
 
