@@ -23,7 +23,7 @@ public class 화염구 extends 스킬 {
             if(유저명.종족 == 2){
                 System.out.println("마나가 사용되지 않았습니다");
             }
-            else if(유저명.종족 !=2){
+            else if(유저명.직업번호 ==2){
                 유저명.전투중마나 = 유저명.전투중마나 - this.마나소모;
             }
         }

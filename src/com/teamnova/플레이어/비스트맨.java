@@ -8,7 +8,7 @@ public class 비스트맨 extends 아인종 {
 
     }
 
-    public void 스탯() {
+    public void 스탯(캐릭터 유저명) {
         this.이름 = 유저명.이름;
         this.레벨 = 1;
         this.공격력 = 5;

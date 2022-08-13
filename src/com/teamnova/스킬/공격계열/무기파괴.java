@@ -29,7 +29,7 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
                 System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
                 System.out.println("적의 방어력이 감소합니다");
             }
-            else if(유저명.종족==1 && 몬스터.방어력 <=0){
+            else if(유저명.직업번호==1 && 몬스터.방어력 <=0){
                 System.out.println("비스트맨의 날카로운 손톱으로 방어구를 찢었습니다");
             }
         }

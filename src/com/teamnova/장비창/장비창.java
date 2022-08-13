@@ -82,7 +82,7 @@ public class 장비창 {
                 }
             }
         }
-        else if (입력 == 2){
+        else if (입력 == 0){
             break ;
         }
     }

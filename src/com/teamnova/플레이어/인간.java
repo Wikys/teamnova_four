@@ -6,7 +6,7 @@ public class 인간 extends 인간종 {
     public 인간(){
     }
 
-public void 스탯(){
+public void 스탯(캐릭터 유저명){
     this.이름 = 유저명.이름;
     this.레벨 = 1;
     this.공격력 = 5;

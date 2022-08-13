@@ -6,7 +6,9 @@ import com.teamnova.상점.상점;
 import com.teamnova.스킬.스킬;
 import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.장비창.장비창;
+import com.teamnova.전직.전사;
 import com.teamnova.전직.전직;
+import com.teamnova.플레이어.캐릭터;
 
 import java.util.ArrayList;
 
@@ -14,6 +16,7 @@ import static com.teamnova.몬스터.몬스터.유저명;
 import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 public class 행동문 extends 캐릭터생성{
+//    public static 캐릭터 유저명 = new 캐릭터();
     public boolean 전투종료;
     public static boolean 밤;
 
@@ -144,13 +147,8 @@ public class 행동문 extends 캐릭터생성{
                     }
                 }
             }
-            else if (선택 == 2) { // 휴식(체,마 전부회복) 메뉴
-                메뉴.휴식();
-                System.out.println(유저명.체력 + " " + 유저명.마나);
-//                System.out.println("스테이터스: "+_전투메뉴.getState());
-//                System.out.println("몬스터: "+몬스터.getState());
-
-
+            else if (선택 == 2) { // 치료(체,마 전부회복) 메뉴
+                메뉴.치료();
 
             } else if (선택 == 3) { //상점 메소드 //아이템구매 // 나중에 필요에따라 아이템판매도 만들기
                 상점.판매목록();
@@ -187,7 +185,7 @@ public class 행동문 extends 캐릭터생성{
                 보스전.보스메뉴(_전투메뉴,this);
             }
             else if (선택 == 0) {
-                return;
+                System.exit(0);
             }
         }
     }
