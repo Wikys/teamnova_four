@@ -53,4 +53,8 @@ public void 스탯(캐릭터 유저명) {
 //    유저명.마법력 = 유저명.마법력 + this.불사자의마력;
 
 }
+    @Override
+    public void 전용패시브() {
+
+    }
 }

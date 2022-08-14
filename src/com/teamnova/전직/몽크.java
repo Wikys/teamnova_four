@@ -53,6 +53,10 @@ public class 몽크 extends 비스트맨 {
         유저명.직업이름 = "몽크";
         유저명.직업번호 = 1;
     }
+    @Override
+    public void 전용패시브() {
+
+    }
 }
 
 

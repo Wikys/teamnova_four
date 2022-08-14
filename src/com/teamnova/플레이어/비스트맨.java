@@ -29,5 +29,9 @@ public class 비스트맨 extends 아인종 {
         this.종족이름 = "비스트맨";
         this.종족스킬_제한 = true;
     }
+    @Override
+    public void 전용패시브() {
+
+    }
 
 }

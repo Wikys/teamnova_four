@@ -52,4 +52,14 @@ public class 전사 extends 인간 {
         유저명.직업이름 = "전사";
         유저명.직업번호 = 0;
     }
+    @Override
+    public void 전용패시브() {
+        int 랜덤이벤트 = random.nextInt(100);
+        if (랜덤이벤트 > 30) {
+
+            System.out.println("연속베기가 발동되었습니다");
+
+        }
+
+    }
 }

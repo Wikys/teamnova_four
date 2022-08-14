@@ -16,6 +16,8 @@ public class 전투메뉴 extends Thread {
     JFrame 몬스터_스테이터스 = new JFrame("몬스터 스테이터스");
     JLabel 캐릭터_텍스트 = new JLabel("캐릭터 스테이터스");
     JLabel 몬스터_텍스트 = new JLabel("몬스터 스테이터스");
+//    JFrame 몬스터_전투 = new JFrame("캐릭터 스테이터스");
+//    public JLabel 몬스터_전투_메세지 = new JLabel("");
     메인메뉴 메인메뉴 = new 메인메뉴();
     Random random = new Random();
 
@@ -28,12 +30,10 @@ public class 전투메뉴 extends Thread {
     boolean 도주카운터 = true;
 
     //    캐릭터생성 캐릭터생성 = new 캐릭터생성();
-    행동문 행동메뉴 = new 행동문();
+//    행동문 행동메뉴 = new 행동문();
 
 
     public void 캐릭터_전투_스테이터스() {
-
-
 
 //        this.캐릭터_스테이터스.setSize(500, 500);
         this.캐릭터_텍스트.setText("" +
@@ -46,10 +46,6 @@ public class 전투메뉴 extends Thread {
                 "<br>방어력 : " + 유저명.전투중방어력 +
                 "<br>회피율 : " + 유저명.전투중회피율 +
                 "<br>=====================");
-//        "<br>"+ 몬스터.이름 + "에게 공격받았습니다 데미지를" +
-//                "<br>받았습니다"
-
-
         this.캐릭터_스테이터스.add(this.캐릭터_텍스트);
         this.캐릭터_스테이터스.setLocation(0, 100);
         this.캐릭터_스테이터스.pack();
@@ -58,13 +54,10 @@ public class 전투메뉴 extends Thread {
             캐릭터_스테이터스.setVisible(false);
             캐릭터_스테이터스.dispose();
         }
-
-
     }
 
+
     public void 몬스터_전투_스테이터스() {
-
-
 //        this.몬스터_스테이터스.setSize(500, 500);
         this.몬스터_텍스트.setText("" +
                 "<html>=====================" +
@@ -85,9 +78,46 @@ public class 전투메뉴 extends Thread {
             몬스터_스테이터스.setVisible(false);
             몬스터_스테이터스.dispose();
         }
-
-
     }
+//    public void 몬스터_전투_메세지(){
+//        this.공격받음(유저명.전투중방어력, 몬스터.공격력, 유저명.회피율); //몹이 보내주는거 받아먹기기
+//        this.몬스터_전투.add(몬스터_전투_메세지);
+//        this.몬스터_전투.setLocation(300, 300); //프레임 없는데 되나보기
+//        this.몬스터_전투.pack();
+//        this.몬스터_전투.setVisible(true);
+//        if (유저명.전투중체력 <=0 || 몬스터.체력 <=0 ){
+//            몬스터_전투.setVisible(false);
+//            몬스터_전투.dispose();
+//        }
+//
+//    }
+//    public int 공격받음(int _방어력, int _적공격력, int _회피율) {//몬스터의 공격
+//
+////        몬스터 몬스터 = new 몬스터();
+//        int 회피 = random.nextInt(100) + 1;
+//
+//        if (유저명.전투중방어력 >= _적공격력) {
+//            _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
+//            this.몬스터_전투_메세지.setText("<html>몬스터가 열심히 공격하고있지만" +
+//                    "<br> 아프지않습니다");
+//
+//        } else if (회피 <= _회피율) {
+//            _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
+////            System.out.println("몬스터의 손이 미끄러졌습니다");
+//            this.몬스터_전투_메세지.setText("<html>몬스터의 손이 미끄러졌습니다" +
+//                    "<br> 데미지를 받지않습니다");
+//        } else if(몬스터.몬스터타입 == 1 && 회피 <= 30){
+//
+//            몬스터.스킬();
+//        }
+//        else {
+////            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
+//            _적공격력 = _적공격력 - _방어력;
+//            this.몬스터_전투_메세지.setText("<html>몬스터가 공격합니다 <br>" +
+//                    ""+_적공격력+" 만큼의 데미지를 받습니다");
+//        }
+//        return _적공격력;
+//    }
 
     @Override
     public void run() {
@@ -95,6 +125,7 @@ public class 전투메뉴 extends Thread {
 
             this.캐릭터_전투_스테이터스();
             this.몬스터_전투_스테이터스();
+//            this.몬스터_전투_메세지();
             if(유저명.전투중체력 <= 0 || 몬스터.체력 <= 0){
                 this.interrupt();
                 break;

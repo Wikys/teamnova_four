@@ -29,4 +29,8 @@ public void 스탯(캐릭터 유저명){
     this.종족이름 = "스켈레톤" ;
     this.종족스킬_제한 = true;
 }
+    @Override
+    public void 전용패시브() {
+
+    }
 }

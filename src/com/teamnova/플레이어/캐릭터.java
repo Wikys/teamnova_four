@@ -1,6 +1,7 @@
 package com.teamnova.플레이어;
 
 import com.teamnova.메뉴.메인메뉴;
+import com.teamnova.메뉴.전투메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.몬스터.몬스터_인카운터;
 import com.teamnova.몬스터.보스.보스;
@@ -15,6 +16,7 @@ import com.teamnova.아이템.분류.가죽갑옷;
 import com.teamnova.아이템.분류.낡은검;
 import com.teamnova.아이템.아이템;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -54,6 +56,7 @@ public abstract class 캐릭터{ //구조체
     public int 전사의강직함;
     public int 몽크의기민함;
     public int 불사자의마력;
+
 //    메인메뉴 메인메뉴 = new 메인메뉴();
     public ArrayList<아이템> 인벤토리 = new ArrayList<아이템>();
     public ArrayList<아이템> 장비창 = new ArrayList<아이템>();
@@ -81,6 +84,7 @@ public abstract class 캐릭터{ //구조체
     }
 
     public abstract void 스탯(캐릭터 유저명);
+    public abstract void 전용패시브();
 
     public ArrayList<아이템> 기본아이템(ArrayList<아이템> _인벤토리) {
         _인벤토리.add(낡은검);
@@ -105,24 +109,33 @@ public abstract class 캐릭터{ //구조체
         return _인벤토리;
     }
 
-    public int 공격받음(int _방어력, int _적공격력, int _회피율) {//몬스터의 공격
-//        몬스터 몬스터 = new 몬스터();
-        int 회피 = random.nextInt(100) + 1;
-
-        if (this.전투중방어력 >= _적공격력) {
-            _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
-        } else if (회피 <= _회피율) {
-            _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
-            System.out.println("몬스터의 공격을 완벽하게 회피하였습니다");
-        } else if(몬스터.몬스터타입 == 1 && 회피 <= 30){
-            몬스터.스킬();
-        }
-        else {
-//            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
-            _적공격력 = _적공격력 - _방어력;
-        }
-        return _적공격력;
-    }
+//    public int 공격받음(int _방어력, int _적공격력, int _회피율, 전투메뉴 텍스트) {//몬스터의 공격
+//        전투메뉴 임시 = null;
+////        몬스터 몬스터 = new 몬스터();
+//        int 회피 = random.nextInt(100) + 1;
+//
+//        if (this.전투중방어력 >= _적공격력) {
+//            _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
+//            텍스트.몬스터_전투_메세지.setText("<html>몬스터가 열심히 공격하고있지만" +
+//                    "<br> 아프지않습니다");
+//
+//        } else if (회피 <= _회피율) {
+//            _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
+////            System.out.println("몬스터의 손이 미끄러졌습니다");
+//            텍스트.몬스터_전투_메세지.setText("<html>몬스터의 손이 미끄러졌습니다" +
+//                    "<br> 데미지를 받지않습니다");
+//        } else if(몬스터.몬스터타입 == 1 && 회피 <= 30){
+//
+//            몬스터.스킬();
+//        }
+//        else {
+////            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
+//            _적공격력 = _적공격력 - _방어력;
+//            텍스트.몬스터_전투_메세지.setText("<html>몬스터가 공격합니다 <br>" +
+//                    ""+_적공격력+" 만큼의 데미지를 받습니다");
+//        }
+//        return _적공격력;
+//    }
 
     public int 몬스터공격() { //몬스터 공격 메세지 출력 // 일반적인 공격할때 이거씀
 
