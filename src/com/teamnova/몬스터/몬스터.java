@@ -57,6 +57,7 @@ public abstract class 몬스터 extends Thread {
     public abstract void 몬스터_드랍();
 
     public abstract void 광폭화();
+    public abstract void 스킬();
 
 //
 
@@ -79,6 +80,9 @@ public abstract class 몬스터 extends Thread {
     public int 캐릭터공격() {
         // 몬스터 반격
         int _랜덤공격 = 유저명.공격받음(유저명.전투중방어력, this.공격력, 유저명.회피율);
+        유저명.전투중체력 = 유저명.전투중체력 - _랜덤공격;
+
+
 
     return _랜덤공격;
     }
@@ -87,16 +91,17 @@ public abstract class 몬스터 extends Thread {
 
         while(true) {
             this.캐릭터공격();
-            if (밤 == true && 제한 == true){
+            if (밤 == true && 제한 == true && this.몬스터타입 == 0){
                 this.광폭화();
                 System.out.println("몬스터가 광폭화했습니다");
-
                 제한 = false;
 
             }
 
             if(유저명.전투중체력 <=0 || this.체력 <= 0){
+                System.out.println("사망");
                 this.interrupt();
+                System.exit(1);
                 break;
             }
             try {

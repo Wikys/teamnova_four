@@ -10,7 +10,7 @@ public class 고블린 extends 몬스터{
         this.체력 = 10;
         this.마나 = 0;
 //        this.공격력 = 1;
-        this.공격력 = 0;
+        this.공격력 = 1;
         this.방어력 = 0;
         this.회피율 = 2;
         this.경험치 = 1000;
@@ -18,19 +18,7 @@ public class 고블린 extends 몬스터{
         this.몬스터타입 = 0;
         this.몬스터번호 = 0;
         this.상태 = "일반";
-        if (밤 == true){
-            this.이름 = "광폭화된 고블린";
-            this.체력 = 10*2;
-            this.마나 = 0;
-            this.공격력 = 0*2;
-            this.방어력 = 0;
-            this.회피율 = 0;
-            this.경험치 = 1000 *2;
-            this.골드 = random.nextInt(5)*2;
-            this.몬스터타입 = 0;
-            this.몬스터번호 = 0;
-            this.상태 = "광폭화";
-        }
+
     }
 
 
@@ -82,6 +70,8 @@ public class 고블린 extends 몬스터{
 
     }
 
+    @Override
+    public void 스킬() {
 
-
+    }
 }

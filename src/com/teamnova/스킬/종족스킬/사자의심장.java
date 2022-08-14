@@ -28,6 +28,7 @@ public class 사자의심장 extends 스킬 {
         System.out.println("============================");
         System.out.println("스킬명 : 사자의심장");
         System.out.println("설명 : 방어력을 레벨만큼 증가시켜줍니다");
+//        System.out.println("TIP : 전직캐릭터가 사용시 특수효과가 발동합니다");
         System.out.println("============================");
     }
 }

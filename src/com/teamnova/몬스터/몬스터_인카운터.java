@@ -60,4 +60,8 @@ public class 몬스터_인카운터 extends 몬스터 {
     public void 광폭화() {
 
     }
+    @Override
+    public void 스킬() {
+
+    }
 }

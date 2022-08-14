@@ -9,13 +9,14 @@ public class 고블린킹 extends 보스 {
         this.이름 = "고블린킹";
         this.체력 = 100;
         this.마나 = 0;
-        this.공격력 = 7;
+        this.공격력 = 1; //7
         this.방어력 = 3;
         this.회피율 = 5;
         this.경험치 = 30;
         this.골드 = random.nextInt(100);
         this.몬스터타입 = 1;
         this.몬스터번호 = 3;
+        this.상태 = "보스";
 
     }
 
@@ -26,13 +27,14 @@ public class 고블린킹 extends 보스 {
         this.이름 = "고블린킹";
         this.체력 = 100;
         this.마나 = 0;
-        this.공격력 = 7;
+        this.공격력 = 1;
         this.방어력 = 3;
         this.회피율 = 5;
         this.경험치 = 30;
         this.골드 = random.nextInt(100);
         this.몬스터타입 = 1;
         this.몬스터번호 = 3;
+        this.상태 = "보스";
     }
 
     @Override
@@ -55,10 +57,11 @@ public class 고블린킹 extends 보스 {
     @Override
     public void 광폭화() {
 
+
     }
 
     @Override
-    public void 보스_스킬() { // 보스몬스터의 기술
+    public void 스킬() { // 보스몬스터의 기술
         System.out.println("고블린킹이 방어구 궤뚫기를 사용합니다");
         System.out.println(유저명.이름+"이(가) 방어력 무시 데미지 "+this.공격력+"을 받습니다");
         유저명.전투중체력 = 유저명.전투중체력 - this.공격력;

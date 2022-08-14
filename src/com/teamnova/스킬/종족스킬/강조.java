@@ -41,6 +41,7 @@ public class 강조 extends 스킬 {
         System.out.println("============================");
         System.out.println("스킬명 : 강조");
         System.out.println("설명 : 손톱을 강화하여 적을 3번 타격합니다");
+//        System.out.println("TIP : 전직캐릭터가 사용시 특수효과가 발동합니다");
         System.out.println("============================");
 
     }

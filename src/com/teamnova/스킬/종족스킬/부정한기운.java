@@ -33,6 +33,7 @@ public class 부정한기운 extends 스킬 {
         System.out.println("설명 : 무기에 언데드의 부정한 기운을 둘러");
         System.out.println("레벨만큼 추가데미지를 줍니다");
         System.out.println("일반공격과 마법 모두에 적용됩니다");
+//        System.out.println("TIP : 전직캐릭터가 사용시 특수효과가 발동합니다");
         System.out.println("============================");
 
     }

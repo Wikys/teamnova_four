@@ -3,6 +3,7 @@ package com.teamnova.플레이어;
 import com.teamnova.메뉴.메인메뉴;
 import com.teamnova.몬스터.몬스터;
 import com.teamnova.몬스터.몬스터_인카운터;
+import com.teamnova.몬스터.보스.보스;
 import com.teamnova.스킬.공격계열.무기파괴;
 import com.teamnova.스킬.공격계열.사광연참;
 import com.teamnova.스킬.공격계열.화염구;
@@ -104,7 +105,7 @@ public abstract class 캐릭터{ //구조체
         return _인벤토리;
     }
 
-    public int 공격받음(int _방어력, int _적공격력, int _회피율) {
+    public int 공격받음(int _방어력, int _적공격력, int _회피율) {//몬스터의 공격
 //        몬스터 몬스터 = new 몬스터();
         int 회피 = random.nextInt(100) + 1;
 
@@ -113,7 +114,10 @@ public abstract class 캐릭터{ //구조체
         } else if (회피 <= _회피율) {
             _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
             System.out.println("몬스터의 공격을 완벽하게 회피하였습니다");
-        } else {
+        } else if(몬스터.몬스터타입 == 1 && 회피 <= 30){
+            몬스터.스킬();
+        }
+        else {
 //            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
             _적공격력 = _적공격력 - _방어력;
         }

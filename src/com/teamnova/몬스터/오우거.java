@@ -10,7 +10,7 @@ public class 오우거 extends 몬스터{
         this.체력 = 30;
         this.마나 = 0;
 //        this.공격력 = 5;
-        this.공격력 = 0;
+        this.공격력 = 1;
         this.방어력 = 2;
         this.회피율 = 0;
         this.경험치 = 1000;
@@ -82,6 +82,10 @@ public class 오우거 extends 몬스터{
             System.out.println("아이템을 발견하지 못했습니다");
         }
 
+
+    }
+    @Override
+    public void 스킬() {
 
     }
 

@@ -10,7 +10,7 @@ public class 오크 extends 몬스터{
         this.체력 = 15;
         this.마나 = 0;
 //        this.공격력 = 3;
-        this.공격력 = 0;
+        this.공격력 = 1;
         this.방어력 = 1;
         this.회피율 = 3;
         this.경험치 = 1000;
@@ -52,20 +52,7 @@ public class 오크 extends 몬스터{
         this.몬스터타입 = 0;
         this.몬스터번호 = 1;
         this.상태 = "일반";
-        if (밤 == true){
-            this.이름 = "광폭화된 오크";
-            this.체력 = 15*2;
-            this.마나 = 0;
-//        this.공격력 = 3;
-            this.공격력 = 0*2;
-            this.방어력 = 1;
-            this.회피율 = 0;
-            this.경험치 = 1000*2;
-            this.골드 = random.nextInt(10)*2;
-            this.몬스터타입 = 0;
-            this.몬스터번호 = 1;
-            this.상태 = "광폭화";
-        }
+
     }
 
     @Override
@@ -82,6 +69,10 @@ public class 오크 extends 몬스터{
             System.out.println("아이템을 발견하지 못했습니다");
         }
 
+
+    }
+    @Override
+    public void 스킬() {
 
     }
 

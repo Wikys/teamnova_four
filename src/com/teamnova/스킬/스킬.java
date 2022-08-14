@@ -34,7 +34,5 @@ public abstract class 스킬 {
     public abstract void 스킬효과(); //스킬발동되면 나오는 효과
     public abstract void 스킬설명(); //스킬설명
     public abstract void 스킬초기화(); // 제한이 있는스킬들 전투끝나고 초기화시켜주는 메소드
-
-
 }
 

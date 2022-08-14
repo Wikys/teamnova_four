@@ -10,7 +10,9 @@ public class 전직{
     Scanner in = new Scanner(System.in);
     int 입력;
 
+
     public void 전직여부(){
+
         if (유저명.레벨 <3){
             System.out.println("3레벨이 되시면 전직이 가능합니다");
             return;
@@ -26,12 +28,12 @@ public class 전직{
     }
     public void 전직메뉴(){
 
-        if(유저명.직업번호 >= 0){
+        if(유저명.직업번호 >= 3){
             System.out.println("이미 전직을 완료한 상태입니다");
             return;
         }
 
-        if (유저명.레벨 <0){
+        if (유저명.레벨 <3){
             System.out.println("3레벨 달성하고 다시오세요!");
             return;
         }
@@ -40,8 +42,9 @@ public class 전직{
         System.out.println("2.아니오");
         입력 = in.nextInt();
         if(입력 == 1) {
-            if (유저명.레벨 >= 0 && 유저명.종족 == 0) {
-                전사 전사 = new 전사();
+            if (유저명.레벨 >= 3 && 유저명.종족 == 0) {
+//                캐릭터 전사 = new 전사();
+
 //                System.out.println(전사.직업이름);
 //                System.out.println(전사.직업번호);
 //                캐릭터 임시 = new 전사();
@@ -51,9 +54,9 @@ public class 전직{
 //                전사.스탯();
 //                System.out.println(전사.최대체력);
 
-                유저명 = 전사;
-                System.out.println(유저명.직업이름);
-                System.out.println(유저명.직업번호);
+                유저명 = new 전사();
+                유저명.스탯(유저명);
+
 
 
                 System.out.println("전사로 전직하셨습니다");
@@ -64,9 +67,10 @@ public class 전직{
                 //몽크
                 //몽크로 전직하셨습니다
                 //몽크의 기민함으로 인해 회피율이 5 증가합니다
-                캐릭터 몽크 = new 몽크();
+//                캐릭터 몽크 = new 몽크();
 //                몽크.스탯();
-                유저명 = 몽크;
+                유저명 = new 몽크();
+                유저명.스탯(유저명);
                 System.out.println("몽크로 전직하셨습니다");
                 System.out.println("몽크의 기민함으로 인해 회피율이 5 증가합니다");
 
@@ -75,9 +79,10 @@ public class 전직{
                 //메이지
                 //메이지로 전직하셨습니다
                 //불사자의 마력으로 마법력이 5 올랐습니다
-                캐릭터 메이지 = new 스켈레톤_메이지();
-//                메이지.스탯();
-                유저명 = 메이지;
+//                캐릭터 메이지 = new 스켈레톤_메이지();
+//                메이지.스탯(유저명);
+                유저명 = new 스켈레톤_메이지();
+                유저명.스탯(유저명);
                 System.out.println("스켈레톤 메이지로 전직하셨습니다");
                 System.out.println("불사자의 마력으로 마법력이 5 올랐습니다");
             }
