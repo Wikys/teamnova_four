@@ -4,6 +4,7 @@ import com.teamnova.플레이어.스켈레톤;
 import com.teamnova.플레이어.캐릭터;
 
 import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 public class 스켈레톤_메이지 extends 스켈레톤 {
 
@@ -55,6 +56,13 @@ public void 스탯(캐릭터 유저명) {
 }
     @Override
     public void 전용패시브() {
+        int 랜덤이벤트 = random.nextInt(100);
+        if (랜덤이벤트 > 30) {
+            int 방어구부식 =  1;
+            몬스터.방어력 = 몬스터.방어력 - 방어구부식;
+            System.out.println("방어구부식이 발동되었습니다");
+            System.out.println("적 방어력 "+방어구부식+" 감소!");
+        }
 
     }
 }

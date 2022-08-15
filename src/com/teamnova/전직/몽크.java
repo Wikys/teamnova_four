@@ -4,6 +4,7 @@ import com.teamnova.플레이어.비스트맨;
 import com.teamnova.플레이어.캐릭터;
 
 import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 
 public class 몽크 extends 비스트맨 {
@@ -55,6 +56,13 @@ public class 몽크 extends 비스트맨 {
     }
     @Override
     public void 전용패시브() {
+        int 랜덤이벤트 = random.nextInt(100);
+        if (랜덤이벤트 > 30) {
+            int 방어구가르기 = 유저명.공격력;
+            몬스터.체력 = 몬스터.체력 - 방어구가르기;
+            System.out.println("방어구가르기가 발동되었습니다");
+            System.out.println("추가데미지 "+방어구가르기+"!");
+        }
 
     }
 }

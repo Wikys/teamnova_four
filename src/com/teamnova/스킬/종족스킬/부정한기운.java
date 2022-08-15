@@ -27,6 +27,11 @@ public class 부정한기운 extends 스킬 {
 
     }
 
+    @Override
+    public void 스킬쿨타임() {
+
+    }
+
     public void 스킬설명() {
         System.out.println("============================");
         System.out.println("스킬명 : 부정한기운");

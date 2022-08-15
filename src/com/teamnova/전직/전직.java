@@ -28,7 +28,7 @@ public class 전직{
     }
     public void 전직메뉴(){
 
-        if(유저명.직업번호 >= 3){
+        if(유저명.직업번호 >= 0){
             System.out.println("이미 전직을 완료한 상태입니다");
             return;
         }
@@ -42,7 +42,7 @@ public class 전직{
         System.out.println("2.아니오");
         입력 = in.nextInt();
         if(입력 == 1) {
-            if (유저명.레벨 >= 3 && 유저명.종족 == 0) {
+            if (유저명.레벨 >= 1 && 유저명.종족 == 0) {
 //                캐릭터 전사 = new 전사();
 
 //                System.out.println(전사.직업이름);

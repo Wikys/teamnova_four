@@ -4,6 +4,7 @@ import com.teamnova.플레이어.인간;
 import com.teamnova.플레이어.캐릭터;
 
 import static com.teamnova.몬스터.몬스터.유저명;
+import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 public class 전사 extends 인간 {
 
@@ -56,9 +57,10 @@ public class 전사 extends 인간 {
     public void 전용패시브() {
         int 랜덤이벤트 = random.nextInt(100);
         if (랜덤이벤트 > 30) {
-
+            int 추가베기 = 유저명.공격력 - 몬스터.방어력;
+            몬스터.체력 = 몬스터.체력 - 추가베기;
             System.out.println("연속베기가 발동되었습니다");
-
+            System.out.println("추가데미지 "+추가베기+"!");
         }
 
     }

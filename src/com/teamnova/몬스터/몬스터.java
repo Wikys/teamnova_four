@@ -73,11 +73,13 @@ public abstract class 몬스터 extends Thread {
         } else if (랜덤이벤트 <= 20) {
             _적공격력 = _적공격력 * 2 - _방어력;
             System.out.println("적에게 치명상을 주었습니다");
+            유저명.전용패시브();
         } else if (랜덤이벤트 <= _회피율) {
             _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
             System.out.println("몬스터가 공격을 회피하였습니다");
         } else {
             _적공격력 = _적공격력 - _방어력;
+            유저명.전용패시브();
         }
         return _적공격력;
     }

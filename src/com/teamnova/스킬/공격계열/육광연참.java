@@ -53,4 +53,9 @@ public class 육광연참 extends 사광연참 {
         System.out.println("tip : 인간이 사용하면 특수효과가 있습니다");
         System.out.println("========================================");
     }
+
+    @Override
+    public void 스킬쿨타임() {
+        super.스킬쿨타임();
+    }
 }

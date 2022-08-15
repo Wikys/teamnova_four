@@ -41,4 +41,9 @@ public class 영혼흡수 extends 스킬 {
     public void 스킬초기화() {
         this.스킬제한 = true;
     }
+
+    @Override
+    public void 스킬쿨타임() {
+
+    }
 }

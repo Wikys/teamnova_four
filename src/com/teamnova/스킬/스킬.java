@@ -1,9 +1,10 @@
 package com.teamnova.스킬;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 
-public abstract class 스킬 {
+public abstract class 스킬 extends Thread{
 
     public Scanner in = new Scanner(System.in);
     public int 입력;
@@ -17,6 +18,11 @@ public abstract class 스킬 {
     public int 스킬마법력;
     public String 설명;
     public int 가격;
+
+    public boolean 임시스킬제한 = false; //스킬 쿨타임을 위한 맴버변수
+    public int 스킬쿨다운;
+    public JFrame 스킬프레임 = new JFrame("스킬프레임");
+    public JLabel 쿨타임텍스트 = new JLabel("쿨타임");
 
 
 
@@ -34,5 +40,6 @@ public abstract class 스킬 {
     public abstract void 스킬효과(); //스킬발동되면 나오는 효과
     public abstract void 스킬설명(); //스킬설명
     public abstract void 스킬초기화(); // 제한이 있는스킬들 전투끝나고 초기화시켜주는 메소드
+    public abstract void 스킬쿨타임();
 }
 
