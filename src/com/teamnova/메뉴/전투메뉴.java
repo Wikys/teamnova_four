@@ -7,8 +7,10 @@ import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
+import static com.teamnova.메뉴.Catastrophe.카운트다운;
 import static com.teamnova.몬스터.몬스터.유저명;
 import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
+import static com.teamnova.메뉴.캐릭터생성.해피엔딩;
 
 public class 전투메뉴 extends Thread {
 
@@ -79,45 +81,7 @@ public class 전투메뉴 extends Thread {
             몬스터_스테이터스.dispose();
         }
     }
-//    public void 몬스터_전투_메세지(){
-//        this.공격받음(유저명.전투중방어력, 몬스터.공격력, 유저명.회피율); //몹이 보내주는거 받아먹기기
-//        this.몬스터_전투.add(몬스터_전투_메세지);
-//        this.몬스터_전투.setLocation(300, 300); //프레임 없는데 되나보기
-//        this.몬스터_전투.pack();
-//        this.몬스터_전투.setVisible(true);
-//        if (유저명.전투중체력 <=0 || 몬스터.체력 <=0 ){
-//            몬스터_전투.setVisible(false);
-//            몬스터_전투.dispose();
-//        }
-//
-//    }
-//    public int 공격받음(int _방어력, int _적공격력, int _회피율) {//몬스터의 공격
-//
-////        몬스터 몬스터 = new 몬스터();
-//        int 회피 = random.nextInt(100) + 1;
-//
-//        if (유저명.전투중방어력 >= _적공격력) {
-//            _적공격력 = 0; //방어력이 적 공격력보다 높으면 데미지0
-//            this.몬스터_전투_메세지.setText("<html>몬스터가 열심히 공격하고있지만" +
-//                    "<br> 아프지않습니다");
-//
-//        } else if (회피 <= _회피율) {
-//            _적공격력 = 0; //회피하면 순간 적공격력 0으로 처리
-////            System.out.println("몬스터의 손이 미끄러졌습니다");
-//            this.몬스터_전투_메세지.setText("<html>몬스터의 손이 미끄러졌습니다" +
-//                    "<br> 데미지를 받지않습니다");
-//        } else if(몬스터.몬스터타입 == 1 && 회피 <= 30){
-//
-//            몬스터.스킬();
-//        }
-//        else {
-////            _체력 = _체력 + this.전투중방어력 - _적공격력; //적공격력이 더높으면 방어력-적공격력만큼 받음
-//            _적공격력 = _적공격력 - _방어력;
-//            this.몬스터_전투_메세지.setText("<html>몬스터가 공격합니다 <br>" +
-//                    ""+_적공격력+" 만큼의 데미지를 받습니다");
-//        }
-//        return _적공격력;
-//    }
+
 
     @Override
     public void run() {
@@ -173,6 +137,10 @@ public class 전투메뉴 extends Thread {
     public void 전투종료() { //전투결과
 
 //        this.interrupt();
+        if(몬스터.몬스터번호 == 3){
+            해피엔딩 = true;
+        }
+        카운트다운--;
 
         int 획득골드 = 몬스터.골드;
         System.out.println("==============================");
@@ -231,11 +199,12 @@ public class 전투메뉴 extends Thread {
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
             스킬 사용스킬 = 유저명._공격스킬목록.get(입력);
-            사용스킬.스킬설명();
-            System.out.println("아무숫자나 누르시면 사용됩니다");
+            System.out.println("사용하시려면 아무숫자나 눌러주세요");
             입력 = in.nextInt();
             사용스킬.스킬효과();
-//                this.캐릭터공격(유저명, _몬스터, _아이템); //스킬사용즉시 적반격
+//            사용스킬.run();
+//                this.캐릭터공격
+//                (유저명, _몬스터, _아이템); //스킬사용즉시 적반격
 
         } else if (입력 == 2) {
             //버프스킬 어레이
@@ -246,8 +215,7 @@ public class 전투메뉴 extends Thread {
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
             스킬 사용스킬 = 유저명._버프스킬목록.get(입력);
-            사용스킬.스킬설명();
-            System.out.println("아무숫자나 누르시면 사용됩니다");
+            System.out.println("사용하시려면 아무숫자나 눌러주세요");
             입력 = in.nextInt();
             사용스킬.스킬효과();
 //                this.캐릭터공격(유저명, _몬스터, _아이템); //스킬사용즉시 적반격
@@ -261,8 +229,7 @@ public class 전투메뉴 extends Thread {
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
             스킬 사용스킬 = 유저명._회복스킬목록.get(입력);
-            사용스킬.스킬설명();
-            System.out.println("아무숫자나 누르시면 사용됩니다");
+            System.out.println("사용하시려면 아무숫자나 눌러주세요");
             입력 = in.nextInt();
             사용스킬.스킬효과();
 //                this.캐릭터공격(유저명, _몬스터, _아이템); //스킬사용즉시 적반격
@@ -275,8 +242,7 @@ public class 전투메뉴 extends Thread {
             System.out.println("사용할 스킬의 번호를 입력해주세요");
             입력 = in.nextInt(); //입력
             스킬 사용스킬 = 유저명._종족스킬목록.get(입력);
-            사용스킬.스킬설명();
-            System.out.println("아무숫자나 누르시면 사용됩니다");
+            System.out.println("사용하시려면 아무숫자나 눌러주세요");
             입력 = in.nextInt();
             사용스킬.스킬효과();
 //                this.캐릭터공격(유저명, _몬스터, _아이템); //스킬사용즉시 적반격

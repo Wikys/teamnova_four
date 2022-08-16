@@ -35,10 +35,7 @@ public class 화염구 extends 스킬 {
 
     }
 
-    @Override
-    public void 스킬쿨타임() {
 
-    }
 
     public void 스킬설명(){
         System.out.println("========================================");

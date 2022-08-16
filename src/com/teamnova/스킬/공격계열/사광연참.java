@@ -6,6 +6,7 @@ import static com.teamnova.몬스터.몬스터.유저명;
 import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
 
 public class 사광연참 extends 스킬 {
+    public boolean 임시스킬제한 = false;
 
     public int 적_회피증가 = 3;
     public int 마나소모 = 5;
@@ -14,13 +15,13 @@ public class 사광연참 extends 스킬 {
         this.스킬이름 = 스킬이름;
 
 
+
     }
 
 
 
     public void 스킬효과(){
-        if(this.임시스킬제한 == false) {
-            this.임시스킬제한 = true;
+
             몬스터.회피율 = 몬스터.회피율 + this.적_회피증가;
             int 피해 = 몬스터.몹공격받음(몬스터.방어력, 유저명.전투중공격력, 몬스터.회피율);
             if (유저명.전투중마나 >= this.마나소모) {
@@ -42,21 +43,16 @@ public class 사광연참 extends 스킬 {
             } else {
                 System.out.println("마나가 부족합니다");
             }
-        }else {
-            System.out.println("쿨타임중에는 사용 불가능합니다");
-        }
+
 
     }
     public void 스킬초기화(){
 
     }
 
-    @Override
-    public void 스킬쿨타임() {
-        //쿨 5초
 
 
-    }
+
 
     public void 스킬설명(){
         System.out.println("========================================");

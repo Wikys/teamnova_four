@@ -47,10 +47,7 @@ public class 무기파괴 extends 스킬 { // 불린으로 스킬제한
         this.스킬제한 = true;
     }
 
-    @Override
-    public void 스킬쿨타임() {
 
-    }
 
     public void 스킬설명(){
         System.out.println("========================================");

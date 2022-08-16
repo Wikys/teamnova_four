@@ -7,7 +7,7 @@ public class 고블린킹 extends 보스 {
     아이템 고블린왕의_몽둥이 = new 고블린왕의_몽둥이();
     public 고블린킹(){
         this.이름 = "고블린킹";
-        this.체력 = 100;
+        this.체력 = 1;
         this.마나 = 0;
         this.공격력 = 1; //7
         this.방어력 = 3;

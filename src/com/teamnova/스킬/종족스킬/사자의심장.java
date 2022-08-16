@@ -24,10 +24,7 @@ public class 사자의심장 extends 스킬 {
     public void 스킬초기화(){
     }
 
-    @Override
-    public void 스킬쿨타임() {
 
-    }
 
     public void 스킬설명() {
         System.out.println("============================");

@@ -54,8 +54,5 @@ public class 육광연참 extends 사광연참 {
         System.out.println("========================================");
     }
 
-    @Override
-    public void 스킬쿨타임() {
-        super.스킬쿨타임();
-    }
+
 }

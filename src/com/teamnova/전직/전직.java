@@ -1,7 +1,5 @@
 package com.teamnova.전직;
 
-import com.teamnova.플레이어.캐릭터;
-
 import java.util.Scanner;
 
 import static com.teamnova.몬스터.몬스터.유저명;
@@ -21,6 +19,7 @@ public class 전직{
             System.out.println("전직 가능한 레벨에 도달했습니다");
             System.out.println("전직메뉴를 들어가보세요");
         }
+
         else if(유저명.직업번호 >=0){
             System.out.println("전직을 완료한 상태입니다");
             return;

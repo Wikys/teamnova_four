@@ -19,23 +19,23 @@ public class 캐릭터생성 {
     ArrayList<스킬> _회복스킬목록 = new ArrayList<>();
     ArrayList<스킬> _공격스킬목록 = new ArrayList<>();
     ArrayList<스킬> _종족스킬목록 = new ArrayList<>();
-//    스킬 강조 = new 강조("강조"); //기본스킬
-//    스킬 부정한기운 = new 부정한기운("부정한기운");
-//    스킬 사자의심장 = new 사자의심장("사자의심장");
-//    스킬 무기파괴 = new 무기파괴("무기파괴");
-//    스킬 사광연참 = new 사광연참("사광연참");
-//    스킬 화염구 = new 화염구("화염구");
+
+    static public Catastrophe 종말 = new Catastrophe();
+    static public boolean 해피엔딩 = false;
+    static public boolean 베드엔딩 = false;
 
 
 
     public void 캐릭터생성() {
-//        유저명._공격스킬목록.add(무기파괴);
-//        유저명._공격스킬목록.add(화염구);
-//        유저명._공격스킬목록.add(사광연참); //실험용
+
+        종말.start();
+        try {
+            Thread.sleep(7000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         캐릭터작성:
         while (true) {
-
-
             System.out.println("1.시작하기");
             System.out.println("0.끝내기");
             선택 = in.nextInt();
@@ -101,7 +101,7 @@ public class 캐릭터생성 {
         유저명.이름 = 이름;
         System.out.println("이름이 " + 유저명.이름 + " 으로 결정되었습니다");
         유저명.기본아이템(유저명.인벤토리);
-        System.out.println("당신은 모험을 시작합니다");
+        System.out.println("임무를 시작합니다");
 
 
     }

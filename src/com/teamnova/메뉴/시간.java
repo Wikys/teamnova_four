@@ -31,7 +31,7 @@ public class 시간 extends Thread {
                     break;
                 }
                 try {
-                    sleep(100);
+                    sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -64,7 +64,7 @@ public class 시간 extends Thread {
                     break;
                 }
                 try {
-                    sleep(100);
+                    sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

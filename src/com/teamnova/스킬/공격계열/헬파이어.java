@@ -42,9 +42,6 @@ public class 헬파이어 extends 화염구 {
         System.out.println("tip : 스켈레톤이 사용시 특수효과가 있습니다");
         System.out.println("========================================");
     }
-    @Override
-    public void 스킬쿨타임() {
-        super.스킬쿨타임();
-    }
+
 
 }

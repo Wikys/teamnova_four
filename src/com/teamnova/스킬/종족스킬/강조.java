@@ -36,10 +36,7 @@ public class 강조 extends 스킬 {
 
     }
 
-    @Override
-    public void 스킬쿨타임() {
 
-    }
 
 
     public void 스킬설명() {
