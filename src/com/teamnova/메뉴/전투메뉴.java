@@ -29,7 +29,7 @@ public class 전투메뉴 extends Thread {
 
     Scanner in = new Scanner(System.in);
     int 입력;
-    boolean 도주카운터 = true;
+    boolean 도주카운터 = false;
 
     //    캐릭터생성 캐릭터생성 = new 캐릭터생성();
 //    행동문 행동메뉴 = new 행동문();
@@ -135,6 +135,7 @@ public class 전투메뉴 extends Thread {
 
 
     public void 전투종료() { //전투결과
+        this.도주카운터 = true;
 
 //        this.interrupt();
         if(몬스터.몬스터번호 == 3){
@@ -184,6 +185,7 @@ public class 전투메뉴 extends Thread {
     }
 
     public void 스킬사용() { //스킬목록 출력후 사용 메소드
+
 
         System.out.println("1.공격계열");
         System.out.println("2.버프계열");
@@ -281,24 +283,9 @@ public class 전투메뉴 extends Thread {
                 System.out.println("잘못 입력하셨습니다");
                 continue 입구;
             }
-
-
-//        if (사용아이템.타입 == 3) { //체력포션 사용
-////            유저명.전투중체력 = 유저명.포션꿀꺽(사용아이템.체력회복, 유저명.최대체력, 유저명.전투중체력);
-////            System.out.println(사용아이템.이름 + "을 사용하였습니다");
-//            사용아이템.아이템_효과(유저명);
-//            유저명.전투인벤토리.remove(사용아이템);
-//        } else if (사용아이템.타입 == 4) { //마나포션 사용
-////            유저명.전투중마나 = 유저명.포션꿀꺽(사용아이템.마나회복, 유저명.최대마나, 유저명.전투중마나);
-////            System.out.println(사용아이템.이름 + "을 사용하였습니다");
-////            사용아이템.아이템_효과(유저명);
-//            유저명.전투인벤토리.remove(사용아이템);
-//        }
         }
-
     }
-
-    public int 도주() { //손봐야할듯 // 행동문으로 옮기는꼼수 이제 못씀
+    public int 도주() {
         int 도주 = 0;
         System.out.println("도주를 시도합니다");
         int 도주확률 = random.nextInt(100);
@@ -330,7 +317,6 @@ public class 전투메뉴 extends Thread {
             System.out.println("사망하셨습니다");
 //            행동메뉴.행동문(유저명);
             System.exit(0);
-
 
         } else if (몬스터.체력 <= 0) {
 //            _전투종료 = true;

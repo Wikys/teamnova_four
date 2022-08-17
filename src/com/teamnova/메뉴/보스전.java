@@ -116,7 +116,6 @@ public class 보스전{
                         if (전투종료 == true){
                             break ;
                         }
-//
                     }
                     else if(입력 == 3){
                         int 도주 = _전투메뉴.도주();

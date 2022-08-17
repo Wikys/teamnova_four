@@ -1,6 +1,8 @@
 package com.teamnova.메뉴;
 
 import javax.swing.*;
+
+import static com.teamnova.메뉴.Catastrophe.카운트다운;
 import static com.teamnova.메뉴.행동문.밤;
 
 public class 시간 extends Thread {
@@ -31,7 +33,7 @@ public class 시간 extends Thread {
                     break;
                 }
                 try {
-                    sleep(1000);
+                    sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -61,10 +63,13 @@ public class 시간 extends Thread {
                     this.낮시작 = true;
                     현재시간.dispose();
                     밤 = false;
+                    if(카운트다운 >=0) {
+                        카운트다운--;
+                    }
                     break;
                 }
                 try {
-                    sleep(1000);
+                    sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

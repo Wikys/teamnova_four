@@ -4,29 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes 스테이터스창 만들었음 쓰레드적용?">
+    <list default="true" id="2a9ff9a5-3e23-47cc-ab68-43b4dde74819" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-10__11_06_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-10__11_06_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-10__7_28_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-10__7_28_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-11__3_57_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-11__3_57_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-11__7_51_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-11__7_51_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-12__10_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-12__10_30_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-12__9_52_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-12__9_52_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-13__7_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-13__7_15_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-14__10_25_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-14__10_25_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-15__3_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-15__3_38_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-08-16__12_57_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-08-16__12_57_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/Catastrophe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/Catastrophe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/메인메뉴.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/보스전.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/시간.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/시간.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/전투메뉴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/캐릭터생성.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/캐릭터생성.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/메뉴/행동문.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/메뉴/행동문.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/몬스터/보스/고블린킹.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/몬스터/보스/고블린킹.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/무기파괴.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/무기파괴.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/사광연참.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/사광연참.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/영혼흡수.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/육광연참.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/헬파이어.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/화염구.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/공격계열/화염구.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/스킬.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/강조.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/강조.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/부정한기운.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/부정한기운.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/사자의심장.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/스킬/종족스킬/사자의심장.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/스킬/쿨타임.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teamnova/발표.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/발표.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/teamnova/실험용.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/실험용.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/전직/전직.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/teamnova/플레이어/캐릭터.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +43,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -65,9 +54,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="애플리케이션.com.teamnova.Main">
-    <configuration name="쓰레드연습" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.teamnova.쓰레드연습" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/천안지점8층/IdeaProjects/teamnova_four"
+  }
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.teamnova.Main" />
       <module name="teamnova_four" />
       <extension name="coverage">
         <pattern>
@@ -86,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.teamnova.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.teamnova.Main" />
       <module name="teamnova_four" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.teamnova.*" />
+          <option name="PATTERN" value="com.teamnova.몬스터.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,20 +95,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.com.teamnova.Main" />
-        <item itemvalue="애플리케이션.쓰레드연습" />
+        <item itemvalue="애플리케이션.Main (1)" />
+        <item itemvalue="애플리케이션.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -156,14 +142,35 @@
       <option name="project" value="LOCAL" />
       <updated>1659171364882</updated>
     </task>
-    <task id="LOCAL-00005" summary="Changes 캐릭터 상수화">
-      <created>1660208074872</created>
+    <task id="LOCAL-00005" summary="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비">
+      <created>1659283412729</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1660208074872</updated>
+      <updated>1659283412729</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes 클래스,메서드 정리 끝">
+      <created>1659339631921</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659339631921</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만">
+      <created>1659787037704</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659787037704</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes">
+      <created>1659863951127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659863951127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,21 +183,18 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes 회사" />
     <MESSAGE value="Changes 메서드정리 (전투메뉴)" />
-    <MESSAGE value="Changes 캐릭터 상수화" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes 캐릭터 상수화" />
+    <MESSAGE value="Changes 몬스터인카운터 까지하면 메서드 정리끝 // 상속 준비" />
+    <MESSAGE value="Changes 클래스,메서드 정리 끝" />
+    <MESSAGE value="Changes 종족스킬,스킬어레이 기초작업 끝냄&#10;&#10;추가할것들 :&#10;스킬샵 구현 // 종족에따라 배울수있는 스킬 구분 ,&#10;스켈레톤 메이지 클래스에 화염구 특화 요소 만들기? 불린으로?&#10;화염구는 모든종족이 배울수있음 , 사광연참은 인간만, 무기파괴는 아인만" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teamnova_four$com_teamnova_Main.ic" NAME="com.teamnova.Main 커버리지 결과" MODIFIED="1660284870848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.teamnova.*</FILTER>
-    </SUITE>
   </component>
 </project>
