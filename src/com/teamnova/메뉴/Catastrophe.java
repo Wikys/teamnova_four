@@ -10,7 +10,7 @@ public class  Catastrophe extends Thread{
     public JLabel 카타스트로피_텍스트 = new JLabel("남은턴");
 
     public boolean Catastrophe = false;
-    public static int 카운트다운 = 50;
+    public static int 카운트다운 = 1;
 
 
     @Override
