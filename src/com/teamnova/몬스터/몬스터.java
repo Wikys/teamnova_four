@@ -135,7 +135,7 @@ public abstract class 몬스터 extends Thread {
         while(true) {
                 this.캐릭터공격();
                 this.몬스터_전투_메세지();
-            if (밤 == true && 제한 == true && this.몬스터타입 == 0){
+            if (밤 == true && 제한 == true && this.몬스터타입 == 0 && 몬스터.체력 >= 0){
                 this.광폭화();
                 System.out.println("몬스터가 광폭화했습니다");
                 제한 = false;
