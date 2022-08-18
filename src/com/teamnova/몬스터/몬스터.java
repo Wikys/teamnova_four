@@ -31,6 +31,7 @@ public abstract class 몬스터 extends Thread {
     //    int 아이템;
     public int 몬스터번호;
     public String 상태;
+    public boolean 도주허용 = false;
 
     public Random random = new Random();
     아이템 잡템 = new 잡템();
@@ -86,7 +87,7 @@ public abstract class 몬스터 extends Thread {
     public void 몬스터_전투_메세지(){
         this.공격받음(유저명.전투중방어력, 몬스터.공격력, 유저명.회피율); //몹이 보내주는거 받아먹기기
         this.몬스터_전투.add(몬스터_전투_메세지);
-        this.몬스터_전투.setLocation(300, 300); //프레임 없는데 되나보기
+        this.몬스터_전투.setLocation(200, 300);
         this.몬스터_전투.pack();
         this.몬스터_전투.setVisible(true);
         if (유저명.전투중체력 <=0 || 몬스터.체력 <=0 ){
@@ -135,14 +136,14 @@ public abstract class 몬스터 extends Thread {
         while(true) {
                 this.캐릭터공격();
                 this.몬스터_전투_메세지();
-            if (밤 == true && 제한 == true && this.몬스터타입 == 0 && 몬스터.체력 >= 0){
+            if (밤 == true && 제한 == true && this.몬스터타입 == 0 && 몬스터.체력 > 0){
                 this.광폭화();
                 System.out.println("몬스터가 광폭화했습니다");
                 제한 = false;
 
             }
 
-            if(유저명.전투중체력 <=0 || this.체력 <= 0){
+            if(유저명.전투중체력 <=0 || this.체력 <= 0 || 몬스터.도주허용){
 
                 this.interrupt();
 //                System.exit(1);

@@ -8,9 +8,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static com.teamnova.메뉴.Catastrophe.카운트다운;
+import static com.teamnova.메뉴.캐릭터생성.해피엔딩;
 import static com.teamnova.몬스터.몬스터.유저명;
 import static com.teamnova.몬스터.몬스터_인카운터.몬스터;
-import static com.teamnova.메뉴.캐릭터생성.해피엔딩;
 
 public class 전투메뉴 extends Thread {
 
@@ -73,7 +73,7 @@ public class 전투메뉴 extends Thread {
                 "<br><html>=====================");
 
         this.몬스터_스테이터스.add(this.몬스터_텍스트);
-        this.몬스터_스테이터스.setLocation(300, 100);
+        this.몬스터_스테이터스.setLocation(200, 100);
         this.몬스터_스테이터스.pack();
         this.몬스터_스테이터스.setVisible(true);
         if (유저명.전투중체력 <=0 || 몬스터.체력 <=0 ){
@@ -292,6 +292,7 @@ public class 전투메뉴 extends Thread {
 
         if (도주확률 <= 50 && this.도주카운터 == true && 몬스터.몬스터타입 == 0) { // 도주확률이 50안쪽이면 도망성공
             System.out.println("도주에 성공하셨습니다");
+            몬스터.도주허용 = true;
             도주 = 1;
 
 
