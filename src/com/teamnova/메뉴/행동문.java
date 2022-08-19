@@ -117,6 +117,7 @@ public class 행동문 extends 캐릭터생성 {
                     } else if (선택 == 3) { // 도주선택시
                         int 도주 = _전투메뉴.도주();
                         if (도주 == 1) {
+
                             break;
                         }
                     }
