@@ -1,7 +1,6 @@
 package com.teamnova.메뉴;
 
 import com.teamnova.스킬.스킬;
-import com.teamnova.스킬.스킬샵.스킬샵;
 import com.teamnova.아이템.아이템;
 import com.teamnova.플레이어.캐릭터;
 
@@ -60,7 +59,7 @@ public class 메인메뉴 {
     }
 
 
-    public 캐릭터 유저상태_초기화(스킬샵 _스킬샵) { // 버프나 기타등등으로 올라간 능력치 초기화
+    public 캐릭터 유저상태_초기화() { // 버프나 기타등등으로 올라간 능력치 초기화
 
 
         유저명.체력 = 유저명.전투중체력;
@@ -74,12 +73,12 @@ public class 메인메뉴 {
         for (int i = 0; i < 유저명._공격스킬목록.size(); i++) {
             유저명._공격스킬목록.get(i).스킬초기화();
         }
-        for (int i = 0; i < 유저명._버프스킬목록.size(); i++) {
-            유저명._버프스킬목록.get(i).스킬초기화();
-        }
-        for (int i = 0; i < 유저명._회복스킬목록.size(); i++) {
-            유저명._회복스킬목록.get(i).스킬초기화();
-        }
+//        for (int i = 0; i < 유저명._버프스킬목록.size(); i++) {
+//            유저명._버프스킬목록.get(i).스킬초기화();
+//        }
+//        for (int i = 0; i < 유저명._회복스킬목록.size(); i++) {
+//            유저명._회복스킬목록.get(i).스킬초기화(); //쓰지않으므로 주석
+//        }
 
         return 유저명;
     }

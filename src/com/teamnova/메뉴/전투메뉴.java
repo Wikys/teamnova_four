@@ -292,6 +292,7 @@ public class 전투메뉴 extends Thread {
 
         if (도주확률 <= 50 && this.도주카운터 == true && 몬스터.몬스터타입 == 0) { // 도주확률이 50안쪽이면 도망성공
             System.out.println("도주에 성공하셨습니다");
+            몬스터.체력 = 0;
             도주 = 1;
 
 
